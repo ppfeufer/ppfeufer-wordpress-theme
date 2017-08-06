@@ -1,2 +1,1 @@
-# ppfeufer-wordpress-theme
-WordPress Theme for https://ppfeufer.de/
+# WordPress Theme for https://ppfeufer.de/
