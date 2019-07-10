@@ -24,13 +24,6 @@ namespace WordPress\Themes\Ppfeufer\Libs\ResourceLoader;
  */
 class CssLoader extends \WordPress\Themes\Ppfeufer\Libs\Singletons\AbstractSingleton implements \WordPress\Themes\Ppfeufer\Libs\Interfaces\AssetsInterface {
     /**
-     * Initialize the loader
-     */
-//    public function init() {
-//        \add_action('wp_enqueue_scripts', [$this, 'enqueue'], 99);
-//    }
-
-    /**
      * Load the styles
      */
     public function enqueue() {
