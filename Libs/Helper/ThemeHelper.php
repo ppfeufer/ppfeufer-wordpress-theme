@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Copyright (C) 2019 p.pfeufer
+ * Copyright (C) 2019 ppfeufer
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,7 +24,7 @@ namespace WordPress\Themes\Ppfeufer\Libs\Helper;
 /**
  * ThemeHelper
  *
- * @author p.pfeufer
+ * @author ppfeufer
  */
 class ThemeHelper extends \WordPress\Themes\Ppfeufer\Libs\Singletons\AbstractSingleton {
     /**
