@@ -38,9 +38,14 @@ class CssLoader extends \WordPress\Themes\Ppfeufer\Libs\Singletons\AbstractSingl
          * only in frontend
          */
         if(!\is_admin()) {
-            \wp_enqueue_style('bootstrap-4', '//static.ppfeufer.de/libraries/bootstrap/4.3.1/css/bootstrap.min.css', [], null);
-            \wp_enqueue_style('ppfeufer-main', \get_theme_file_uri('/Assets/Css/main.css'), [], null);
-            \wp_enqueue_style('ppfeufer-responsive', \get_theme_file_uri('/Assets/Css/responsive.css'), ['ppfeufer-main'], null);
+            // deregister certain styles we have our own of
+            \wp_deregister_style('font-awesome');
+            \wp_deregister_style('bootstrap');
+
+            // register our own css
+            \wp_enqueue_style('bootstrap-4', '//static.ppfeufer.de/libraries/bootstrap/4.3.1/css/bootstrap.min.css', [], false);
+            \wp_enqueue_style('ppfeufer-main', \get_theme_file_uri('/Assets/Css/main.css'), [], false);
+            \wp_enqueue_style('ppfeufer-responsive', \get_theme_file_uri('/Assets/Css/responsive.css'), ['ppfeufer-main'], false);
             \wp_enqueue_style('ppfeufer-plugin-accommodations', \get_theme_file_uri('/Assets/Css/plugin-accommodations.css'), ['ppfeufer-main'], null);
         }
 
