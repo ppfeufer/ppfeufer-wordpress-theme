@@ -38,10 +38,9 @@ class CssLoader extends \WordPress\Themes\Ppfeufer\Libs\Singletons\AbstractSingl
          * only in frontend
          */
         if(!\is_admin()) {
-//            if(\is_page(\WordPress\Plugin\EveOnlineFittingManager\Libs\PostType::getPosttypeSlug('fittings')) || \get_post_type() === 'fitting') {
-//                \wp_enqueue_style('bootstrap', \WordPress\Plugin\EveOnlineFittingManager\Helper\PluginHelper::getPluginUri('bootstrap/css/bootstrap.min.css'));
-//                \wp_enqueue_style('eve-online-fitting-manager', \WordPress\Plugin\EveOnlineFittingManager\Helper\PluginHelper::getPluginUri('css/eve-online-fitting-manager.min.css'));
-//            }
+            \wp_enqueue_style('ppfeufer-main', \get_theme_file_uri('/Assets/Css/main.css'), [], null);
+            \wp_enqueue_style('ppfeufer-responsive', \get_theme_file_uri('/Assets/Css/responsive.css'), ['ppfeufer-main'], null);
+            \wp_enqueue_style('ppfeufer-plugin-accommodations', \get_theme_file_uri('/Assets/Css/plugin-accommodations.css'), ['ppfeufer-main'], null);
         }
 
         /**
