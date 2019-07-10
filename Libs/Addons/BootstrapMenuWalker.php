@@ -10,7 +10,7 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-namespace WordPress\Themes\Ppfeufer\Addons;
+namespace WordPress\Themes\Ppfeufer\Libs\Addons;
 
 use WordPress\Themes\Ppfeufer;
 

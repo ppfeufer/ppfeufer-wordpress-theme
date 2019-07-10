@@ -1,6 +1,6 @@
 <?php
 
-namespace WordPress\Themes\Ppfeufer\Addons;
+namespace WordPress\Themes\Ppfeufer\Libs\Addons;
 
 use WordPress\Themes\Ppfeufer;
 
