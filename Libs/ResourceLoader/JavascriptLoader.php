@@ -24,13 +24,6 @@ namespace WordPress\Themes\Ppfeufer\Libs\ResourceLoader;
  */
 class JavascriptLoader extends \WordPress\Themes\Ppfeufer\Libs\Singletons\AbstractSingleton implements \WordPress\Themes\Ppfeufer\Libs\Interfaces\AssetsInterface {
     /**
-     * Initialize the loader
-     */
-//    public function init() {
-//        \add_action('wp_enqueue_scripts', [$this, 'enqueue'], 99);
-//    }
-
-    /**
      * Load the JavaScript
      */
     public function enqueue() {
@@ -38,8 +31,15 @@ class JavascriptLoader extends \WordPress\Themes\Ppfeufer\Libs\Singletons\Abstra
          * Only in Frontend
          */
         if(!\is_admin()) {
+            // deregister certain js we have our own of
+            \wp_deregister_script('bootstrap');
+            \wp_deregister_script('bootstrap-js');
+            \wp_deregister_script('font-awesome');
+
+            // register our own js
+            \wp_enqueue_script('bootstrap-4-js', '//static.ppfeufer.de/libraries/bootstrap/4.3.1/js/bootstrap.min.js', ['jquery'], false, true);
+            \wp_enqueue_script('font-awesome-5-js', '//static.ppfeufer.de/libraries/font-awesome/5.9.0/js/all.min.js', [], false, true);
 //            if(\is_page(\WordPress\Plugin\EveOnlineFittingManager\Libs\PostType::getPosttypeSlug('fittings')) || \get_post_type() === 'fitting') {
-//                \wp_enqueue_script('bootstrap-js', \WordPress\Plugin\EveOnlineFittingManager\Helper\PluginHelper::getPluginUri('bootstrap/js/bootstrap.min.js'), ['jquery'], '', true);
 //                \wp_enqueue_script('bootstrap-toolkit-js', \WordPress\Plugin\EveOnlineFittingManager\Helper\PluginHelper::getPluginUri('bootstrap/bootstrap-toolkit/bootstrap-toolkit.min.js'), ['jquery', 'bootstrap-js'], '', true);
 //                \wp_enqueue_script('bootstrap-gallery-js', \WordPress\Plugin\EveOnlineFittingManager\Helper\PluginHelper::getPluginUri('js/jquery.bootstrap-gallery.min.js'), ['jquery', 'bootstrap-js'], '', true);
 //                \wp_enqueue_script('copy-to-clipboard-js', \WordPress\Plugin\EveOnlineFittingManager\Helper\PluginHelper::getPluginUri('js/copy-to-clipboard.min.js'), ['jquery'], '', true);

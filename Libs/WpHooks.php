@@ -48,7 +48,8 @@ class WpHooks {
      * Add our actions to WordPress
      */
     public function initActions() {
-        \add_action('wp_enqueue_scripts', [\WordPress\Themes\Ppfeufer\Libs\ResourceLoader\CssLoader::getInstance(), 'enqueue'], 99);
+        \add_action('wp_enqueue_scripts', [ResourceLoader\CssLoader::getInstance(), 'enqueue'], 99);
+        \add_action('wp_enqueue_scripts', [ResourceLoader\JavascriptLoader::getInstance(), 'enqueue'], 99);
     }
 
     /**
