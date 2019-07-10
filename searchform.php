@@ -17,22 +17,18 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+
 \defined('ABSPATH') or die();
 ?>
-<!DOCTYPE html>
-<html <?php \language_attributes(); ?>>
-    <head>
-        <meta charset="<?php \bloginfo('charset'); ?>">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="pingback" href="<?php \bloginfo('pingback_url'); ?>" />
-
-        <?php \wp_head(); ?>
-    </head>
-
-    <body <?php \body_class('no-js'); ?> id="pagetop">
-        <header>
-        </header>
-        <!-- End Header. Begin Template Content -->
-
-        <main>
+<form action="/" method="GET" id="s" role="search">
+	<div class="input-group">
+		<label class="sr-only" for="search"><?php echo \__('Search', 'eve-online') ?></label>
+		<input type="text" class="form-control" id="search" name="s" placeholder="<?php echo \__('Search', 'eve-online') ?>" value="<?php \the_search_query(); ?>">
+		<div class="input-group-btn">
+			<button type="submit" class="btn btn-default">
+				<span class="glyphicon glyphicon-search"></span>
+			</button>
+		</div>
+	</div>
+</form>

@@ -17,10 +17,39 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-defined('ABSPATH') or die();
+namespace WordPress\Themes\Ppfeufer;
 
-get_header();
+\defined('ABSPATH') or die();
+
+\get_header();
 ?>
 
+<div class="container container-main">
+    <!--<div class="row main-content">-->
+    <div class="main-content clearfix">
+        <div class="content-wrapper">
+            <div class="content content-inner content-index content-loop">
+                <?php
+                if(\have_posts()) {
+                    while(\have_posts()) {
+                        \the_post();
+
+                        \get_template_part('template-parts/content/content', \get_post_format());
+                    }
+                } else {
+                    \get_template_part( 'template-parts/content/content', 'none' );
+                }
+
+                if(\function_exists('\wp_pagenavi')) {
+                    \wp_pagenavi();
+                } else {
+//                    \WordPress\Themes\YulaiFederation\Helper\NavigationHelper::getInstance()->getContentNav('nav-below');
+                }
+                ?>
+            </div>
+        </div><!--/.col -->
+    </div> <!--/.row -->
+</div><!-- container -->
+
 <?php
-get_footer();
+\get_footer();
