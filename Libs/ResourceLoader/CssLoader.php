@@ -37,9 +37,10 @@ class CssLoader extends \WordPress\Themes\Ppfeufer\Libs\Singletons\AbstractSingl
 
             // register our own css
             \wp_enqueue_style('bootstrap-4', '//static.ppfeufer.de/libraries/bootstrap/4.3.1/css/bootstrap.min.css', [], false);
-            \wp_enqueue_style('ppfeufer-main', \get_theme_file_uri('/Assets/Css/main.css'), [], false);
+            \wp_enqueue_style('ppfeufer-main', \get_theme_file_uri('/Assets/Css/main.css'), ['bootstrap-4'], false);
             \wp_enqueue_style('ppfeufer-responsive', \get_theme_file_uri('/Assets/Css/responsive.css'), ['ppfeufer-main'], false);
             \wp_enqueue_style('ppfeufer-plugin-accommodations', \get_theme_file_uri('/Assets/Css/plugin-accommodations.css'), ['ppfeufer-main'], null);
+            \wp_enqueue_style('ppfeufer-gutenberg', \get_theme_file_uri('/Assets/Css/gutenberg.css'), ['ppfeufer-responsive'], false);
         }
 
         /**
