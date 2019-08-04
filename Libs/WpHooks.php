@@ -19,6 +19,9 @@
 
 namespace WordPress\Themes\Ppfeufer\Libs;
 
+use \WordPress\Themes\Ppfeufer\Libs\ResourceLoader\CssLoader;
+use \WordPress\Themes\Ppfeufer\Libs\ResourceLoader\JavascriptLoader;
+
 \defined('ABSPATH') or die();
 
 class WpHooks {
@@ -48,13 +51,19 @@ class WpHooks {
      * Add our actions to WordPress
      */
     public function initActions() {
-        \add_action('wp_enqueue_scripts', [ResourceLoader\CssLoader::getInstance(), 'enqueue'], 99);
-        \add_action('wp_enqueue_scripts', [ResourceLoader\JavascriptLoader::getInstance(), 'enqueue'], 99);
+        // Theme Setup
+        \add_action('after_setup_theme', [ThemeSetup::getInstance(), 'themeSetup']);
+
+        \add_action('wp_enqueue_scripts', [CssLoader::getInstance(), 'enqueue'], 99);
+        \add_action('wp_enqueue_scripts', [JavascriptLoader::getInstance(), 'enqueue'], 99);
+
+        \add_action('init', [ThemeFunctions::getInstance(), 'initWidgets']);
     }
 
     /**
      * Initializing our filter
      */
     public function initFilter() {
+        \add_filter('the_excerpt', [ThemeFunctions::getInstance(), 'addExcerptClass']);
     }
 }

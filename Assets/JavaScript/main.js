@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2019 ppfeufer
  *
  * This program is free software: you can redistribute it and/or modify
@@ -15,4 +15,29 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+/* Stuff without jQuery
+ ----------------------------------------------------------------------------- */
+/**
+ * Detecting JS Support
+ *
+ * @param {type} body
+ * @returns {undefined}
+ */
+(function(body) {
+    body.className = body.className.replace(/\bno-js\b/, 'js');
+})(document.body);
 
+/**
+ * Detecting mobile devices
+ *
+ * @returns {boolean} true/false
+ */
+function isMobile() {
+    return navigator.userAgent.match(/(iPhone|iPod|iPad|blackberry|android|Kindle|htc|lg|midp|mmp|mobile|nokia|opera mini|palm|pocket|psp|sgh|smartphone|symbian|treo mini|Playstation Portable|SonyEricsson|Samsung|MobileExplorer|PalmSource|Benq|Windows Phone|Windows Mobile|IEMobile|Windows CE|Nintendo Wii)/i);
+}
+
+/* Stuff that needs jQuery
+ ----------------------------------------------------------------------------- */
+jQuery(function($) {
+
+});

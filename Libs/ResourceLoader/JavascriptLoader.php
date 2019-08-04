@@ -27,6 +27,11 @@ class JavascriptLoader extends \WordPress\Themes\Ppfeufer\Libs\Singletons\Abstra
      * Load the JavaScript
      */
     public function enqueue() {
+        $extension = '.min.js';
+        if(\WP_DEBUG === true) {
+            $extension = '.js';
+        }
+
         /**
          * Only in Frontend
          */
@@ -37,8 +42,9 @@ class JavascriptLoader extends \WordPress\Themes\Ppfeufer\Libs\Singletons\Abstra
             \wp_deregister_script('font-awesome');
 
             // register our own js
-            \wp_enqueue_script('bootstrap-4-js', '//static.ppfeufer.de/libraries/bootstrap/4.3.1/js/bootstrap.min.js', ['jquery'], false, true);
-            \wp_enqueue_script('font-awesome-5-js', '//static.ppfeufer.de/libraries/font-awesome/5.9.0/js/all.min.js', [], false, true);
+            \wp_enqueue_script('bootstrap-js', '//static.ppfeufer.de/libraries/bootstrap/4.3.1/js/bootstrap' . $extension, ['jquery'], false, true);
+            \wp_enqueue_script('font-awesome-js', '//static.ppfeufer.de/libraries/font-awesome/5.9.0/js/all' . $extension, [], false, true);
+            \wp_enqueue_script('ppfeufer-main', \get_theme_file_uri('/Assets/JavaScript/main' . $extension), ['jquery'], false, true);
 //            \wp_localize_script('eve-online-fitting-manager-js', 'fittingManagerL10n', $this->getJavaScriptTranslations());
         }
     }
@@ -53,14 +59,14 @@ class JavascriptLoader extends \WordPress\Themes\Ppfeufer\Libs\Singletons\Abstra
 //            'copyToClipboard' => [
 //                'eft' => [
 //                    'text' => [
-//                        'success' => \__('EFT data successfully copied', 'eve-online-fitting-manager'),
-//                        'error' => \__('Something went wrong. Nothing copied. Maybe your browser doesn\'t support this function.', 'eve-online-fitting-manager')
+//                        'success' => \__('EFT data successfully copied', 'ppfeufer'),
+//                        'error' => \__('Something went wrong. Nothing copied. Maybe your browser doesn\'t support this function.', 'ppfeufer')
 //                    ]
 //                ],
 //                'permalink' => [
 //                    'text' => [
-//                        'success' => \__('Permalink successfully copied', 'eve-online-fitting-manager'),
-//                        'error' => \__('Something went wrong. Nothing copied. Maybe your browser doesn\'t support this function.', 'eve-online-fitting-manager')
+//                        'success' => \__('Permalink successfully copied', 'ppfeufer'),
+//                        'error' => \__('Something went wrong. Nothing copied. Maybe your browser doesn\'t support this function.', 'ppfeufer')
 //                    ]
 //                ]
 //            ],

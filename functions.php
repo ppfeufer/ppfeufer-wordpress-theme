@@ -25,13 +25,32 @@
 
 namespace WordPress\Themes\Ppfeufer;
 
+use \WordPress\Themes\Ppfeufer\Libs\Singletons\AbstractSingleton;
+use \WordPress\Themes\Ppfeufer\Libs\WpHooks;
+
 require_once(\trailingslashit(\dirname(__FILE__)) . 'inc/autoloader.php');
 
-class Theme {
+/**
+ * Maximal content width
+ */
+if(!isset($content_width)) {
+    $content_width = 1680;
+}
+
+/**
+ * Theme main class
+ */
+class Theme extends AbstractSingleton {
+    /**
+     * Initialize all the important stuff
+     */
     public function init() {
-        new Libs\WpHooks;
+        new WpHooks;
     }
 }
 
-$ppfeuferTheme = new Theme;
+/**
+ * Start the show
+ */
+$ppfeuferTheme = \WordPress\Themes\Ppfeufer\Theme::getInstance();
 $ppfeuferTheme->init();

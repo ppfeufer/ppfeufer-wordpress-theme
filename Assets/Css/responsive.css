@@ -14,8 +14,27 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-/* 
-    Created on : 10.07.2019, 11:14:12
+/*
+    Created on : 10.07.2019, 11:14:1
     Author     : ppfeufer
 */
 
+@media (min-width: 82.5em) {
+    body {
+        max-width: 120rem;
+        margin: 0 auto;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 1680px;
+        max-width: 105rem;
+    }
+}
+
+@media (min-width: 120rem) {
+    .container {
+        width: 100%;
+        max-width: 100%;
+    }
+}

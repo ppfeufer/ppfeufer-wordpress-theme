@@ -4,8 +4,10 @@
 
 $options = '';
 ?>
-        </main>
-        <footer>
+            </main>
+        </div>
+
+        <footer class="page-footer">
         </footer>
         <?php \wp_footer(); ?>
     </body>

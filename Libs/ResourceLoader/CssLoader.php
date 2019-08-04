@@ -27,6 +27,11 @@ class CssLoader extends \WordPress\Themes\Ppfeufer\Libs\Singletons\AbstractSingl
      * Load the styles
      */
     public function enqueue() {
+        $extension = '.min.css';
+        if(\WP_DEBUG === true) {
+            $extension = '.css';
+        }
+
         /**
          * only in frontend
          */
@@ -36,11 +41,11 @@ class CssLoader extends \WordPress\Themes\Ppfeufer\Libs\Singletons\AbstractSingl
             \wp_deregister_style('bootstrap');
 
             // register our own css
-            \wp_enqueue_style('bootstrap-4', '//static.ppfeufer.de/libraries/bootstrap/4.3.1/css/bootstrap.min.css', [], false);
-            \wp_enqueue_style('ppfeufer-main', \get_theme_file_uri('/Assets/Css/main.css'), ['bootstrap-4'], false);
-            \wp_enqueue_style('ppfeufer-responsive', \get_theme_file_uri('/Assets/Css/responsive.css'), ['ppfeufer-main'], false);
-            \wp_enqueue_style('ppfeufer-plugin-accommodations', \get_theme_file_uri('/Assets/Css/plugin-accommodations.css'), ['ppfeufer-main'], null);
-            \wp_enqueue_style('ppfeufer-gutenberg', \get_theme_file_uri('/Assets/Css/gutenberg.css'), ['ppfeufer-responsive'], false);
+            \wp_enqueue_style('bootstrap', '//static.ppfeufer.de/libraries/bootstrap/4.3.1/css/bootstrap' . $extension, [], false);
+            \wp_enqueue_style('ppfeufer-main', \get_theme_file_uri('/Assets/Css/main' . $extension), ['bootstrap'], false);
+            \wp_enqueue_style('ppfeufer-responsive', \get_theme_file_uri('/Assets/Css/responsive' . $extension), ['ppfeufer-main'], false);
+            \wp_enqueue_style('ppfeufer-plugin-accommodations', \get_theme_file_uri('/Assets/Css/plugin-accommodations' . $extension), ['ppfeufer-main'], null);
+            \wp_enqueue_style('ppfeufer-gutenberg', \get_theme_file_uri('/Assets/Css/gutenberg' . $extension), ['ppfeufer-responsive'], false);
         }
 
         /**

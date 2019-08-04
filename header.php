@@ -31,8 +31,14 @@
     </head>
 
     <body <?php \body_class('no-js'); ?> id="pagetop">
-        <header>
+        <header class="page-header clearfix">
+
         </header>
+
+        <div class="page-stage clearfix">
+
+        </div>
         <!-- End Header. Begin Template Content -->
 
-        <main>
+        <div class="page-content wrap-outer clearfix">
+            <main id="content" class="content content-main wrap-inner clearfix">
