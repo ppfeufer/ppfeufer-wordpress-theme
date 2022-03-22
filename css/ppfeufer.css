@@ -2,6 +2,15 @@
  * Style for https://ppfeufer.de
  */
 
+/* Remove header from home page */
+article#post-29952 header {
+    display: none;
+}
+
+article#post-29952 .entry-content {
+    margin-top: 24px;
+}
+
 .prose {
     max-width: 120ch;
 }
