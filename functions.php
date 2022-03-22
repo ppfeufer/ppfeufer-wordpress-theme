@@ -1,9 +1,25 @@
 <?php
 /**
- * Our Theme's namespace to keep the global namespace clear
+ * Enqueue the child themes CSS
  *
- * WordPress\Themes\YulaiFederation
+ * @return void
  */
-namespace WordPress\Themes\Ppfeufer;
+function ppfeufer_enqueue_styles() {
+    wp_enqueue_style('ppfeufer-theme-style', get_theme_file_uri('/css/ppfeufer.min.css'), ['wp-moose-style']);
+}
 
-require_once(\trailingslashit(\dirname(__FILE__)) . 'inc/autoloader.php');
+add_action('wp_enqueue_scripts', 'ppfeufer_enqueue_styles');
+
+
+/**
+ * Disable footer credits
+ *
+ * @return void
+ */
+function wp_moose_footer_credits() {
+    if (is_child_theme()) {
+        return;
+    }
+}
+
+add_action('wp_moose_action_footer', 'wp_moose_footer_copyright', 20);

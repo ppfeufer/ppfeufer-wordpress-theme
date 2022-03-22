@@ -1,0 +1,4 @@
+/*!
+ * Style for https://ppfeufer.de
+ */
+.prose{max-width:120ch}.max-w-prose{max-width:110ch}@media (min-width:992px){.no-sidebar .prose.prose-moose .alignwide{margin:40px -5%!important;max-width:110%;width:110%}}
