@@ -29,7 +29,7 @@ function ppfeufer_favicon_ico() {
     exit;
 }
 
-add_action( 'do_faviconico', 'ppfeufer_favicon_ico');
+add_action('do_faviconico', 'ppfeufer_favicon_ico');
 
 
 /**
