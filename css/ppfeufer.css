@@ -2,15 +2,8 @@
  * Style for https://ppfeufer.de
  */
 
-/* Remove header from home page */
-article#post-29952 header {
-    display: none;
-}
-
-article#post-29952 .entry-content {
-    margin-top: 24px;
-}
-
+/* Override parent theme styles
+--------------------------------------------------------------------------------------------------------------------- */
 .prose {
     max-width: 120ch;
 }
@@ -19,6 +12,37 @@ article#post-29952 .entry-content {
     max-width: 110ch;
 }
 
+/* Remove header from home page
+--------------------------------------------------------------------------------------------------------------------- */
+article#post-29952 header {
+    display: none;
+}
+
+article#post-29952 .entry-content {
+    margin-top: 24px;
+}
+
+/* Footer should always be at the bottom
+--------------------------------------------------------------------------------------------------------------------- */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+body > div.container {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+/* Responsive
+--------------------------------------------------------------------------------------------------------------------- */
 @media (min-width: 992px) {
     .no-sidebar .prose.prose-moose .alignwide {
         margin: 40px -5% !important;
