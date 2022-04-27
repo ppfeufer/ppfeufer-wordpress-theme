@@ -12,6 +12,10 @@
     max-width: 110ch;
 }
 
+a:focus, button:focus, .menu-links.menu-vertical .menu-item > a:focus, .menu-links > .menu-item > a:focus {
+    outline-style: none;
+}
+
 /* Remove header from home page
 --------------------------------------------------------------------------------------------------------------------- */
 article#post-29952 header {
