@@ -1,4 +1,7 @@
 <?php
+
+namespace WordPress\Themes\Ppfeufer;
+
 /**
  * Enqueue the child themes CSS
  *
@@ -6,10 +9,12 @@
  */
 function ppfeufer_enqueue_styles() {
     wp_enqueue_style('fira-code', get_theme_file_uri('/css/libs/fira-code/6.2.0/fira_code.min.css'));
-    wp_enqueue_style('ppfeufer-theme-style', get_theme_file_uri('/css/ppfeufer.min.css'), ['fira-code', 'wp-moose-style']);
+    wp_enqueue_style(
+        'ppfeufer-theme-style', get_theme_file_uri('/css/ppfeufer.min.css'), ['fira-code', 'wp-moose-style']
+    );
 }
 
-add_action('wp_enqueue_scripts', 'ppfeufer_enqueue_styles');
+add_action('wp_enqueue_scripts', '\\WordPress\Themes\Ppfeufer\ppfeufer_enqueue_styles');
 
 /**
  * Enqueue admin CSS
@@ -18,10 +23,12 @@ add_action('wp_enqueue_scripts', 'ppfeufer_enqueue_styles');
  */
 function ppfeufer_admin_style() {
     wp_enqueue_style('fira-code', get_theme_file_uri('/css/libs/fira-code/6.2.0/fira_code.min.css'));
-    wp_enqueue_style('ppfeufer-admin-style', get_theme_file_uri('/css/ppfeufer-admin-style.min.css'), ['fira-code']);
+    wp_enqueue_style(
+        'ppfeufer-admin-style', get_theme_file_uri('/css/ppfeufer-admin-style.min.css'), ['fira-code']
+    );
 }
 
-add_action('admin_enqueue_scripts', 'ppfeufer_admin_style');
+add_action('admin_enqueue_scripts', '\\WordPress\Themes\Ppfeufer\ppfeufer_admin_style');
 
 
 /**
@@ -42,7 +49,7 @@ function ppfeufer_favicon_ico() {
     exit;
 }
 
-add_action('do_faviconico', 'ppfeufer_favicon_ico');
+add_action('do_faviconico', '\\WordPress\Themes\Ppfeufer\ppfeufer_favicon_ico');
 
 
 /**
@@ -63,7 +70,7 @@ function ppfeufer_favicons() {
     echo '<meta name="theme-color" content="#ffffff">' . "\n";
 }
 
-add_action('wp_head', 'ppfeufer_favicons');
+add_action('wp_head', '\\WordPress\Themes\Ppfeufer\ppfeufer_favicons');
 
 
 /**
@@ -71,10 +78,10 @@ add_action('wp_head', 'ppfeufer_favicons');
  *
  * @return void
  */
-function wp_moose_footer_credits() {
+function disable_wp_moose_footer_credits() {
     if (is_child_theme()) {
         return;
     }
 }
 
-add_action('wp_moose_action_footer', 'wp_moose_footer_copyright', 20);
+add_action('wp_moose_action_footer', '\\WordPress\Themes\Ppfeufer\disable_wp_moose_footer_credits', 20);
