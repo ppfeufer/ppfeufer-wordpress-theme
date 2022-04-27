@@ -5,10 +5,23 @@
  * @return void
  */
 function ppfeufer_enqueue_styles() {
-    wp_enqueue_style('ppfeufer-theme-style', get_theme_file_uri('/css/ppfeufer.min.css'), ['wp-moose-style']);
+    wp_enqueue_style('fira-code', get_theme_file_uri('/css/libs/fira-code/6.2.0/fira_code.min.css'));
+    wp_enqueue_style('ppfeufer-theme-style', get_theme_file_uri('/css/ppfeufer.min.css'), ['fira-code', 'wp-moose-style']);
 }
 
 add_action('wp_enqueue_scripts', 'ppfeufer_enqueue_styles');
+
+/**
+ * Enqueue admin CSS
+ *
+ * @return void
+ */
+function ppfeufer_admin_style() {
+    wp_enqueue_style('fira-code', get_theme_file_uri('/css/libs/fira-code/6.2.0/fira_code.min.css'));
+    wp_enqueue_style('ppfeufer-admin-style', get_theme_file_uri('/css/ppfeufer-admin-style.min.css'), ['fira-code']);
+}
+
+add_action('admin_enqueue_scripts', 'ppfeufer_admin_style');
 
 
 /**

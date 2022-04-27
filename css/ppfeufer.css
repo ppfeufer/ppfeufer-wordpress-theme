@@ -16,6 +16,12 @@ a:focus, button:focus, .menu-links.menu-vertical .menu-item > a:focus, .menu-lin
     outline-style: none;
 }
 
+/* Syntax Highlight
+--------------------------------------------------------------------------------------------------------------------- */
+code, .syntaxhighlight {
+    font-family: 'Fira Code', monospace;
+}
+
 /* Remove header from home page
 --------------------------------------------------------------------------------------------------------------------- */
 article#post-29952 header {

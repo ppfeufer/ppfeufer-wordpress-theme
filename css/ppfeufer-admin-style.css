@@ -1,0 +1,6 @@
+/* Syntax Highlight
+--------------------------------------------------------------------------------------------------------------------- */
+code, .syntaxhighlight, .codecolorer, .codecolorer *, .codecolorer-container, .codecolorer-container * {
+    font: 0.9rem/1.3rem 'Fira Code', monospace !important;
+    /*font-family: 'Fira Code', monospace !important;*/
+}
