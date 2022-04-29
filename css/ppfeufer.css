@@ -16,18 +16,6 @@ a:focus, button:focus, .menu-links.menu-vertical .menu-item > a:focus, .menu-lin
     outline-style: none;
 }
 
-/* Syntax Highlight
---------------------------------------------------------------------------------------------------------------------- */
-code, .syntaxhighlight, .codecolorer, .codecolorer *, .codecolorer-container, .codecolorer-container * {
-    font: 0.9rem/1.3rem 'Fira Code', monospace !important;
-}
-
-@supports (font-variation-settings: normal) {
-    code, .syntaxhighlight, .codecolorer, .codecolorer *, .codecolorer-container, .codecolorer-container * {
-        font: 0.9rem/1.3rem 'Fira Code VF', monospace !important;
-    }
-}
-
 /* Remove header from home page
 --------------------------------------------------------------------------------------------------------------------- */
 article#post-29952 header {

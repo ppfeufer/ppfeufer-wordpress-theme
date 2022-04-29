@@ -21,6 +21,12 @@ function ppfeufer_enqueue_styles() {
         ['fira-code', 'wp-moose-style'],
         wp_get_theme()->get('Version')
     );
+    wp_enqueue_style(
+        'ppfeufer-plugin-styles',
+        get_theme_file_uri('/css/plugin-styles.min.css'),
+        ['fira-code', 'wp-moose-style'],
+        wp_get_theme()->get('Version')
+    );
 }
 
 add_action('wp_enqueue_scripts', '\\WordPress\Themes\Ppfeufer\ppfeufer_enqueue_styles');
