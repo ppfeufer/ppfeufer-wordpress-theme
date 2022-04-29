@@ -6,17 +6,19 @@
     border-right: 1px solid rgb(192, 192, 192) !important;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    padding-right: 1.5rem;
 }
 
 .codecolorer-container table td.line-numbers {
-    padding: 5px 1.5rem 5px 5px !important;
     background-color: transparent !important;
     border-right: none !important;
 }
 
 .codecolorer-container, .codecolorer {
     background-color: transparent !important;
+}
+
+.codecolorer {
+    padding: 5px 1.5rem !important;
 }
 
 /* Syntax Highlight and code elements
