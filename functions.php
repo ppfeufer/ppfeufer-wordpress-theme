@@ -2,7 +2,6 @@
 
 namespace WordPress\Themes\Ppfeufer;
 
-
 /**
  * Enqueue the child themes CSS
  *
@@ -53,7 +52,6 @@ function ppfeufer_admin_style() {
 
 add_action('admin_enqueue_scripts', '\\WordPress\Themes\Ppfeufer\ppfeufer_admin_style');
 
-
 /**
  * Redirect to the right favicon.ico
  *
@@ -74,7 +72,6 @@ function ppfeufer_favicon_ico() {
 
 add_action('do_faviconico', '\\WordPress\Themes\Ppfeufer\ppfeufer_favicon_ico');
 
-
 /**
  * Adding favicons
  *
@@ -94,7 +91,6 @@ function ppfeufer_favicons() {
 }
 
 add_action('wp_head', '\\WordPress\Themes\Ppfeufer\ppfeufer_favicons');
-
 
 /**
  * Disable footer credits
