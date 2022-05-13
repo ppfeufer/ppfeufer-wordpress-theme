@@ -17,17 +17,6 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-namespace WordPress\Themes\Ppfeufer;
-
-use function add_action;
-use function get_site_icon_url;
-use function get_stylesheet_directory_uri;
-use function get_theme_file_uri;
-use function is_child_theme;
-use function wp_enqueue_style;
-use function wp_get_theme;
-use function wp_redirect;
-
 /**
  * Enqueue the child themes CSS
  *
@@ -54,7 +43,7 @@ function ppfeufer_enqueue_styles() {
     );
 }
 
-add_action('wp_enqueue_scripts', '\\WordPress\Themes\Ppfeufer\ppfeufer_enqueue_styles');
+add_action('wp_enqueue_scripts', 'ppfeufer_enqueue_styles');
 
 /**
  * Enqueue admin CSS
@@ -76,7 +65,7 @@ function ppfeufer_admin_style() {
     );
 }
 
-add_action('admin_enqueue_scripts', '\\WordPress\Themes\Ppfeufer\ppfeufer_admin_style');
+add_action('admin_enqueue_scripts', 'ppfeufer_admin_style');
 
 /**
  * Redirect to the right favicon.ico
@@ -96,7 +85,7 @@ function ppfeufer_favicon_ico() {
     exit;
 }
 
-add_action('do_faviconico', '\\WordPress\Themes\Ppfeufer\ppfeufer_favicon_ico');
+add_action('do_faviconico', 'ppfeufer_favicon_ico');
 
 /**
  * Adding favicons
@@ -116,17 +105,17 @@ function ppfeufer_favicons() {
     echo '<meta name="theme-color" content="#ffffff">' . "\n";
 }
 
-add_action('wp_head', '\\WordPress\Themes\Ppfeufer\ppfeufer_favicons');
+add_action('wp_head', 'ppfeufer_favicons');
 
 /**
  * Disable footer credits
  *
- * @return void
+ * @return string
  */
-function disable_wp_moose_footer_credits() {
+function wp_moose_footer_credits(): string {
     if (is_child_theme()) {
-        return;
+        return '';
     }
 }
 
-add_action('wp_moose_action_footer', '\\WordPress\Themes\Ppfeufer\disable_wp_moose_footer_credits', 20);
+add_action('wp_moose_action_footer', 'wp_moose_footer_credits');
