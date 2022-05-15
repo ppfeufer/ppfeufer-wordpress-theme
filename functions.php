@@ -1,15 +1,71 @@
 <?php
+
+/*
+ * Copyright (C) 2022 p.pfeufer
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 /**
  * Enqueue the child themes CSS
  *
  * @return void
  */
 function ppfeufer_enqueue_styles() {
-    wp_enqueue_style('ppfeufer-theme-style', get_theme_file_uri('/css/ppfeufer.min.css'), ['wp-moose-style']);
+    wp_enqueue_style(
+        'fira-code',
+        get_theme_file_uri('/css/libs/fira-code/6.2.0/fira_code.min.css'),
+        [],
+        wp_get_theme()->get('Version')
+    );
+    wp_enqueue_style(
+        'ppfeufer-theme-style',
+        get_theme_file_uri('/css/ppfeufer.min.css'),
+        ['fira-code', 'wp-moose-style'],
+        wp_get_theme()->get('Version')
+    );
+    wp_enqueue_style(
+        'ppfeufer-plugin-styles',
+        get_theme_file_uri('/css/plugin-styles.min.css'),
+        ['fira-code', 'wp-moose-style'],
+        wp_get_theme()->get('Version')
+    );
 }
 
 add_action('wp_enqueue_scripts', 'ppfeufer_enqueue_styles');
 
+/**
+ * Enqueue admin CSS
+ *
+ * @return void
+ */
+function ppfeufer_admin_style() {
+    wp_enqueue_style(
+        'fira-code',
+        get_theme_file_uri('/css/libs/fira-code/6.2.0/fira_code.min.css'),
+        [],
+        wp_get_theme()->get('Version')
+    );
+    wp_enqueue_style(
+        'ppfeufer-admin-style',
+        get_theme_file_uri('/css/ppfeufer-admin-style.min.css'),
+        ['fira-code'],
+        wp_get_theme()->get('Version')
+    );
+}
+
+add_action('admin_enqueue_scripts', 'ppfeufer_admin_style');
 
 /**
  * Redirect to the right favicon.ico
@@ -31,7 +87,6 @@ function ppfeufer_favicon_ico() {
 
 add_action('do_faviconico', 'ppfeufer_favicon_ico');
 
-
 /**
  * Adding favicons
  *
@@ -52,16 +107,15 @@ function ppfeufer_favicons() {
 
 add_action('wp_head', 'ppfeufer_favicons');
 
-
 /**
  * Disable footer credits
  *
- * @return void
+ * @return string
  */
-function wp_moose_footer_credits() {
+function wp_moose_footer_credits(): string {
     if (is_child_theme()) {
-        return;
+        return '';
     }
 }
 
-add_action('wp_moose_action_footer', 'wp_moose_footer_copyright', 20);
+add_action('wp_moose_action_footer', 'wp_moose_footer_credits');

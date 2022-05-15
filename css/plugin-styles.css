@@ -1,0 +1,34 @@
+/* CodeColorer
+--------------------------------------------------------------------------------------------------------------------- */
+.codecolorer-container {
+    border: none !important;
+    border-left: 1px solid rgb(192, 192, 192) !important;
+    border-right: 1px solid rgb(192, 192, 192) !important;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.codecolorer-container table td.line-numbers {
+    background-color: transparent !important;
+    border-right: none !important;
+}
+
+.codecolorer-container, .codecolorer {
+    background-color: transparent !important;
+}
+
+div.codecolorer {
+    padding: 5px 1.5rem !important;
+}
+
+/* Syntax Highlight and code elements
+--------------------------------------------------------------------------------------------------------------------- */
+code, .syntaxhighlight, .codecolorer, .codecolorer *, .codecolorer-container, .codecolorer-container * {
+    font: 0.9rem/1.3rem 'Fira Code', monospace !important;
+}
+
+@supports (font-variation-settings: normal) {
+    code, .syntaxhighlight, .codecolorer, .codecolorer *, .codecolorer-container, .codecolorer-container * {
+        font: 0.9rem/1.3rem 'Fira Code VF', monospace !important;
+    }
+}

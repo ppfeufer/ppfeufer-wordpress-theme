@@ -12,6 +12,21 @@
     max-width: 110ch;
 }
 
+a:focus, button:focus, .menu-links.menu-vertical .menu-item > a:focus, .menu-links > .menu-item > a:focus {
+    outline-style: none;
+}
+
+/* Sticky primary sidebar
+--------------------------------------------------------------------------------------------------------------------- */
+body > div.container {
+    align-items: flex-start;
+}
+
+.sidebar-primary {
+    position: sticky;
+    top: 5rem;
+}
+
 /* Remove header from home page
 --------------------------------------------------------------------------------------------------------------------- */
 article#post-29952 header {
