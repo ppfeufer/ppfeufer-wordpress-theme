@@ -70,7 +70,7 @@ add_action('admin_enqueue_scripts', 'ppfeufer_admin_style');
 /**
  * Redirect to the right favicon.ico
  *
- * WordPress redirects to a default favicon (admin_url('images/w-logo-blue.png')) since v5.5, which is not what I want
+ * WordPress redirects to a default favicon (admin_url('images/w-logo-blue.png')) since v5.5, which is not what I want,
  * so I have to do it myself here ...
  *
  * https://ppfeufer.de/favicon.ico will be redirected to get_theme_file_uri('/favicons/favicon.ico')
@@ -113,9 +113,7 @@ add_action('wp_head', 'ppfeufer_favicons');
  * @return string
  */
 function wp_moose_footer_credits(): string {
-    if (is_child_theme()) {
-        return '';
-    }
+    return '';
 }
 
-add_action('wp_moose_action_footer', 'wp_moose_footer_credits');
+add_action('wp_moose_action_footer', 'wp_moose_footer_credits', 30);
