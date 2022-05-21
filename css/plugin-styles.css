@@ -1,3 +1,15 @@
+/* Dhortcode [divider] (Theme own shortcode)
+--------------------------------------------------------------------------------------------------------------------- */
+.divider {
+    --tw-border-opacity: 1;
+    border-bottom-width: 1px;
+    border-color: rgba(var(--wp-moose-base-100), var(--tw-border-opacity));
+    border-top-width: 1px;
+    clear: both;
+    display: block;
+    margin: 1rem auto;
+}
+
 /* CodeColorer
 --------------------------------------------------------------------------------------------------------------------- */
 .codecolorer-container {

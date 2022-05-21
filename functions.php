@@ -17,6 +17,12 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+//namespace WordPress\Themes\Ppfeufer;
+
+require_once(\trailingslashit(__DIR__) . 'inc/autoloader.php');
+
+new \WordPress\Themes\Ppfeufer\Plugins\Shortcodes;
+
 /**
  * Enqueue the child themes CSS
  *
