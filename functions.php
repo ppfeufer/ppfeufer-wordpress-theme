@@ -19,16 +19,18 @@
 
 //namespace WordPress\Themes\Ppfeufer;
 
-require_once(\trailingslashit(__DIR__) . 'inc/autoloader.php');
+use WordPress\Themes\Ppfeufer\Plugins\Shortcodes;
 
-new \WordPress\Themes\Ppfeufer\Plugins\Shortcodes;
+require_once(trailingslashit(__DIR__) . 'inc/autoloader.php');
+
+new Shortcodes;
 
 /**
  * Enqueue the child themes CSS
  *
  * @return void
  */
-function ppfeufer_enqueue_styles() {
+function ppfeufer_enqueue_styles(): void {
     wp_enqueue_style(
         'fira-code',
         get_theme_file_uri('/css/libs/fira-code/6.2.0/fira_code.min.css'),
@@ -56,7 +58,7 @@ add_action('wp_enqueue_scripts', 'ppfeufer_enqueue_styles');
  *
  * @return void
  */
-function ppfeufer_admin_style() {
+function ppfeufer_admin_style(): void {
     wp_enqueue_style(
         'fira-code',
         get_theme_file_uri('/css/libs/fira-code/6.2.0/fira_code.min.css'),
@@ -85,7 +87,7 @@ add_action('admin_enqueue_scripts', 'ppfeufer_admin_style');
  *
  * @return void
  */
-function ppfeufer_favicon_ico() {
+function ppfeufer_favicon_ico(): void {
     wp_redirect(get_site_icon_url(32, get_theme_file_uri('/favicons/favicon.ico')));
 
     exit;
@@ -98,7 +100,7 @@ add_action('do_faviconico', 'ppfeufer_favicon_ico');
  *
  * @return void
  */
-function ppfeufer_favicons() {
+function ppfeufer_favicons(): void {
     echo '<link rel="apple-touch-icon" sizes="180x180" href="' . get_stylesheet_directory_uri() . '/favicons/apple-touch-icon.png">' . "\n";
     echo '<link rel="icon" type="image/png" sizes="32x32" href="' . get_stylesheet_directory_uri() . '/favicons/favicon-32x32.png">' . "\n";
     echo '<link rel="icon" type="image/png" sizes="192x192" href="' . get_stylesheet_directory_uri() . '/favicons/android-chrome-192x192.png">' . "\n";
@@ -123,3 +125,41 @@ function wp_moose_footer_credits(): string {
 }
 
 add_action('wp_moose_action_footer', 'wp_moose_footer_credits', 30);
+
+/**
+ * Remove website field from comment form to prevent backlink spam
+ *
+ * @param array $fields
+ * @return array
+ */
+function remove_website_field_from_comment_form(array $fields): array {
+    if (isset($fields['url'])) {
+        unset($fields['url']);
+    }
+
+    return $fields;
+}
+
+add_filter('comment_form_default_fields', 'remove_website_field_from_comment_form');
+
+/**
+ * Change the label text for the cookie consent checkbox in comment form
+ *
+ * @param array $fields
+ * @return array
+ */
+function comment_form_change_cookie_consent_checkbox_label(array $fields): array {
+    if (!is_admin()) {
+        $commenter = wp_get_current_commenter();
+        $consent = empty($commenter['comment_author_email']) ? '' : ' checked="checked"';
+        $consentText = __('Save my name and email in this browser for the next time I comment.', 'ppfeufer');
+        $fields['cookies'] = '<p class="comment-form-cookies-consent">
+                                <input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"' . $consent . ' />
+                                <label for="wp-comment-cookies-consent">' . $consentText . '</label>
+                            </p>';
+    }
+
+    return $fields;
+}
+
+add_filter('comment_form_default_fields', 'comment_form_change_cookie_consent_checkbox_label');
