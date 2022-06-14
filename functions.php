@@ -154,7 +154,7 @@ function comment_form_change_cookie_consent_checkbox_label(array $fields): array
         $consent = empty($commenter['comment_author_email']) ? '' : ' checked="checked"';
         $consentText = __('Save my name and email in this browser for the next time I comment.', 'ppfeufer');
         $fields['cookies'] = '<p class="comment-form-cookies-consent">
-                                <input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"' . $consent . ' />
+                                <input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"' . $consent . '>
                                 <label for="wp-comment-cookies-consent">' . $consentText . '</label>
                             </p>';
     }
