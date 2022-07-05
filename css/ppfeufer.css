@@ -15,7 +15,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    text-shadow: 1px 1px 5px rgb(163 163 163);
+    text-shadow: 1px 1px 1px rgb(163 163 163);
 }
 
 body > div.container {
