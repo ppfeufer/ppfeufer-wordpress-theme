@@ -32,14 +32,48 @@ div.codecolorer {
     padding: 5px 1.5rem !important;
 }
 
+/* Syntax Highlighter Evolved
+--------------------------------------------------------------------------------------------------------------------- */
+.wp-block-syntaxhighlighter-code {
+    border: none !important;
+    border-left: 1px solid rgb(192 192 192) !important;
+    border-right: 1px solid rgb(192 192 192) !important;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.wp-block-syntaxhighlighter-code .syntaxhighlighter .gutter {
+    color: rgb(136 136 136) !important;
+}
+
+.wp-block-syntaxhighlighter-code .syntaxhighlighter .gutter .line {
+    border-right: none !important;
+}
+
 /* Syntax Highlight and code elements
 --------------------------------------------------------------------------------------------------------------------- */
-code, .syntaxhighlight, .codecolorer, .codecolorer *, .codecolorer-container, .codecolorer-container * {
+code, .syntaxhighlight, .codecolorer, .codecolorer *, .codecolorer-container,
+.codecolorer-container *, .wp-block-syntaxhighlighter-code, .wp-block-syntaxhighlighter-code .syntaxhighlighter a,
+.wp-block-syntaxhighlighter-code .syntaxhighlighter div, .wp-block-syntaxhighlighter-code .syntaxhighlighter code,
+.wp-block-syntaxhighlighter-code .syntaxhighlighter table, .wp-block-syntaxhighlighter-code .syntaxhighlighter table td,
+.wp-block-syntaxhighlighter-code .syntaxhighlighter table tr, .wp-block-syntaxhighlighter-code .syntaxhighlighter table tbody,
+.wp-block-syntaxhighlighter-code .syntaxhighlighter table thead, .wp-block-syntaxhighlighter-code .syntaxhighlighter table caption,
+.wp-block-syntaxhighlighter-code .syntaxhighlighter textarea {
     font: 0.9rem/1.3rem 'Fira Code', monospace !important;
 }
 
 @supports (font-variation-settings: normal) {
-    code, .syntaxhighlight, .codecolorer, .codecolorer *, .codecolorer-container, .codecolorer-container * {
+    code, .syntaxhighlight, .codecolorer, .codecolorer *, .codecolorer-container,
+    .codecolorer-container *, .wp-block-syntaxhighlighter-code, .wp-block-syntaxhighlighter-code .syntaxhighlighter a,
+    .wp-block-syntaxhighlighter-code .syntaxhighlighter div, .wp-block-syntaxhighlighter-code .syntaxhighlighter code,
+    .wp-block-syntaxhighlighter-code .syntaxhighlighter table, .wp-block-syntaxhighlighter-code .syntaxhighlighter table td,
+    .wp-block-syntaxhighlighter-code .syntaxhighlighter table tr, .wp-block-syntaxhighlighter-code .syntaxhighlighter table tbody,
+    .wp-block-syntaxhighlighter-code .syntaxhighlighter table thead, .wp-block-syntaxhighlighter-code .syntaxhighlighter table caption,
+    .wp-block-syntaxhighlighter-code .syntaxhighlighter textarea {
         font: 0.9rem/1.3rem 'Fira Code VF', monospace !important;
     }
+}
+
+.prose .wp-block-syntaxhighlighter-code code:after, .prose .wp-block-syntaxhighlighter-code code:before {
+    content: "";
 }
