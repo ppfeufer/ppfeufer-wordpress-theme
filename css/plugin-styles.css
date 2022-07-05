@@ -42,12 +42,17 @@ div.codecolorer {
     padding-bottom: 0.5rem;
 }
 
+.wp-block-syntaxhighlighter-code .syntaxhighlighter {
+    margin: 0 !important;
+}
+
 .wp-block-syntaxhighlighter-code .syntaxhighlighter .gutter {
     color: rgb(136 136 136) !important;
 }
 
 .wp-block-syntaxhighlighter-code .syntaxhighlighter .gutter .line {
     border-right: none !important;
+    padding: 0 0.5em 0 0.5em !important;
 }
 
 /* Syntax Highlight and code elements
