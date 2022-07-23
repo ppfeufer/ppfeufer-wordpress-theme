@@ -38,15 +38,21 @@ function ppfeufer_enqueue_styles(): void {
         wp_get_theme()->get('Version')
     );
     wp_enqueue_style(
+        'ppfeufer-theme-style-defaults',
+        get_theme_file_uri('/css/ppfeufer-defaults.min.css'),
+        ['fira-code', 'wp-moose-style'],
+        wp_get_theme()->get('Version')
+    );
+    wp_enqueue_style(
         'ppfeufer-theme-style',
         get_theme_file_uri('/css/ppfeufer.min.css'),
-        ['fira-code', 'wp-moose-style'],
+        ['ppfeufer-theme-style-defaults'],
         wp_get_theme()->get('Version')
     );
     wp_enqueue_style(
         'ppfeufer-plugin-styles',
         get_theme_file_uri('/css/plugin-styles.min.css'),
-        ['fira-code', 'wp-moose-style'],
+        ['ppfeufer-theme-style'],
         wp_get_theme()->get('Version')
     );
 }

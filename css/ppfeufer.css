@@ -2,69 +2,66 @@
  * Style for https://ppfeufer.de
  */
 
-:root {
-    --tw-border-opacity: 1;
-}
+@media all {
+    /* Override parent theme styles
+    ----------------------------------------------------------------------------------------------------------------- */
+    html, body {
+        height: 100%;
+    }
 
-/* Override parent theme styles
---------------------------------------------------------------------------------------------------------------------- */
-html, body {
-    height: 100%;
-}
+    body {
+        display: flex;
+        flex-direction: column;
+    }
 
-body {
-    display: flex;
-    flex-direction: column;
-    /*text-shadow: 1px 1px 1px rgb(163 163 163);*/
-}
+    body > div.container {
+        flex: 1 0 auto;
+    }
 
-body > div.container {
-    flex: 1 0 auto;
-}
+    .prose {
+        max-width: 120ch;
+    }
 
-.prose {
-    max-width: 120ch;
-}
+    .max-w-prose {
+        max-width: 110ch;
+    }
 
-.max-w-prose {
-    max-width: 110ch;
-}
+    a:focus, button:focus, .menu-links.menu-vertical .menu-item > a:focus, .menu-links > .menu-item > a:focus {
+        outline-style: none;
+    }
 
-a:focus, button:focus, .menu-links.menu-vertical .menu-item > a:focus, .menu-links > .menu-item > a:focus {
-    outline-style: none;
-}
+    /* Sticky primary sidebar
+    ----------------------------------------------------------------------------------------------------------------- */
+    body > div.container {
+        align-items: flex-start;
+    }
 
-/* Sticky primary sidebar
---------------------------------------------------------------------------------------------------------------------- */
-body > div.container {
-    align-items: flex-start;
-}
+    .sidebar-primary {
+        position: sticky;
+        top: 5rem;
+    }
 
-.sidebar-primary {
-    position: sticky;
-    top: 5rem;
-}
+    /* Remove header from home page
+    ----------------------------------------------------------------------------------------------------------------- */
+    article#post-29952 header {
+        display: none;
+    }
 
-/* Remove header from home page
---------------------------------------------------------------------------------------------------------------------- */
-article#post-29952 header {
-    display: none;
-}
-
-article#post-29952 .entry-content {
-    margin-top: 24px;
-}
+    article#post-29952 .entry-content {
+        margin-top: 24px;
+    }
 
 
-/* Footer should always be at the bottom
---------------------------------------------------------------------------------------------------------------------- */
-footer {
-    flex-shrink: 0;
+    /* Footer should always be at the bottom
+    ----------------------------------------------------------------------------------------------------------------- */
+    footer {
+        flex-shrink: 0;
+    }
 }
 
 /* Responsive
 --------------------------------------------------------------------------------------------------------------------- */
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) {
     .no-sidebar .prose.prose-moose .alignwide {
         margin: 40px -5% !important;
         max-width: 110%;

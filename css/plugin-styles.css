@@ -1,73 +1,63 @@
-/* Shortcode [divider] (Theme own shortcode)
---------------------------------------------------------------------------------------------------------------------- */
-.divider {
-    border-bottom-width: 1px;
-    border-color: rgba(var(--wp-moose-base-100), var(--tw-border-opacity));
-    border-top-width: 1px;
-    clear: both;
-    display: block;
-    margin: 1rem auto;
-}
+@media all {
+    /* Shortcode [divider] (Theme own shortcode)
+    ----------------------------------------------------------------------------------------------------------------- */
+    .divider {
+        border-bottom-width: 1px;
+        border-color: rgba(var(--wp-moose-base-100), var(--tw-border-opacity));
+        border-top-width: 1px;
+        clear: both;
+        display: block;
+        margin: 1rem auto;
+    }
 
-/* CodeColorer
---------------------------------------------------------------------------------------------------------------------- */
-.codecolorer-container {
-    border: none !important;
-    border-left: 1px solid rgb(192 192 192) !important;
-    border-right: 1px solid rgb(192 192 192) !important;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-}
+    /* CodeColorer
+    ----------------------------------------------------------------------------------------------------------------- */
+    .codecolorer-container {
+        border: none !important;
+        border-left: 1px solid var(--color-grey-light) !important;
+        border-right: 1px solid var(--color-grey-light) !important;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
 
-.codecolorer-container table td.line-numbers {
-    background-color: transparent !important;
-    border-right: none !important;
-}
+    .codecolorer-container table td.line-numbers {
+        background-color: transparent !important;
+        border-right: none !important;
+    }
 
-.codecolorer-container, .codecolorer {
-    background-color: transparent !important;
-}
+    .codecolorer-container, .codecolorer {
+        background-color: transparent !important;
+    }
 
-div.codecolorer {
-    padding: 5px 1.5rem !important;
-}
+    div.codecolorer {
+        padding: 5px 1.5rem !important;
+    }
 
-/* Syntax Highlighter Evolved
---------------------------------------------------------------------------------------------------------------------- */
-.wp-block-syntaxhighlighter-code {
-    border: none !important;
-    border-left: 1px solid rgb(192 192 192) !important;
-    border-right: 1px solid rgb(192 192 192) !important;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-}
+    /* Syntax Highlighter Evolved
+    ----------------------------------------------------------------------------------------------------------------- */
+    .wp-block-syntaxhighlighter-code {
+        border: none !important;
+        border-left: 1px solid var(--color-grey-light) !important;
+        border-right: 1px solid var(--color-grey-light) !important;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
 
-.wp-block-syntaxhighlighter-code .syntaxhighlighter {
-    margin: 0 !important;
-}
+    .wp-block-syntaxhighlighter-code .syntaxhighlighter {
+        margin: 0 !important;
+    }
 
-.wp-block-syntaxhighlighter-code .syntaxhighlighter .gutter {
-    color: rgb(136 136 136) !important;
-}
+    .wp-block-syntaxhighlighter-code .syntaxhighlighter .gutter {
+        color: var(--color-grey-dark) !important;
+    }
 
-.wp-block-syntaxhighlighter-code .syntaxhighlighter .gutter .line {
-    border-right: none !important;
-    padding: 0 0.5em 0 0.5em !important;
-}
+    .wp-block-syntaxhighlighter-code .syntaxhighlighter .gutter .line {
+        border-right: none !important;
+        padding: 0 0.5em 0 0.5em !important;
+    }
 
-/* Syntax Highlight and code elements
---------------------------------------------------------------------------------------------------------------------- */
-code, .syntaxhighlight, .codecolorer, .codecolorer *, .codecolorer-container,
-.codecolorer-container *, .wp-block-syntaxhighlighter-code, .wp-block-syntaxhighlighter-code .syntaxhighlighter a,
-.wp-block-syntaxhighlighter-code .syntaxhighlighter div, .wp-block-syntaxhighlighter-code .syntaxhighlighter code,
-.wp-block-syntaxhighlighter-code .syntaxhighlighter table, .wp-block-syntaxhighlighter-code .syntaxhighlighter table td,
-.wp-block-syntaxhighlighter-code .syntaxhighlighter table tr, .wp-block-syntaxhighlighter-code .syntaxhighlighter table tbody,
-.wp-block-syntaxhighlighter-code .syntaxhighlighter table thead, .wp-block-syntaxhighlighter-code .syntaxhighlighter table caption,
-.wp-block-syntaxhighlighter-code .syntaxhighlighter textarea {
-    font: 0.9rem/1.3rem 'Fira Code', monospace !important;
-}
-
-@supports (font-variation-settings: normal) {
+    /* Syntax Highlight and code elements
+    ----------------------------------------------------------------------------------------------------------------- */
     code, .syntaxhighlight, .codecolorer, .codecolorer *, .codecolorer-container,
     .codecolorer-container *, .wp-block-syntaxhighlighter-code, .wp-block-syntaxhighlighter-code .syntaxhighlighter a,
     .wp-block-syntaxhighlighter-code .syntaxhighlighter div, .wp-block-syntaxhighlighter-code .syntaxhighlighter code,
@@ -75,10 +65,22 @@ code, .syntaxhighlight, .codecolorer, .codecolorer *, .codecolorer-container,
     .wp-block-syntaxhighlighter-code .syntaxhighlighter table tr, .wp-block-syntaxhighlighter-code .syntaxhighlighter table tbody,
     .wp-block-syntaxhighlighter-code .syntaxhighlighter table thead, .wp-block-syntaxhighlighter-code .syntaxhighlighter table caption,
     .wp-block-syntaxhighlighter-code .syntaxhighlighter textarea {
-        font: 0.9rem/1.3rem 'Fira Code VF', monospace !important;
+        font: 0.9rem/1.3rem var(--font-family-code) !important;
     }
-}
 
-.prose .wp-block-syntaxhighlighter-code code:after, .prose .wp-block-syntaxhighlighter-code code:before {
-    content: "";
+    @supports (font-variation-settings: normal) {
+        code, .syntaxhighlight, .codecolorer, .codecolorer *, .codecolorer-container,
+        .codecolorer-container *, .wp-block-syntaxhighlighter-code, .wp-block-syntaxhighlighter-code .syntaxhighlighter a,
+        .wp-block-syntaxhighlighter-code .syntaxhighlighter div, .wp-block-syntaxhighlighter-code .syntaxhighlighter code,
+        .wp-block-syntaxhighlighter-code .syntaxhighlighter table, .wp-block-syntaxhighlighter-code .syntaxhighlighter table td,
+        .wp-block-syntaxhighlighter-code .syntaxhighlighter table tr, .wp-block-syntaxhighlighter-code .syntaxhighlighter table tbody,
+        .wp-block-syntaxhighlighter-code .syntaxhighlighter table thead, .wp-block-syntaxhighlighter-code .syntaxhighlighter table caption,
+        .wp-block-syntaxhighlighter-code .syntaxhighlighter textarea {
+            font: 0.9rem/1.3rem var(--font-family-code-font-variation) !important;
+        }
+    }
+
+    .prose .wp-block-syntaxhighlighter-code code:after, .prose .wp-block-syntaxhighlighter-code code:before {
+        content: "";
+    }
 }
