@@ -21,8 +21,9 @@
 
 use WordPress\Themes\Ppfeufer\Plugins\Shortcodes;
 
-require_once(trailingslashit(__DIR__) . 'inc/autoloader.php');
+require_once(get_theme_file_path('inc/autoloader.php'));
 
+// Load oen plugins
 new Shortcodes;
 
 /**
