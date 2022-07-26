@@ -25,6 +25,9 @@ namespace WordPress\Themes\Ppfeufer\Plugins;
 
 defined('ABSPATH') or die();
 
+/**
+ * Class Shortcodes
+ */
 class Shortcodes {
     /**
      * Constructor
@@ -42,19 +45,42 @@ class Shortcodes {
         add_shortcode('credits', [$this, 'shortcodeCredits']);
     }
 
+    /**
+     * Add shortcode to widgets
+     *
+     * @return void
+     */
     public function addShortcodesToWidgets(): void {
         add_filter('widget_text', 'do_shortcode');
     }
 
-    public function removeAutopInShortcode($content) {
+    /**
+     * Remove the `<p>` tag that WP automatically adds
+     *
+     * @param string $content
+     * @return array|string|string[]|null
+     */
+    public function removeAutopInShortcode(string $content) {
         $content = do_shortcode(shortcode_unautop($content));
 
         return preg_replace('#^</p>|^<br />|<p>$#', '', $content);
     }
 
-    public function shortcodeDivider($atts): string {
+    /**
+     * Shortcode: Divider
+     *
+     * Usage:
+     *      [divider width="85%"]
+     *
+     * Attributes:
+     *      width => Width of the divider. (Default: 100%)
+     *
+     * @param array $atts Attributes for the shortcode
+     * @return string
+     */
+    public function shortcodeDivider(array $atts = []): string {
         // Normalize attribute keys, lowercase
-        $atts = array_change_key_case((array) $atts, CASE_LOWER);
+        $atts = array_change_key_case($atts, CASE_LOWER);
 
         // Override default attributes with user attributes
         $attributes = shortcode_atts(
@@ -67,9 +93,25 @@ class Shortcodes {
         return '<div class="divider clearfix" style="width: ' . $attributes['width'] . '"></div>';
     }
 
-    public function shortcodeCredits($atts = [], $content = null, $tag = ''): string {
+    /**
+     * Shortcode: Credits box
+     *
+     * Draws a credits area
+     *
+     * Usage:
+     *      [credits width="85%" headline_tag="h4"]Content[/credits]
+     *
+     * Attributes:
+     *      width => Width of the credits box (Default: 85%)
+     *      headline_tag => Headline tag (Default: h4)
+     *
+     * @param array $atts Attributes for the shortcode
+     * @param string|null $content Shortcode content
+     * @return string
+     */
+    public function shortcodeCredits(array $atts = [], string $content = null): string {
         // Normalize attribute keys, lowercase
-        $atts = array_change_key_case((array) $atts, CASE_LOWER);
+        $atts = array_change_key_case($atts, CASE_LOWER);
 
         // Override default attributes with user attributes
         $attributes = shortcode_atts(
@@ -77,8 +119,7 @@ class Shortcodes {
                 'headline_tag' => 'h4',
                 'width' => '85%'
             ],
-            $atts,
-            $tag
+            $atts
         );
 
         $shortcodeOutput = null;
