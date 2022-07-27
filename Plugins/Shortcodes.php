@@ -58,9 +58,9 @@ class Shortcodes {
      * Remove the `<p>` tag that WP automatically adds
      *
      * @param string $content
-     * @return array|string|string[]|null
+     * @return string
      */
-    public function removeAutopInShortcode(string $content) {
+    public function removeAutopInShortcode(string $content): string {
         $content = do_shortcode(shortcode_unautop($content));
 
         return preg_replace('#^</p>|^<br />|<p>$#', '', $content);
@@ -107,9 +107,9 @@ class Shortcodes {
      *
      * @param array $atts Attributes for the shortcode
      * @param string|null $content Shortcode content
-     * @return string
+     * @return string|null
      */
-    public function shortcodeCredits(array $atts = [], string $content = null): string {
+    public function shortcodeCredits(array $atts = [], string $content = null): ?string {
         // Normalize attribute keys, lowercase
         $atts = array_change_key_case($atts, CASE_LOWER);
 
