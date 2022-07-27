@@ -136,8 +136,8 @@ add_action('wp_moose_action_footer', 'wp_moose_footer_credits', 30);
 /**
  * Remove website field from comment form to prevent backlink spam
  *
- * @param array $fields
- * @return array
+ * @param array $fields All form fields used in the comment form
+ * @return array Our form fields we use in the comment form
  */
 function remove_website_field_from_comment_form(array $fields): array {
     if (isset($fields['url'])) {
@@ -152,8 +152,8 @@ add_filter('comment_form_default_fields', 'remove_website_field_from_comment_for
 /**
  * Change the label text for the cookie consent checkbox in comment form
  *
- * @param array $fields
- * @return array
+ * @param array $fields All form fields used in the comment form
+ * @return array Our form fields we use in the comment form
  */
 function comment_form_change_cookie_consent_checkbox_label(array $fields): array {
     if (!is_admin()) {
