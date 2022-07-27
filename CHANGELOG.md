@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+
+### [0.0.9] - 2022-07-27
+
 ### Added
 
 - Typehints to the PHP code
