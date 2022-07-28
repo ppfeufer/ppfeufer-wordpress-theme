@@ -41,13 +41,13 @@
         top: 5rem;
     }
 
-    /* Remove header from home page
+    /* Remove page title from home page
     ----------------------------------------------------------------------------------------------------------------- */
-    article#post-29952 header {
+    .home article header {
         display: none;
     }
 
-    article#post-29952 .entry-content {
+    .home article .entry-content {
         margin-top: 24px;
     }
 

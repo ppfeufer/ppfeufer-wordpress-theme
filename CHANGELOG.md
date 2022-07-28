@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+### Fixed
+
+- Better way of hiding the page title on the home page
+
 
 ### [0.0.9] - 2022-07-27
 
