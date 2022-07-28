@@ -1,6 +1,9 @@
 /* Defaults
 --------------------------------------------------------------------------------------------------------------------- */
 :root {
+    --backdrop-filter-default: saturate(1.5) blur(1.5em);
+    --background-color-light-transparency: rgba(255 255 255 / 60%);
+
     --font-family-code: 'Fira Code', monospace;
     --font-family-code-font-variation: 'Fira Code VF', monospace;
 

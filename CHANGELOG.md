@@ -9,6 +9,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [In Development] - Unreleased
 
 
+### [0.0.10] - 2022-07-28
+
+### Added
+
+- Opaque blur effect to top navigation when page is scrolled
+- Shortcode name for WP internal filter
+
+### Fixed
+
+- Better way of hiding the page title on the home page
+- Argument type in shortcode class
+
+
 ### [0.0.9] - 2022-07-27
 
 ### Added
