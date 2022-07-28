@@ -1,1 +1,1 @@
-:root{--font-family-code:'Fira Code', monospace;--font-family-code-font-variation:'Fira Code VF', monospace;--color-grey-light:rgb(192 192 192);--color-grey-dark:rgb(136 136 136);--tw-border-opacity:1}
+:root{--backdrop-filter-default:saturate(1.5) blur(1.5em);--background-color-light-transparency:rgba(255 255 255 / 35%);--font-family-code:'Fira Code', monospace;--font-family-code-font-variation:'Fira Code VF', monospace;--color-grey-light:rgb(192 192 192);--color-grey-dark:rgb(136 136 136);--tw-border-opacity:1}

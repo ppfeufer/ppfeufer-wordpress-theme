@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+### Added
+
+- Opaque blur effect to top navigation when page is scrolled
+
 ### Fixed
 
 - Better way of hiding the page title on the home page

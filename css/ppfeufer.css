@@ -30,6 +30,13 @@
         outline-style: none;
     }
 
+    /* Navbar
+    ----------------------------------------------------------------------------------------------------------------- */
+    .is-sticky .navbar {
+        backdrop-filter: var(--backdrop-filter-default);
+        background-color: var(--background-color-light-transparency);
+    }
+
     /* Sticky primary sidebar
     ----------------------------------------------------------------------------------------------------------------- */
     body > div.container {
@@ -50,7 +57,6 @@
     .home article .entry-content {
         margin-top: 24px;
     }
-
 
     /* Footer should always be at the bottom
     ----------------------------------------------------------------------------------------------------------------- */
