@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 
 - Better way of hiding the page title on the home page
+- Argument type in shortcode class
 
 
 ### [0.0.9] - 2022-07-27

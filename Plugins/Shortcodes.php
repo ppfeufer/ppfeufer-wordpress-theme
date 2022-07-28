@@ -75,12 +75,12 @@ class Shortcodes {
      * Attributes:
      *      width => Width of the divider. (Default: 100%)
      *
-     * @param array $atts Attributes for the shortcode
+     * @param string|array $atts Attributes for the shortcode
      * @return string
      */
-    public function shortcodeDivider(array $atts = []): string {
+    public function shortcodeDivider($atts = []): string {
         // Normalize attribute keys, lowercase
-        $atts = array_change_key_case($atts, CASE_LOWER);
+        $atts = array_change_key_case((array) $atts, CASE_LOWER);
 
         // Override default attributes with user attributes
         $attributes = shortcode_atts(
@@ -105,13 +105,13 @@ class Shortcodes {
      *      width => Width of the credits box (Default: 85%)
      *      headline_tag => Headline tag (Default: h4)
      *
-     * @param array $atts Attributes for the shortcode
+     * @param string|array $atts Attributes for the shortcode
      * @param string|null $content Shortcode content
      * @return string|null
      */
-    public function shortcodeCredits(array $atts = [], string $content = null): ?string {
+    public function shortcodeCredits($atts = [], string $content = null): ?string {
         // Normalize attribute keys, lowercase
-        $atts = array_change_key_case($atts, CASE_LOWER);
+        $atts = array_change_key_case((array) $atts, CASE_LOWER);
 
         // Override default attributes with user attributes
         $attributes = shortcode_atts(
