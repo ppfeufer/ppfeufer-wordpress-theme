@@ -87,7 +87,8 @@ class Shortcodes {
             [
                 'width' => '100%'
             ],
-            $atts
+            $atts,
+            'divider'
         );
 
         return '<div class="divider clearfix" style="width: ' . $attributes['width'] . '"></div>';
@@ -119,7 +120,8 @@ class Shortcodes {
                 'headline_tag' => 'h4',
                 'width' => '85%'
             ],
-            $atts
+            $atts,
+            'credits'
         );
 
         $shortcodeOutput = null;

@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 
 - Opaque blur effect to top navigation when page is scrolled
+- Shortcode name for WP internal filter
 
 ### Fixed
 
