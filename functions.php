@@ -23,7 +23,7 @@ use WordPress\Themes\Ppfeufer\Plugins\Shortcodes;
 
 require_once(get_theme_file_path('inc/autoloader.php'));
 
-// Load oen plugins
+// Load Libraries
 new Shortcodes;
 
 /**
@@ -65,7 +65,7 @@ add_action('wp_enqueue_scripts', 'ppfeufer_enqueue_styles');
  *
  * @return void
  */
-function ppfeufer_admin_style(): void {
+function ppfeufer_enqueue_admin_styles(): void {
     wp_enqueue_style(
         'fira-code',
         get_theme_file_uri('/css/libs/fira-code/6.2.0/fira_code.min.css'),
@@ -80,7 +80,7 @@ function ppfeufer_admin_style(): void {
     );
 }
 
-add_action('admin_enqueue_scripts', 'ppfeufer_admin_style');
+add_action('admin_enqueue_scripts', 'ppfeufer_enqueue_admin_styles');
 
 /**
  * Redirect to the right favicon.ico
