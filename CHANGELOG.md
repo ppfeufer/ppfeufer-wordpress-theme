@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 
-- Using template override to hide page title on home page instead of CSS (This is the WordPress way)
+- Using template override to hide page title on the home page instead of CSS (This is the WordPress way)
 
 
 ### [0.0.10] - 2022-07-28
