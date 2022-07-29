@@ -48,16 +48,6 @@
         top: 5rem;
     }
 
-    /* Remove page title from home page
-    ----------------------------------------------------------------------------------------------------------------- */
-    .home article header {
-        display: none;
-    }
-
-    .home article .entry-content {
-        margin-top: 24px;
-    }
-
     /* Footer should always be at the bottom
     ----------------------------------------------------------------------------------------------------------------- */
     footer {
