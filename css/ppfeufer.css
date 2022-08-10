@@ -65,6 +65,13 @@
     footer {
         flex-shrink: 0;
     }
+
+    /* Make sure SVG images always use the full space they have
+    ----------------------------------------------------------------------------------------------------------------- */
+    svg {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 /* Responsive

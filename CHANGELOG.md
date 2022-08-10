@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [In Development] - Unreleased
 
 
+### [0.0.13] - 2022-08-10
+
+### Fixed
+
+- Make sure SVG images always use the full space they have
+
+
 ### [0.0.12] - 2022-08-10
 
 ### Changed
