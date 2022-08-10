@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [In Development] - Unreleased
 
 
+### [0.0.12] - 2022-08-10
+
+### Changed
+
+- Link colours when focused
+
+
 ### [0.0.11] - 2022-07-29
 
 ### Changed
