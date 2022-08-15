@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [In Development] - Unreleased
 
 
+### [0.0.14] - 2022-08-16
+
+### Added
+
+- Use article images as `og:image` meta tag
+
+
 ### [0.0.13] - 2022-08-10
 
 ### Fixed
