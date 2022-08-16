@@ -170,3 +170,20 @@ function comment_form_change_cookie_consent_checkbox_label(array $fields): array
 }
 
 add_filter('comment_form_default_fields', 'comment_form_change_cookie_consent_checkbox_label');
+
+/**
+ * Use article image as og:image meta tag
+ *
+ * @return void
+ */
+function ppfeufer_og_image(): void {
+    if (is_single()) {
+        $articleImage = get_the_post_thumbnail_url(get_the_ID(),'full');
+
+        if ($articleImage) {
+            echo '<meta property="og:image" content="' . $articleImage . '">';
+        }
+    }
+}
+
+add_action('wp_head', 'ppfeufer_og_image');
