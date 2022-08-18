@@ -226,25 +226,25 @@ function ppfeufer_og_tags(): void {
         $ogDescription = get_the_excerpt();
     }
 
-    // On blog articls
+    // On blog articles
     if (is_single()) {
         $ogType = 'article';
         $ogArticleImage = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
 
         if ($ogArticleImage) {
-            echo '<meta name="og:image" content="' . $ogArticleImage['0'] . '">';
-            echo '<meta name="og:image:width" content="' . $ogArticleImage['1'] . '">';
-            echo '<meta name="og:image:height" content="' . $ogArticleImage['2'] . '">';
-            echo '<meta name="og:image:url" content="' . $ogArticleImage['0'] . '">';
-            echo '<meta name="twitter:image" content="' . $ogArticleImage['0'] . '">';
+            echo '<meta property="og:image" content="' . $ogArticleImage['0'] . '">';
+            echo '<meta property="og:image:url" content="' . $ogArticleImage['0'] . '">';
+            echo '<meta property="og:image:width" content="' . $ogArticleImage['1'] . '">';
+            echo '<meta property="og:image:height" content="' . $ogArticleImage['2'] . '">';
+            echo '<meta property="twitter:image" content="' . $ogArticleImage['0'] . '">';
         }
     }
 
-    echo '<meta name="og:type" content="' . $ogType . '">';
-    echo '<meta name="og:site_name" content="' . $ogSiteName . '">';
-    echo '<meta name="og:url" content="' . $ogUrl . '">';
-    echo '<meta name="og:title" content="' . $ogTitle . '">';
-    echo '<meta name="og:description" content="' . $ogDescription . '">';
+    echo '<meta property="og:type" content="' . $ogType . '">';
+    echo '<meta property="og:site_name" content="' . $ogSiteName . '">';
+    echo '<meta property="og:url" content="' . $ogUrl . '">';
+    echo '<meta property="og:title" content="' . $ogTitle . '">';
+    echo '<meta property="og:description" content="' . $ogDescription . '">';
 }
 
 add_action('wp_head', 'ppfeufer_og_tags');
