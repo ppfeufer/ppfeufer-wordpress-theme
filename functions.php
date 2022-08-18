@@ -206,6 +206,8 @@ function remove_protocol_from_url(string $url): string {
  * @return void
  */
 function ppfeufer_og_tags(): void {
+    global $wp;
+
     // WP info
     $wpSiteUrl = get_bloginfo('url', 'display');
     $wpSiteDescription = get_bloginfo('description', 'display');
@@ -216,6 +218,7 @@ function ppfeufer_og_tags(): void {
     $ogDescription = $wpSiteDescription;
     $ogSiteName = $wpSiteName . ' / ' . remove_protocol_from_url($wpSiteUrl);
     $ogTitle = $wpSiteName;
+    $ogUrl = home_url(add_query_arg(null, null));
 
     // On every singular page except home page
     if (is_singular()) {
@@ -226,15 +229,20 @@ function ppfeufer_og_tags(): void {
     // On blog articls
     if (is_single()) {
         $ogType = 'article';
-        $ogArticleImage = get_the_post_thumbnail_url(get_the_ID(), 'full');
+        $ogArticleImage = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
 
         if ($ogArticleImage) {
-            echo '<meta name="og:image" content="' . $ogArticleImage . '">';
+            echo '<meta name="og:image" content="' . $ogArticleImage['0'] . '">';
+            echo '<meta name="og:image:width" content="' . $ogArticleImage['1'] . '">';
+            echo '<meta name="og:image:height" content="' . $ogArticleImage['2'] . '">';
+            echo '<meta name="og:image:url" content="' . $ogArticleImage['0'] . '">';
+            echo '<meta name="twitter:image" content="' . $ogArticleImage['0'] . '">';
         }
     }
 
     echo '<meta name="og:type" content="' . $ogType . '">';
     echo '<meta name="og:site_name" content="' . $ogSiteName . '">';
+    echo '<meta name="og:url" content="' . $ogUrl . '">';
     echo '<meta name="og:title" content="' . $ogTitle . '">';
     echo '<meta name="og:description" content="' . $ogDescription . '">';
 }
