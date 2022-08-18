@@ -206,8 +206,6 @@ function remove_protocol_from_url(string $url): string {
  * @return void
  */
 function ppfeufer_og_tags(): void {
-    global $wp;
-
     // WP info
     $wpSiteUrl = get_bloginfo('url', 'display');
     $wpSiteDescription = get_bloginfo('description', 'display');
