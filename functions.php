@@ -172,18 +172,77 @@ function comment_form_change_cookie_consent_checkbox_label(array $fields): array
 add_filter('comment_form_default_fields', 'comment_form_change_cookie_consent_checkbox_label');
 
 /**
+ * Set the title separator
+ *
+ * @return string
+ */
+function ppfeufer_title_separator(): string {
+    return '»';
+}
+
+add_filter('document_title_separator', 'ppfeufer_title_separator');
+
+/**
+ * Remove the protocol from a given URL
+ *
+ * @param string $url
+ * @return string
+ */
+function remove_protocol_from_url(string $url): string {
+    $disallowed = ['http://', 'https://'];
+
+    foreach ($disallowed as $d) {
+        if (strpos($url, $d) === 0) {
+            return str_replace($d, '', $url);
+        }
+    }
+
+    return $url;
+}
+
+/**
  * Use article image as og:image meta tag
  *
  * @return void
  */
-function ppfeufer_og_image(): void {
-    if (is_single()) {
-        $articleImage = get_the_post_thumbnail_url(get_the_ID(),'full');
+function ppfeufer_og_tags(): void {
+    // WP info
+    $wpSiteUrl = get_bloginfo('url', 'display');
+    $wpSiteDescription = get_bloginfo('description', 'display');
+    $wpSiteName = get_bloginfo('name');
 
-        if ($articleImage) {
-            echo '<meta property="og:image" content="' . $articleImage . '">';
+    // OG info
+    $ogType = 'website';
+    $ogDescription = $wpSiteDescription;
+    $ogSiteName = $wpSiteName . ' / ' . remove_protocol_from_url($wpSiteUrl);
+    $ogTitle = $wpSiteName;
+    $ogUrl = home_url(add_query_arg(null, null));
+
+    // On every singular page except home page
+    if (is_singular()) {
+        $ogTitle = get_the_title();
+        $ogDescription = get_the_excerpt();
+    }
+
+    // On blog articles
+    if (is_single()) {
+        $ogType = 'article';
+        $ogArticleImage = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
+
+        if ($ogArticleImage) {
+            echo '<meta property="og:image" content="' . $ogArticleImage['0'] . '">';
+            echo '<meta property="og:image:url" content="' . $ogArticleImage['0'] . '">';
+            echo '<meta property="og:image:width" content="' . $ogArticleImage['1'] . '">';
+            echo '<meta property="og:image:height" content="' . $ogArticleImage['2'] . '">';
+            echo '<meta property="twitter:image" content="' . $ogArticleImage['0'] . '">';
         }
     }
+
+    echo '<meta property="og:type" content="' . $ogType . '">';
+    echo '<meta property="og:site_name" content="' . $ogSiteName . '">';
+    echo '<meta property="og:url" content="' . $ogUrl . '">';
+    echo '<meta property="og:title" content="' . $ogTitle . '">';
+    echo '<meta property="og:description" content="' . $ogDescription . '">';
 }
 
-add_action('wp_head', 'ppfeufer_og_image');
+add_action('wp_head', 'ppfeufer_og_tags');
