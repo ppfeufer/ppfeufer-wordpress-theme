@@ -172,18 +172,71 @@ function comment_form_change_cookie_consent_checkbox_label(array $fields): array
 add_filter('comment_form_default_fields', 'comment_form_change_cookie_consent_checkbox_label');
 
 /**
+ * Set the title separator
+ *
+ * @return string
+ */
+function ppfeufer_title_separator(): string {
+    return '»';
+}
+
+add_filter('document_title_separator', 'ppfeufer_title_separator');
+
+/**
+ * Remove the protocol from a given URL
+ *
+ * @param string $url
+ * @return string
+ */
+function remove_protocol_from_url(string $url): string {
+    $disallowed = ['http://', 'https://'];
+
+    foreach ($disallowed as $d) {
+        if (strpos($url, $d) === 0) {
+            return str_replace($d, '', $url);
+        }
+    }
+
+    return $url;
+}
+
+/**
  * Use article image as og:image meta tag
  *
  * @return void
  */
-function ppfeufer_og_image(): void {
-    if (is_single()) {
-        $articleImage = get_the_post_thumbnail_url(get_the_ID(),'full');
+function ppfeufer_og_tags(): void {
+    // WP info
+    $wpSiteUrl = get_bloginfo('url', 'display');
+    $wpSiteDescription = get_bloginfo('description', 'display');
+    $wpSiteName = get_bloginfo('name');
 
-        if ($articleImage) {
-            echo '<meta property="og:image" content="' . $articleImage . '">';
+    // OG info
+    $ogType = 'website';
+    $ogDescription = $wpSiteDescription;
+    $ogSiteName = $wpSiteName . ' / ' . remove_protocol_from_url($wpSiteUrl);
+    $ogTitle = $wpSiteName;
+
+    // On every singular page except home page
+    if (is_singular()) {
+        $ogTitle = get_the_title();
+        $ogDescription = get_the_excerpt();
+    }
+
+    // On blog articls
+    if (is_single()) {
+        $ogType = 'article';
+        $ogArticleImage = get_the_post_thumbnail_url(get_the_ID(), 'full');
+
+        if ($ogArticleImage) {
+            echo '<meta name="og:image" content="' . $ogArticleImage . '">';
         }
     }
+
+    echo '<meta name="og:type" content="' . $ogType . '">';
+    echo '<meta name="og:site_name" content="' . $ogSiteName . '">';
+    echo '<meta name="og:title" content="' . $ogTitle . '">';
+    echo '<meta name="og:description" content="' . $ogDescription . '">';
 }
 
-add_action('wp_head', 'ppfeufer_og_image');
+add_action('wp_head', 'ppfeufer_og_tags');

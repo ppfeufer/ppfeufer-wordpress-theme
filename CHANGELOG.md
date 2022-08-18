@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [In Development] - Unreleased
 
 
+### [0.0.15] - 2022-08-18
+
+### Changed
+
+- OG tags improved
+
+
 ### [0.0.14] - 2022-08-16
 
 ### Added
