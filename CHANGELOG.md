@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+### Fixed
+
+- Site brand icon geometry
+
 
 ### [0.0.15] - 2022-08-18
 

@@ -49,6 +49,10 @@
         background-color: var(--background-color-light-transparency);
     }
 
+    .navbar .site-brand img {
+        width: auto;
+    }
+
     /* Sticky primary sidebar
     ----------------------------------------------------------------------------------------------------------------- */
     body > div.container {
