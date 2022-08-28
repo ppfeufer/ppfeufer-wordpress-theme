@@ -234,7 +234,14 @@ function ppfeufer_og_tags(): void {
             echo '<meta property="og:image:url" content="' . $ogArticleImage['0'] . '">';
             echo '<meta property="og:image:width" content="' . $ogArticleImage['1'] . '">';
             echo '<meta property="og:image:height" content="' . $ogArticleImage['2'] . '">';
-            echo '<meta property="twitter:image" content="' . $ogArticleImage['0'] . '">';
+            echo '<meta property="og:image:alt" content="' . $ogDescription . '">';
+
+            // Twitter cards
+            echo '<meta name="twitter:image:src" content="' . $ogArticleImage['0'] . '">';
+
+            if ($ogArticleImage['1'] > 1000) {
+                echo '<meta name="twitter:card" content="summary_large_image">';
+            }
         }
     }
 
@@ -243,6 +250,11 @@ function ppfeufer_og_tags(): void {
     echo '<meta property="og:url" content="' . $ogUrl . '">';
     echo '<meta property="og:title" content="' . $ogTitle . '">';
     echo '<meta property="og:description" content="' . $ogDescription . '">';
+
+    // Twitter cards
+    echo '<meta name="twitter:title" content="' . $ogTitle . '">';
+    echo '<meta name="twitter:site" content="@ppfeufer">';
+    echo '<meta name="twitter:description" content="' . $ogDescription . '">';
 }
 
 add_action('wp_head', 'ppfeufer_og_tags');
