@@ -9,6 +9,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [In Development] - Unreleased
 
 
+### [0.0.16] - 2022-08-28
+
+### Fixed
+
+- Site brand icon geometry
+
+### Added
+
+- Twitter cards to OG tags
+
+
 ### [0.0.15] - 2022-08-18
 
 ### Changed
