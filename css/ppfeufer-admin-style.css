@@ -1,12 +1,22 @@
 @media all {
     /* Syntax Highlight
     ----------------------------------------------------------------------------------------------------------------- */
-    code, .syntaxhighlight, .codecolorer, .codecolorer *, .codecolorer-container, .codecolorer-container * {
+    code,
+    .syntaxhighlight,
+    .codecolorer,
+    .codecolorer *,
+    .codecolorer-container,
+    .codecolorer-container * {
         font: 0.9rem/1.3rem var(--font-family-code) !important;
     }
 
     @supports (font-variation-settings: normal) {
-        code, .syntaxhighlight, .codecolorer, .codecolorer *, .codecolorer-container, .codecolorer-container * {
+        code,
+        .syntaxhighlight,
+        .codecolorer,
+        .codecolorer *,
+        .codecolorer-container,
+        .codecolorer-container * {
             font: 0.9rem/1.3rem var(--font-family-code-font-variation) !important;
         }
     }
