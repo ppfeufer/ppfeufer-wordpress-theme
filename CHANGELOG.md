@@ -8,12 +8,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+
+### [0.0.17] - 2022-09-13
+
 ### Added
 
 - Missing margin on an arrow in a `::before` CSS rules
-
-
-### [0.0.17] - 2022-09-13
 
 ### Changed
 
