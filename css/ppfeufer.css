@@ -5,7 +5,8 @@
 @media all {
     /* Override parent theme styles
     ----------------------------------------------------------------------------------------------------------------- */
-    html, body {
+    html,
+    body {
         height: 100%;
     }
 
@@ -15,6 +16,7 @@
     }
 
     body > div.container {
+        align-items: flex-start;
         flex: 1 0 auto;
     }
 
@@ -26,7 +28,10 @@
         max-width: 110ch;
     }
 
-    a:focus, button:focus, .menu-links.menu-vertical .menu-item > a:focus, .menu-links > .menu-item > a:focus {
+    a:focus,
+    button:focus,
+    .menu-links.menu-vertical .menu-item > a:focus,
+    .menu-links > .menu-item > a:focus {
         outline-style: none;
     }
 
@@ -38,7 +43,8 @@
         color: var(--link-hover-color-default) !important;
     }
 
-    a:focus, button:focus {
+    a:focus,
+    button:focus {
         color: inherit;
     }
 
@@ -55,10 +61,6 @@
 
     /* Sticky primary sidebar
     ----------------------------------------------------------------------------------------------------------------- */
-    body > div.container {
-        align-items: flex-start;
-    }
-
     .sidebar-primary {
         position: sticky;
         top: 5rem;

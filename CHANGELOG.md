@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+### Changed
+
+- CSS lint applied
+
 
 ### [0.0.16] - 2022-08-28
 
