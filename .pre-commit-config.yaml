@@ -11,6 +11,7 @@ repos:
       - id: check-json
       - id: check-xml
       - id: check-yaml
+      - id: fix-byte-order-marker
       - id: trailing-whitespace
         exclude: \.(min\.css|min\.js|po|mo)$
       - id: end-of-file-fixer
@@ -26,3 +27,9 @@ repos:
     hooks:
       - id: editorconfig-checker
         exclude: ^(LICENSE)
+
+  - repo: https://github.com/digitalpulp/pre-commit-php.git
+    rev: 1.4.0
+    hooks:
+      - id: php-lint-all
+      - id: php-unit
