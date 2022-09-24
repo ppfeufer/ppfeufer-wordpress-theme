@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [In Development] - Unreleased
 
 
+### [0.0.18] - 2022-09-25
+
+### Removed
+
+- DNS prefetch
+
+
 ### [0.0.17] - 2022-09-13
 
 ### Added

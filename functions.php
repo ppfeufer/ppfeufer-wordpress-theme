@@ -258,3 +258,14 @@ function ppfeufer_og_tags(): void {
 }
 
 add_action('wp_head', 'ppfeufer_og_tags');
+
+/**
+ * Remove DNS prefetch
+ *
+ * @return void
+ */
+function remove_dns_prefetch(): void {
+    remove_action('wp_head', 'wp_resource_hints', 2, 99);
+}
+
+add_action('init', 'remove_dns_prefetch');
