@@ -189,15 +189,7 @@ add_filter('document_title_separator', 'ppfeufer_title_separator');
  * @return string
  */
 function remove_protocol_from_url(string $url): string {
-    $disallowed = ['http://', 'https://'];
-
-    foreach ($disallowed as $d) {
-        if (strpos($url, $d) === 0) {
-            return str_replace($d, '', $url);
-        }
-    }
-
-    return $url;
+    return preg_replace('#^https?://#', '', $url);
 }
 
 /**
