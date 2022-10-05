@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+### Changed
+
+- Simplified `remove_protocol_from_url` function
+
 
 ### [0.0.18] - 2022-09-25
 
