@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [In Development] - Unreleased
 
 
+### [0.0.20] - 2022-11-08
+
+### Removed
+
+- Custom `:hover` color for links
+- Unnecessary and non-existent 4th parameter from function
+
+
 ### [0.0.19] - 2022-10-05
 
 ### Changed

@@ -39,10 +39,6 @@
         text-decoration: underline;
     }
 
-    a:hover {
-        color: var(--link-hover-color-default) !important;
-    }
-
     a:focus,
     button:focus {
         color: inherit;
