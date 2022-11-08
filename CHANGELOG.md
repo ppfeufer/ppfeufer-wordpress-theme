@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+### Removed
+
+- Custom `:hover` color for links
+
 
 ### [0.0.19] - 2022-10-05
 
