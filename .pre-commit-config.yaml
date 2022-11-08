@@ -23,7 +23,7 @@ repos:
       - id: check-merge-conflict
 
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-    rev: 2.4.0
+    rev: 2.6.1
     hooks:
       - id: editorconfig-checker
         exclude: ^(LICENSE)
@@ -32,4 +32,3 @@ repos:
     rev: 1.4.0
     hooks:
       - id: php-lint-all
-      - id: php-unit
