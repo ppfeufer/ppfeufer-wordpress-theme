@@ -32,5 +32,3 @@ repos:
     rev: 1.4.0
     hooks:
       - id: php-lint-all
-      - id: php-stan
-        files: \.(php)$
