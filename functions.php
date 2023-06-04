@@ -27,6 +27,25 @@ require_once(get_theme_file_path('inc/autoloader.php'));
 new Shortcodes;
 
 /**
+ * Create HTML meta tags
+ *
+ * @param string $property
+ * @param string $content
+ * @param string $type
+ *
+ * @return string|null
+ */
+function __create_meta_tag(string $property, string $content, string $type = 'property'): ?string {
+    $allowed_types = ['property', 'name'];
+
+    if (!in_array($type, $allowed_types) || empty($property) || empty($content)) {
+        return null;
+    }
+
+    return '<meta ' . $type . '="' . $property . '" content="' . $content . '">';
+}
+
+/**
  * Enqueue the child themes CSS
  *
  * @return void
@@ -114,10 +133,11 @@ function ppfeufer_favicons(): void {
     echo '<link rel="icon" type="image/png" sizes="16x16" href="' . get_stylesheet_directory_uri() . '/favicons/favicon-16x16.png">' . "\n";
     echo '<link rel="manifest" href="' . get_stylesheet_directory_uri() . '/favicons/site.webmanifest">' . "\n";
     echo '<link rel="shortcut icon" href="' . get_stylesheet_directory_uri() . '/favicons/favicon.ico">' . "\n";
-    echo '<meta name="msapplication-TileColor" content="#da532c">' . "\n";
-    echo '<meta name="msapplication-TileImage" content="' . get_stylesheet_directory_uri() . '/favicons/mstile-144x144.png">' . "\n";
-    echo '<meta name="msapplication-config" content="' . get_stylesheet_directory_uri() . '/favicons/browserconfig.xml">' . "\n";
-    echo '<meta name="theme-color" content="#ffffff">' . "\n";
+
+    echo __create_meta_tag('msapplication-TileColor', '#da532c', 'name') . "\n";
+    echo __create_meta_tag('msapplication-TileImage', get_stylesheet_directory_uri() . '/favicons/mstile-144x144.png', 'name') . "\n";
+    echo __create_meta_tag('msapplication-config', get_stylesheet_directory_uri() . '/favicons/browserconfig.xml', 'name') . "\n";
+    echo __create_meta_tag('theme-color', '#ffffff', 'name') . "\n";
 }
 
 add_action('wp_head', 'ppfeufer_favicons');
@@ -222,31 +242,31 @@ function ppfeufer_og_tags(): void {
         $ogArticleImage = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
 
         if ($ogArticleImage) {
-            echo '<meta property="og:image" content="' . $ogArticleImage['0'] . '">';
-            echo '<meta property="og:image:url" content="' . $ogArticleImage['0'] . '">';
-            echo '<meta property="og:image:width" content="' . $ogArticleImage['1'] . '">';
-            echo '<meta property="og:image:height" content="' . $ogArticleImage['2'] . '">';
-            echo '<meta property="og:image:alt" content="' . $ogDescription . '">';
+            echo __create_meta_tag('og:image', $ogArticleImage['0']) . "\n";
+            echo __create_meta_tag('og:image:url', $ogArticleImage['0']) . "\n";
+            echo __create_meta_tag('og:image:width', $ogArticleImage['1']) . "\n";
+            echo __create_meta_tag('og:image:height', $ogArticleImage['2']) . "\n";
+            echo __create_meta_tag('og:image:alt', $ogDescription) . "\n";
 
             // Twitter cards
-            echo '<meta name="twitter:image:src" content="' . $ogArticleImage['0'] . '">';
+            echo __create_meta_tag('twitter:image:src', $ogArticleImage['0'], 'name') . "\n";
 
             if ($ogArticleImage['1'] > 1000) {
-                echo '<meta name="twitter:card" content="summary_large_image">';
+                echo __create_meta_tag('twitter:card', 'summary_large_image', 'name') . "\n";
             }
         }
     }
 
-    echo '<meta property="og:type" content="' . $ogType . '">';
-    echo '<meta property="og:site_name" content="' . $ogSiteName . '">';
-    echo '<meta property="og:url" content="' . $ogUrl . '">';
-    echo '<meta property="og:title" content="' . $ogTitle . '">';
-    echo '<meta property="og:description" content="' . $ogDescription . '">';
+    echo __create_meta_tag('og:type', $ogType) . "\n";
+    echo __create_meta_tag('og:site_name', $ogSiteName) . "\n";
+    echo __create_meta_tag('og:url', $ogUrl) . "\n";
+    echo __create_meta_tag('og:title', $ogTitle) . "\n";
+    echo __create_meta_tag('og:description', $ogDescription) . "\n";
 
     // Twitter cards
-    echo '<meta name="twitter:title" content="' . $ogTitle . '">';
-    echo '<meta name="twitter:site" content="@ppfeufer">';
-    echo '<meta name="twitter:description" content="' . $ogDescription . '">';
+    echo __create_meta_tag('twitter:title', $ogTitle, 'name') . "\n";
+    echo __create_meta_tag('twitter:site', '@ppfeufer', 'name') . "\n";
+    echo __create_meta_tag('twitter:description', $ogDescription, 'name') . "\n";
 }
 
 add_action('wp_head', 'ppfeufer_og_tags');
