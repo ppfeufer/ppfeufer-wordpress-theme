@@ -102,6 +102,26 @@ function ppfeufer_enqueue_admin_styles(): void {
 add_action('admin_enqueue_scripts', 'ppfeufer_enqueue_admin_styles');
 
 /**
+ * Enqueue the child themes JS
+ *
+ * @return void
+ */
+function ppfeufer_enqueue_javascript(): void {
+    wp_enqueue_script(
+        'ppfeufer',
+        get_theme_file_uri('/javascript/ppfeufer.min.js'),
+        [],
+        wp_get_theme()->get('Version'),
+        [
+            'in_footer' => true,
+            'strategy' => 'async'
+        ]
+    );
+}
+
+add_action('wp_enqueue_scripts', 'ppfeufer_enqueue_javascript', 9999);
+
+/**
  * Redirect to the right favicon.ico
  *
  * WordPress redirects to a default favicon (admin_url('images/w-logo-blue.png')) since v5.5, which is not what I want,

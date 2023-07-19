@@ -1,6 +1,6 @@
 @media all {
     /* Shortcode [divider] (Theme own shortcode)
-    ----------------------------------------------------------------------------------------------------------------- */
+    --------------------------------------------------------------------------------- */
     .divider {
         border-bottom-width: 1px;
         border-color: rgb(241 245 249 / 100%);
@@ -11,13 +11,13 @@
     }
 
     /* CodeColorer
-    ----------------------------------------------------------------------------------------------------------------- */
+    --------------------------------------------------------------------------------- */
     .codecolorer-container {
         border: none !important;
         border-left: 1px solid var(--color-grey-light) !important;
         border-right: 1px solid var(--color-grey-light) !important;
-        padding-top: 0.5rem;
         padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
     }
 
     .codecolorer-container table td.line-numbers {
@@ -35,13 +35,13 @@
     }
 
     /* Syntax Highlighter Evolved
-    ----------------------------------------------------------------------------------------------------------------- */
-    .wp-block-syntaxhighlighter-code {
+    --------------------------------------------------------------------------------- */
+    .wp-block-syntaxhighlighter-code > div {
         border: none !important;
         border-left: 1px solid var(--color-grey-light) !important;
         border-right: 1px solid var(--color-grey-light) !important;
-        padding-top: 0.5rem;
         padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
     }
 
     .wp-block-syntaxhighlighter-code .syntaxhighlighter {
@@ -58,7 +58,7 @@
     }
 
     /* Syntax Highlight and code elements
-    ----------------------------------------------------------------------------------------------------------------- */
+    --------------------------------------------------------------------------------- */
     code,
     .syntaxhighlight,
     .codecolorer,
@@ -104,5 +104,46 @@
     .prose .wp-block-syntaxhighlighter-code code::after,
     .prose .wp-block-syntaxhighlighter-code code::before {
         content: "";
+    }
+
+    /* Copy to Clipboard Button
+    _________________________________________________________________________________ */
+    .syntaxhighlighter {
+        border-radius: 8px;
+        border-top: none;
+        position: relative;
+    }
+
+    .wp-block-syntaxhighlighter-code > header {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        left: 0;
+        margin-block-end: 3rem;
+        position: sticky;
+        top: 5rem;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .admin-bar .wp-block-syntaxhighlighter-code > header {
+        top: 7rem;
+    }
+
+    .wp-block-syntaxhighlighter-code > header .copy-to-clipboard {
+        backdrop-filter: var(--backdrop-filter-default);
+        background-color: var(--background-color-light-transparency);
+        border: ridge 1px var(--color-grey-dark);
+        border-radius: 5px;
+        padding: 0.45rem 0.35rem 0.35rem;
+        position: absolute;
+        right: 5px;
+        text-shadow: var(--color-grey-light) 0 0 2px;
+        top: 5px;
+        transition: var(--background-hover-transition);
+    }
+
+    .wp-block-syntaxhighlighter-code > header .copy-to-clipboard:hover {
+        background-color: var(--color-grey-light);
+        cursor: pointer;
     }
 }
