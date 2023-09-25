@@ -1,4 +1,4 @@
-jQuery(document).ready(function ($) {
+jQuery(document).ready(function ($) { // eslint-disable-line no-unused-vars
     'use strict';
 
     const copyButtonLabel = 'Copy Code';
@@ -9,8 +9,8 @@ jQuery(document).ready(function ($) {
 
         const blocks = document.querySelectorAll('div.wp-block-syntaxhighlighter-code ');
         blocks.forEach((block) => {
-            const header = document.createElement("header");
-            const span = document.createElement("span");
+            const header = document.createElement('header');
+            const span = document.createElement('span');
 
             block.insertBefore(header, block.childNodes[0]);
             header.appendChild(span);
