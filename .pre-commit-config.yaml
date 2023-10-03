@@ -70,8 +70,8 @@ repos:
             Libs/YahnisElsts/PluginUpdateChecker/
           )
 
-  - repo: https://github.com/awebdeveloper/pre-commit-stylelint
-    rev: 0.0.2
+  - repo: https://github.com/thibaudcolas/pre-commit-stylelint
+    rev: v15.10.3
     hooks:
       - id: stylelint
         exclude: |
