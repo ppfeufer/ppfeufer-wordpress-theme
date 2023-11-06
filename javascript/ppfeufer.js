@@ -39,7 +39,7 @@ jQuery(document).ready(($) => { // eslint-disable-line no-unused-vars
 
         setTimeout(() => {
             button.innerHTML = copyButtonLabel;
-        }, 100000);
+        }, 5000);
     };
 
     addHeaderToCodeBlocks();
