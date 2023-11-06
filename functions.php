@@ -21,13 +21,13 @@
 
 use WordPress\Themes\Ppfeufer\Plugins\Shortcodes;
 
-require_once(get_theme_file_path('inc/autoloader.php'));
+require_once(get_theme_file_path(file: 'inc/autoloader.php'));
 
 // Load Libraries
 new Shortcodes;
 
 /**
- * Create HTML meta tags
+ * Create HTML meta-tags
  *
  * @param string $property
  * @param string $content
@@ -35,10 +35,17 @@ new Shortcodes;
  *
  * @return string|null
  */
-function __create_meta_tag(string $property, string $content, string $type = 'property'): ?string {
+function __create_meta_tag(
+    string $property,
+    string $content,
+    string $type = 'property'
+): ?string {
     $allowed_types = ['property', 'name'];
 
-    if (!in_array($type, $allowed_types) || empty($property) || empty($content)) {
+    if (
+        !in_array(needle: $type, haystack: $allowed_types)
+        || empty($property) || empty($content)
+    ) {
         return null;
     }
 
@@ -52,32 +59,31 @@ function __create_meta_tag(string $property, string $content, string $type = 'pr
  */
 function ppfeufer_enqueue_styles(): void {
     wp_enqueue_style(
-        'fira-code',
-        get_theme_file_uri('/css/libs/fira-code/6.2.0/fira_code.min.css'),
-        [],
-        wp_get_theme()->get('Version')
+        handle: 'fira-code',
+        src: get_theme_file_uri(file: '/css/libs/fira-code/6.2.0/fira_code.min.css'),
+        ver: wp_get_theme()->get('Version')
     );
     wp_enqueue_style(
-        'ppfeufer-theme-style-defaults',
-        get_theme_file_uri('/css/ppfeufer-defaults.min.css'),
-        ['fira-code', 'wp-moose-style'],
-        wp_get_theme()->get('Version')
+        handle: 'ppfeufer-theme-style-defaults',
+        src: get_theme_file_uri(file: '/css/ppfeufer-defaults.min.css'),
+        deps: ['fira-code', 'wp-moose-style'],
+        ver: wp_get_theme()->get('Version')
     );
     wp_enqueue_style(
-        'ppfeufer-theme-style',
-        get_theme_file_uri('/css/ppfeufer.min.css'),
-        ['ppfeufer-theme-style-defaults'],
-        wp_get_theme()->get('Version')
+        handle: 'ppfeufer-theme-style',
+        src: get_theme_file_uri(file: '/css/ppfeufer.min.css'),
+        deps: ['ppfeufer-theme-style-defaults'],
+        ver: wp_get_theme()->get('Version')
     );
     wp_enqueue_style(
-        'ppfeufer-plugin-styles',
-        get_theme_file_uri('/css/plugin-styles.min.css'),
-        ['ppfeufer-theme-style'],
-        wp_get_theme()->get('Version')
+        handle: 'ppfeufer-plugin-styles',
+        src: get_theme_file_uri(file: '/css/plugin-styles.min.css'),
+        deps: ['ppfeufer-theme-style'],
+        ver: wp_get_theme()->get('Version')
     );
 }
 
-add_action('wp_enqueue_scripts', 'ppfeufer_enqueue_styles');
+add_action(hook_name: 'wp_enqueue_scripts', callback: 'ppfeufer_enqueue_styles');
 
 /**
  * Enqueue admin CSS
@@ -86,20 +92,21 @@ add_action('wp_enqueue_scripts', 'ppfeufer_enqueue_styles');
  */
 function ppfeufer_enqueue_admin_styles(): void {
     wp_enqueue_style(
-        'fira-code',
-        get_theme_file_uri('/css/libs/fira-code/6.2.0/fira_code.min.css'),
-        [],
-        wp_get_theme()->get('Version')
+        handle: 'fira-code',
+        src: get_theme_file_uri(file: '/css/libs/fira-code/6.2.0/fira_code.min.css'),
+        ver: wp_get_theme()->get('Version')
     );
     wp_enqueue_style(
-        'ppfeufer-admin-style',
-        get_theme_file_uri('/css/ppfeufer-admin-style.min.css'),
-        ['fira-code'],
-        wp_get_theme()->get('Version')
+        handle: 'ppfeufer-admin-style',
+        src: get_theme_file_uri(file: '/css/ppfeufer-admin-style.min.css'),
+        deps: ['fira-code'],
+        ver: wp_get_theme()->get('Version')
     );
 }
 
-add_action('admin_enqueue_scripts', 'ppfeufer_enqueue_admin_styles');
+add_action(
+    hook_name: 'admin_enqueue_scripts', callback: 'ppfeufer_enqueue_admin_styles'
+);
 
 /**
  * Enqueue the child themes JS
@@ -108,18 +115,21 @@ add_action('admin_enqueue_scripts', 'ppfeufer_enqueue_admin_styles');
  */
 function ppfeufer_enqueue_javascript(): void {
     wp_enqueue_script(
-        'ppfeufer',
-        get_theme_file_uri('/javascript/ppfeufer.min.js'),
-        [],
-        wp_get_theme()->get('Version'),
-        [
+        handle: 'ppfeufer',
+        src: get_theme_file_uri(file: '/javascript/ppfeufer.min.js'),
+        ver: wp_get_theme()->get('Version'),
+        args: [
             'in_footer' => true,
             'strategy' => 'async'
         ]
     );
 }
 
-add_action('wp_enqueue_scripts', 'ppfeufer_enqueue_javascript', 9999);
+add_action(
+    hook_name: 'wp_enqueue_scripts',
+    callback: 'ppfeufer_enqueue_javascript',
+    priority: 9999
+);
 
 /**
  * Redirect to the right favicon.ico
@@ -134,12 +144,14 @@ add_action('wp_enqueue_scripts', 'ppfeufer_enqueue_javascript', 9999);
  * @return void
  */
 function ppfeufer_favicon_ico(): void {
-    wp_redirect(get_site_icon_url(32, get_theme_file_uri('/favicons/favicon.ico')));
+    wp_redirect(location: get_site_icon_url(
+        size: 32, url: get_theme_file_uri('/favicons/favicon.ico')
+    ));
 
     exit;
 }
 
-add_action('do_faviconico', 'ppfeufer_favicon_ico');
+add_action(hook_name: 'do_faviconico', callback: 'ppfeufer_favicon_ico');
 
 /**
  * Adding favicons
@@ -154,13 +166,25 @@ function ppfeufer_favicons(): void {
     echo '<link rel="manifest" href="' . get_stylesheet_directory_uri() . '/favicons/site.webmanifest">' . "\n";
     echo '<link rel="shortcut icon" href="' . get_stylesheet_directory_uri() . '/favicons/favicon.ico">' . "\n";
 
-    echo __create_meta_tag('msapplication-TileColor', '#da532c', 'name') . "\n";
-    echo __create_meta_tag('msapplication-TileImage', get_stylesheet_directory_uri() . '/favicons/mstile-144x144.png', 'name') . "\n";
-    echo __create_meta_tag('msapplication-config', get_stylesheet_directory_uri() . '/favicons/browserconfig.xml', 'name') . "\n";
-    echo __create_meta_tag('theme-color', '#ffffff', 'name') . "\n";
+    echo __create_meta_tag(
+            property: 'msapplication-TileColor', content: '#da532c', type: 'name'
+        ) . "\n";
+    echo __create_meta_tag(
+            property: 'msapplication-TileImage',
+            content: get_stylesheet_directory_uri() . '/favicons/mstile-144x144.png',
+            type: 'name'
+        ) . "\n";
+    echo __create_meta_tag(
+            property: 'msapplication-config',
+            content: get_stylesheet_directory_uri() . '/favicons/browserconfig.xml',
+            type: 'name'
+        ) . "\n";
+    echo __create_meta_tag(
+            property: 'theme-color', content: '#ffffff', type: 'name'
+        ) . "\n";
 }
 
-add_action('wp_head', 'ppfeufer_favicons');
+add_action(hook_name: 'wp_head', callback: 'ppfeufer_favicons');
 
 /**
  * Disable footer credits
@@ -171,7 +195,11 @@ function wp_moose_footer_credits(): string {
     return '';
 }
 
-add_action('wp_moose_action_footer', 'wp_moose_footer_credits', 30);
+add_action(
+    hook_name: 'wp_moose_action_footer',
+    callback: 'wp_moose_footer_credits',
+    priority: 30
+);
 
 /**
  * Remove website field from comment form to prevent backlink spam
@@ -187,7 +215,10 @@ function remove_website_field_from_comment_form(array $fields): array {
     return $fields;
 }
 
-add_filter('comment_form_default_fields', 'remove_website_field_from_comment_form');
+add_filter(
+    hook_name: 'comment_form_default_fields',
+    callback: 'remove_website_field_from_comment_form'
+);
 
 /**
  * Change the label text for the cookie consent checkbox in comment form
@@ -199,7 +230,10 @@ function comment_form_change_cookie_consent_checkbox_label(array $fields): array
     if (!is_admin()) {
         $commenter = wp_get_current_commenter();
         $consent = empty($commenter['comment_author_email']) ? '' : ' checked="checked"';
-        $consentText = __('Save my name and email in this browser for the next time I comment.', 'ppfeufer');
+        $consentText = __(
+            text: 'Save my name and email in this browser for the next time I comment.',
+            domain: 'ppfeufer'
+        );
         $fields['cookies'] = '<p class="comment-form-cookies-consent">
                                 <input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"' . $consent . '>
                                 <label for="wp-comment-cookies-consent">' . $consentText . '</label>
@@ -209,7 +243,10 @@ function comment_form_change_cookie_consent_checkbox_label(array $fields): array
     return $fields;
 }
 
-add_filter('comment_form_default_fields', 'comment_form_change_cookie_consent_checkbox_label');
+add_filter(
+    hook_name: 'comment_form_default_fields',
+    callback: 'comment_form_change_cookie_consent_checkbox_label'
+);
 
 /**
  * Set the title separator
@@ -220,7 +257,7 @@ function ppfeufer_title_separator(): string {
     return '»';
 }
 
-add_filter('document_title_separator', 'ppfeufer_title_separator');
+add_filter(hook_name: 'document_title_separator', callback: 'ppfeufer_title_separator');
 
 /**
  * Remove the protocol from a given URL
@@ -229,7 +266,7 @@ add_filter('document_title_separator', 'ppfeufer_title_separator');
  * @return string
  */
 function remove_protocol_from_url(string $url): string {
-    return preg_replace('#^https?://#', '', $url);
+    return preg_replace(pattern: '#^https?://#', replacement: '', subject: $url);
 }
 
 /**
@@ -239,16 +276,16 @@ function remove_protocol_from_url(string $url): string {
  */
 function ppfeufer_og_tags(): void {
     // WP info
-    $wpSiteUrl = get_bloginfo('url', 'display');
-    $wpSiteDescription = get_bloginfo('description', 'display');
-    $wpSiteName = get_bloginfo('name');
+    $wpSiteUrl = get_bloginfo(show: 'url', filter: 'display');
+    $wpSiteDescription = get_bloginfo(show: 'description', filter: 'display');
+    $wpSiteName = get_bloginfo(show: 'name');
 
     // OG info
     $ogType = 'website';
     $ogDescription = $wpSiteDescription;
-    $ogSiteName = $wpSiteName . ' / ' . remove_protocol_from_url($wpSiteUrl);
+    $ogSiteName = $wpSiteName . ' / ' . remove_protocol_from_url(url: $wpSiteUrl);
     $ogTitle = $wpSiteName;
-    $ogUrl = home_url(add_query_arg(null, null));
+    $ogUrl = home_url(path: add_query_arg(null, null));
 
     // On every singular page except home page
     if (is_singular()) {
@@ -259,37 +296,63 @@ function ppfeufer_og_tags(): void {
     // On blog articles
     if (is_single()) {
         $ogType = 'article';
-        $ogArticleImage = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
+        $ogArticleImage = wp_get_attachment_image_src(
+            attachment_id: get_post_thumbnail_id(), size: 'full'
+        );
 
         if ($ogArticleImage) {
-            echo __create_meta_tag('og:image', $ogArticleImage['0']) . "\n";
-            echo __create_meta_tag('og:image:url', $ogArticleImage['0']) . "\n";
-            echo __create_meta_tag('og:image:width', $ogArticleImage['1']) . "\n";
-            echo __create_meta_tag('og:image:height', $ogArticleImage['2']) . "\n";
-            echo __create_meta_tag('og:image:alt', $ogDescription) . "\n";
+            echo __create_meta_tag(
+                    property: 'og:image', content: $ogArticleImage['0']
+                ) . "\n";
+            echo __create_meta_tag(
+                    property: 'og:image:url', content: $ogArticleImage['0']
+                ) . "\n";
+            echo __create_meta_tag(
+                    property: 'og:image:width', content: $ogArticleImage['1']
+                ) . "\n";
+            echo __create_meta_tag(
+                    property: 'og:image:height', content: $ogArticleImage['2']
+                ) . "\n";
+            echo __create_meta_tag(
+                    property: 'og:image:alt', content: $ogDescription
+                ) . "\n";
 
             // Twitter cards
-            echo __create_meta_tag('twitter:image:src', $ogArticleImage['0'], 'name') . "\n";
+            echo __create_meta_tag(
+                    property: 'twitter:image:src',
+                    content: $ogArticleImage['0'],
+                    type: 'name'
+                ) . "\n";
 
             if ($ogArticleImage['1'] > 1000) {
-                echo __create_meta_tag('twitter:card', 'summary_large_image', 'name') . "\n";
+                echo __create_meta_tag(
+                        property: 'twitter:card',
+                        content: 'summary_large_image',
+                        type: 'name'
+                    ) . "\n";
             }
         }
     }
 
-    echo __create_meta_tag('og:type', $ogType) . "\n";
-    echo __create_meta_tag('og:site_name', $ogSiteName) . "\n";
-    echo __create_meta_tag('og:url', $ogUrl) . "\n";
-    echo __create_meta_tag('og:title', $ogTitle) . "\n";
-    echo __create_meta_tag('og:description', $ogDescription) . "\n";
+    echo __create_meta_tag(property: 'og:type', content: $ogType) . "\n";
+    echo __create_meta_tag(property: 'og:site_name', content: $ogSiteName) . "\n";
+    echo __create_meta_tag(property: 'og:url', content: $ogUrl) . "\n";
+    echo __create_meta_tag(property: 'og:title', content: $ogTitle) . "\n";
+    echo __create_meta_tag(property: 'og:description', content: $ogDescription) . "\n";
 
     // Twitter cards
-    echo __create_meta_tag('twitter:title', $ogTitle, 'name') . "\n";
-    echo __create_meta_tag('twitter:site', '@ppfeufer', 'name') . "\n";
-    echo __create_meta_tag('twitter:description', $ogDescription, 'name') . "\n";
+    echo __create_meta_tag(
+            property: 'twitter:title', content: $ogTitle, type: 'name'
+        ) . "\n";
+    echo __create_meta_tag(
+            property: 'twitter:site', content: '@ppfeufer', type: 'name'
+        ) . "\n";
+    echo __create_meta_tag(
+            property: 'twitter:description', content: $ogDescription, type: 'name'
+        ) . "\n";
 }
 
-add_action('wp_head', 'ppfeufer_og_tags');
+add_action(hook_name: 'wp_head', callback: 'ppfeufer_og_tags');
 
 /**
  * Remove DNS prefetch
@@ -297,7 +360,18 @@ add_action('wp_head', 'ppfeufer_og_tags');
  * @return void
  */
 function remove_dns_prefetch(): void {
-    remove_action('wp_head', 'wp_resource_hints', 2);
+    remove_action(hook_name: 'wp_head', callback: 'wp_resource_hints', priority: 2);
 }
 
-add_action('init', 'remove_dns_prefetch');
+add_action(hook_name: 'init', callback: 'remove_dns_prefetch');
+
+/**
+ * Add SVG-Sprite to footer hook
+ *
+ * @return void
+ */
+function ppfeufer_svg_sprite(): void {
+    include 'Assets/images/sprite.svg';
+}
+
+add_action(hook_name: 'wp_footer', callback: 'ppfeufer_svg_sprite');

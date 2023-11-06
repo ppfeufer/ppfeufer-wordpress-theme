@@ -23,7 +23,7 @@ namespace WordPress\Themes\Ppfeufer\Plugins;
  * Theme Shortcodes
  */
 
-defined('ABSPATH') or die();
+defined(constant_name: 'ABSPATH') or die();
 
 /**
  * Class Shortcodes
@@ -41,8 +41,8 @@ class Shortcodes {
      * Register all shortcodes
      */
     public function registerShortcodes(): void {
-        add_shortcode('divider', [$this, 'shortcodeDivider']);
-        add_shortcode('credits', [$this, 'shortcodeCredits']);
+        add_shortcode(tag: 'divider', callback: [$this, 'shortcodeDivider']);
+        add_shortcode(tag: 'credits', callback: [$this, 'shortcodeCredits']);
     }
 
     /**
@@ -51,7 +51,7 @@ class Shortcodes {
      * @return void
      */
     public function addShortcodesToWidgets(): void {
-        add_filter('widget_text', 'do_shortcode');
+        add_filter(hook_name: 'widget_text', callback: 'do_shortcode');
     }
 
     /**
@@ -63,7 +63,9 @@ class Shortcodes {
     public function removeAutopInShortcode(string $content): string {
         $content = do_shortcode(shortcode_unautop($content));
 
-        return preg_replace('#^</p>|^<br />|<p>$#', '', $content);
+        return preg_replace(
+            pattern: '#^</p>|^<br />|<p>$#', replacement: '', subject: $content
+        );
     }
 
     /**
@@ -75,20 +77,20 @@ class Shortcodes {
      * Attributes:
      *      width => Width of the divider. (Default: 100%)
      *
-     * @param string|array $atts Attributes for the shortcode
+     * @param array|string $atts Attributes for the shortcode
      * @return string
      */
-    public function shortcodeDivider($atts = []): string {
+    public function shortcodeDivider(array|string $atts = []): string {
         // Normalize attribute keys, lowercase
-        $atts = array_change_key_case((array) $atts, CASE_LOWER);
+        $atts = array_change_key_case(array: (array) $atts);
 
         // Override default attributes with user attributes
         $attributes = shortcode_atts(
-            [
+            pairs: [
                 'width' => '100%'
             ],
-            $atts,
-            'divider'
+            atts: $atts,
+            shortcode: 'divider'
         );
 
         return '<div class="divider clearfix" style="width: ' . $attributes['width'] . '"></div>';
@@ -97,42 +99,44 @@ class Shortcodes {
     /**
      * Shortcode: Credits box
      *
-     * Draws a credits area
+     * Draws a credit area
      *
      * Usage:
      *      [credits width="85%" headline_tag="h4"]Content[/credits]
      *
      * Attributes:
-     *      width => Width of the credits box (Default: 85%)
+     *      width => Width of the credit box (Default: 85%)
      *      headline_tag => Headline tag (Default: h4)
      *
-     * @param string|array $atts Attributes for the shortcode
+     * @param array|string $atts Attributes for the shortcode
      * @param string|null $content Shortcode content
      * @return string|null
      */
-    public function shortcodeCredits($atts = [], string $content = null): ?string {
+    public function shortcodeCredits(array|string $atts = [], string $content = null): ?string {
         // Normalize attribute keys, lowercase
-        $atts = array_change_key_case((array) $atts, CASE_LOWER);
+        $atts = array_change_key_case(array: (array) $atts);
 
         // Override default attributes with user attributes
         $attributes = shortcode_atts(
-            [
+            pairs: [
                 'headline_tag' => 'h4',
                 'width' => '85%'
             ],
-            $atts,
-            'credits'
+            atts: $atts,
+            shortcode: 'credits'
         );
 
         $shortcodeOutput = null;
 
-        if(!is_null($content)) {
+        if($content !== null) {
             $headlineOpen = '<' . $attributes['headline_tag'] . '>';
             $headlineClose = '</' . $attributes['headline_tag'] . '>';
 
             $shortcodeOutput = '<div class="ppfeufer-article-credits clearfix">';
-            $shortcodeOutput .= '<header>' . $headlineOpen . __('Credits:', 'ppfeufer') . $headlineClose . '</header>';
-            $shortcodeOutput .= wpautop(do_shortcode(apply_filters('the_content', $content)));
+            $shortcodeOutput .= '<header>' . $headlineOpen . __(text: 'Credits:', domain: 'ppfeufer') . $headlineClose . '</header>';
+            $shortcodeOutput .= wpautop(text: do_shortcode(
+                content: apply_filters(hook_name: 'the_content', value: $content)
+            ));
             $shortcodeOutput .= '</div>';
         }
 

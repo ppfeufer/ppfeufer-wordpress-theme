@@ -20,11 +20,11 @@ $classes = [
         ?>
         <header class="not-prose post-header mb-gutter text-center">
             <div class="mb-half-gutter max-w-prose mx-auto">
-                <?php the_title('<h1 class="mt-10 mb-6 text-3xl font-bold">', '</h1>'); ?>
+                <?php the_title(before: '<h1 class="mt-10 mb-6 text-3xl font-bold">', after: '</h1>'); ?>
 
                 <div class="text-xs entry-meta">
                     <span class="link text-xs">
-                        <?php edit_post_link(esc_html__('Edit', 'wp-moose')); ?>
+                        <?php edit_post_link(esc_html__(text: 'Edit', domain: 'wp-moose')); ?>
                     </span>
                 </div>
             </div>
@@ -37,8 +37,8 @@ $classes = [
         <?php
         the_content();
 
-        wp_link_pages([
-            'before' => '<div class="page-links">' . esc_html__('Pages:', 'wp-moose'),
+        wp_link_pages(args: [
+            'before' => '<div class="page-links">' . esc_html__(text: 'Pages:', domain: 'wp-moose'),
             'after'  => '</div>',
         ]);
         ?>
