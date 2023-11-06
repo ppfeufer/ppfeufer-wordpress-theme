@@ -1,33 +1,28 @@
-jQuery(document).ready(function ($) { // eslint-disable-line no-unused-vars
+jQuery(document).ready(($) => { // eslint-disable-line no-unused-vars
     'use strict';
 
-    const copyButtonLabel = 'Copy Code';
+    // const copyButtonLabel = 'Copy Code';
+    const copyButtonLabel = `<svg style="width: 16px; height: 16px;"><use href="#copy-code"></use></svg>`;
     const sleep = ms => new Promise(r => setTimeout(r, ms));
 
     const addHeaderToCodeBlocks = async () => {
         await sleep(2000);
 
-        const blocks = document.querySelectorAll('div.wp-block-syntaxhighlighter-code ');
+        const blocks = document.querySelectorAll('div.wp-block-syntaxhighlighter-code');
 
         blocks.forEach((block) => {
-            const header = document.createElement('header');
-            const span = document.createElement('span');
-
-            block.insertBefore(header, block.childNodes[0]);
-            header.appendChild(span);
-
             // Only add button if the browser supports Clipboard API
             if (navigator.clipboard) {
-                const button = document.createElement('button');
-                button.innerText = copyButtonLabel;
+                const button = document.createElement('span');
+
+                button.innerHTML = copyButtonLabel;
                 button.classList.add('copy-to-clipboard');
 
                 button.addEventListener('click', async () => {
                     await copyCode(block, button);
                 });
 
-                // block.appendChild(button);
-                header.appendChild(button);
+                block.prepend(button);
             }
         });
     };
@@ -39,11 +34,12 @@ jQuery(document).ready(function ($) { // eslint-disable-line no-unused-vars
         await navigator.clipboard.writeText(text);
 
         // Visual feedback that task is completed
-        button.innerText = 'Code Copied';
+        // button.innerText = 'Code Copied';
+        button.innerHTML = `<svg style="width: 16px; height: 16px;"><use href="#code-copied"></use></svg>`;
 
         setTimeout(() => {
-            button.innerText = copyButtonLabel;
-        }, 700);
+            button.innerHTML = copyButtonLabel;
+        }, 100000);
     };
 
     addHeaderToCodeBlocks();
