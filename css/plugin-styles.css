@@ -119,15 +119,15 @@
         background-color: var(--background-color-light-transparency);
         border: ridge 1px var(--color-grey-dark);
         border-radius: 5px;
-        padding: 0.45rem 0.35rem 0.35rem;
-        margin-right: 0.5rem;
-        text-shadow: var(--color-grey-light)0 0 2px;
-        transition: var(--background-hover-transition);
-        position: sticky;
-        top: 5rem;
-        z-index: 1;
-        width: auto;
         float: right;
+        margin-right: 0.5rem;
+        padding: 0.45rem 0.35rem 0.35rem;
+        position: sticky;
+        text-shadow: var(--color-grey-light) 0 0 2px;
+        top: 5rem;
+        transition: var(--background-hover-transition);
+        width: auto;
+        z-index: 1;
     }
 
     .wp-block-syntaxhighlighter-code > .copy-to-clipboard:hover {

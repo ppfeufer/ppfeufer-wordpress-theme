@@ -1,4 +1,2 @@
-/*!
- * Style for https://ppfeufer.de
- */
 @media all{body,html{height:100%}body{display:flex;flex-direction:column}body>div.container{align-items:flex-start;flex:1 0 auto}.prose{max-width:120ch}.max-w-prose{max-width:110ch}.menu-links.menu-vertical .menu-item>a:focus,.menu-links>.menu-item>a:focus,a:focus,button:focus{outline-style:none}a{text-decoration:underline}a:focus,button:focus{color:inherit}.is-sticky .navbar{backdrop-filter:var(--backdrop-filter-default);background-color:var(--background-color-light-transparency)}.navbar .site-brand img{width:auto}.sidebar-primary{position:sticky;top:5rem}footer{flex-shrink:0}svg{height:100%;width:100%}.comments-area .comment-list .reply::before{margin-right:.5rem}}@media screen and (min-width:992px){.no-sidebar .prose.prose-moose .alignwide{margin:40px -5%!important;max-width:110%;width:110%}}
+/*# sourceMappingURL=ppfeufer.min.css.map */
