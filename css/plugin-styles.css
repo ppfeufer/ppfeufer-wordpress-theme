@@ -114,35 +114,23 @@
         position: relative;
     }
 
-    .wp-block-syntaxhighlighter-code > header {
-        display: grid;
-        grid-template-columns: min-content 1fr;
-        left: 0;
-        margin-block-end: 3rem;
-        position: sticky;
-        top: 5rem;
-        width: 100%;
-        z-index: 1;
-    }
-
-    .admin-bar .wp-block-syntaxhighlighter-code > header {
-        top: 7rem;
-    }
-
-    .wp-block-syntaxhighlighter-code > header .copy-to-clipboard {
+    .wp-block-syntaxhighlighter-code > .copy-to-clipboard {
         backdrop-filter: var(--backdrop-filter-default);
         background-color: var(--background-color-light-transparency);
         border: ridge 1px var(--color-grey-dark);
         border-radius: 5px;
         padding: 0.45rem 0.35rem 0.35rem;
-        position: absolute;
-        right: 5px;
-        text-shadow: var(--color-grey-light) 0 0 2px;
-        top: 5px;
+        margin-right: 0.5rem;
+        text-shadow: var(--color-grey-light)0 0 2px;
         transition: var(--background-hover-transition);
+        position: sticky;
+        top: 5rem;
+        z-index: 1;
+        width: auto;
+        float: right;
     }
 
-    .wp-block-syntaxhighlighter-code > header .copy-to-clipboard:hover {
+    .wp-block-syntaxhighlighter-code > .copy-to-clipboard:hover {
         background-color: var(--color-grey-light);
         cursor: pointer;
     }
