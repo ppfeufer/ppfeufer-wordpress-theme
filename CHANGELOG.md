@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## \[In Development\] - Unreleased
 
+### Added
+
+- SVG sprite for "Copy to Clipboard" button
+- Argument keywords in PHP code
+
 ### \[0.0.22\] - 2023-07-20
 
 ### Added
