@@ -12,6 +12,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - SVG sprite for "Copy to Clipboard" button
 - Argument keywords in PHP code
 
+### Changed
+
+- CSS moved to dedicated `Assets` directory
+- Favicons moved to dedicated `Assets` directory
+- JavaScript moved to dedicated `Assets` directory
+
 ### \[0.0.22\] - 2023-07-20
 
 ### Added
