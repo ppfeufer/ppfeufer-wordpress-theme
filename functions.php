@@ -116,7 +116,7 @@ add_action(
 function ppfeufer_enqueue_javascript(): void {
     wp_enqueue_script(
         handle: 'ppfeufer',
-        src: get_theme_file_uri(file: '/javascript/ppfeufer.min.js'),
+        src: get_theme_file_uri(file: '/Assets/javascript/ppfeufer.min.js'),
         ver: wp_get_theme()->get('Version'),
         args: [
             'in_footer' => true,
