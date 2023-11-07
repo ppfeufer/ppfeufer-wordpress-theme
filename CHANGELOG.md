@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## \[In Development\] - Unreleased
 
+### \[0.0.23\] - 2023-11-07
+
 ### Added
 
 - SVG sprite for "Copy to Clipboard" button
@@ -154,7 +156,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 
-- Primary sidebar is now sticky
+- The Primary sidebar is now sticky
 
 ### \[0.0.4\] - 2022-05-13
 
