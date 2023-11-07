@@ -78,7 +78,7 @@ repos:
           (?x)(
             .min(.css|.css.map)|
             Libs/YahnisElsts/PluginUpdateChecker/ |
-            css/libs/
+            Assets/css/libs/
           )
         args:
           - --formatter=compact

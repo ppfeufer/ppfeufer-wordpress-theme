@@ -60,24 +60,24 @@ function __create_meta_tag(
 function ppfeufer_enqueue_styles(): void {
     wp_enqueue_style(
         handle: 'fira-code',
-        src: get_theme_file_uri(file: '/css/libs/fira-code/6.2.0/fira_code.min.css'),
+        src: get_theme_file_uri(file: '/Assets/css/libs/fira-code/6.2.0/fira_code.min.css'),
         ver: wp_get_theme()->get('Version')
     );
     wp_enqueue_style(
         handle: 'ppfeufer-theme-style-defaults',
-        src: get_theme_file_uri(file: '/css/ppfeufer-defaults.min.css'),
+        src: get_theme_file_uri(file: '/Assets/css/ppfeufer-defaults.min.css'),
         deps: ['fira-code', 'wp-moose-style'],
         ver: wp_get_theme()->get('Version')
     );
     wp_enqueue_style(
         handle: 'ppfeufer-theme-style',
-        src: get_theme_file_uri(file: '/css/ppfeufer.min.css'),
+        src: get_theme_file_uri(file: '/Assets/css/ppfeufer.min.css'),
         deps: ['ppfeufer-theme-style-defaults'],
         ver: wp_get_theme()->get('Version')
     );
     wp_enqueue_style(
         handle: 'ppfeufer-plugin-styles',
-        src: get_theme_file_uri(file: '/css/plugin-styles.min.css'),
+        src: get_theme_file_uri(file: '/Assets/css/plugin-styles.min.css'),
         deps: ['ppfeufer-theme-style'],
         ver: wp_get_theme()->get('Version')
     );
@@ -93,12 +93,12 @@ add_action(hook_name: 'wp_enqueue_scripts', callback: 'ppfeufer_enqueue_styles')
 function ppfeufer_enqueue_admin_styles(): void {
     wp_enqueue_style(
         handle: 'fira-code',
-        src: get_theme_file_uri(file: '/css/libs/fira-code/6.2.0/fira_code.min.css'),
+        src: get_theme_file_uri(file: '/Assets/css/libs/fira-code/6.2.0/fira_code.min.css'),
         ver: wp_get_theme()->get('Version')
     );
     wp_enqueue_style(
         handle: 'ppfeufer-admin-style',
-        src: get_theme_file_uri(file: '/css/ppfeufer-admin-style.min.css'),
+        src: get_theme_file_uri(file: '/Assets/css/ppfeufer-admin-style.min.css'),
         deps: ['fira-code'],
         ver: wp_get_theme()->get('Version')
     );
