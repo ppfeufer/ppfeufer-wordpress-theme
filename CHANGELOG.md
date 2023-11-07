@@ -16,9 +16,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 
-- CSS moved to dedicated `Assets` directory
-- Favicons moved to dedicated `Assets` directory
-- JavaScript moved to dedicated `Assets` directory
+- CSS moved to the dedicated `Assets` directory
+- Favicons moved to the dedicated `Assets` directory
+- JavaScript moved to the dedicated `Assets` directory
 - PHP code formatted
 
 ### \[0.0.22\] - 2023-07-20
