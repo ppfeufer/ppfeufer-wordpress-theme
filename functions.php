@@ -60,7 +60,9 @@ function __create_meta_tag(
 function ppfeufer_enqueue_styles(): void {
     wp_enqueue_style(
         handle: 'fira-code',
-        src: get_theme_file_uri(file: '/Assets/css/libs/fira-code/6.2.0/fira_code.min.css'),
+        src: get_theme_file_uri(
+            file: '/Assets/css/libs/fira-code/6.2.0/fira_code.min.css'
+        ),
         ver: wp_get_theme()->get('Version')
     );
     wp_enqueue_style(
@@ -93,7 +95,9 @@ add_action(hook_name: 'wp_enqueue_scripts', callback: 'ppfeufer_enqueue_styles')
 function ppfeufer_enqueue_admin_styles(): void {
     wp_enqueue_style(
         handle: 'fira-code',
-        src: get_theme_file_uri(file: '/Assets/css/libs/fira-code/6.2.0/fira_code.min.css'),
+        src: get_theme_file_uri(
+            file: '/Assets/css/libs/fira-code/6.2.0/fira_code.min.css'
+        ),
         ver: wp_get_theme()->get('Version')
     );
     wp_enqueue_style(
