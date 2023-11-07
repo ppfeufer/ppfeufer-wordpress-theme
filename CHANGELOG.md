@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - CSS moved to dedicated `Assets` directory
 - Favicons moved to dedicated `Assets` directory
 - JavaScript moved to dedicated `Assets` directory
+- PHP code formatted
 
 ### \[0.0.22\] - 2023-07-20
 
@@ -28,7 +29,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 
-- Meta tags now generated via their own function
+- Meta-tags are now generated via their own function
 
 ### \[0.0.20\] - 2022-11-08
 

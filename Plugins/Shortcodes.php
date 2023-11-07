@@ -38,20 +38,20 @@ class Shortcodes {
     }
 
     /**
-     * Register all shortcodes
-     */
-    public function registerShortcodes(): void {
-        add_shortcode(tag: 'divider', callback: [$this, 'shortcodeDivider']);
-        add_shortcode(tag: 'credits', callback: [$this, 'shortcodeCredits']);
-    }
-
-    /**
      * Add shortcode to widgets
      *
      * @return void
      */
     public function addShortcodesToWidgets(): void {
         add_filter(hook_name: 'widget_text', callback: 'do_shortcode');
+    }
+
+    /**
+     * Register all shortcodes
+     */
+    public function registerShortcodes(): void {
+        add_shortcode(tag: 'divider', callback: [$this, 'shortcodeDivider']);
+        add_shortcode(tag: 'credits', callback: [$this, 'shortcodeCredits']);
     }
 
     /**
@@ -82,7 +82,7 @@ class Shortcodes {
      */
     public function shortcodeDivider(array|string $atts = []): string {
         // Normalize attribute keys, lowercase
-        $atts = array_change_key_case(array: (array) $atts);
+        $atts = array_change_key_case(array: (array)$atts);
 
         // Override default attributes with user attributes
         $attributes = shortcode_atts(
@@ -114,7 +114,7 @@ class Shortcodes {
      */
     public function shortcodeCredits(array|string $atts = [], string $content = null): ?string {
         // Normalize attribute keys, lowercase
-        $atts = array_change_key_case(array: (array) $atts);
+        $atts = array_change_key_case(array: (array)$atts);
 
         // Override default attributes with user attributes
         $attributes = shortcode_atts(
@@ -128,7 +128,7 @@ class Shortcodes {
 
         $shortcodeOutput = null;
 
-        if($content !== null) {
+        if ($content !== null) {
             $headlineOpen = '<' . $attributes['headline_tag'] . '>';
             $headlineClose = '</' . $attributes['headline_tag'] . '>';
 
