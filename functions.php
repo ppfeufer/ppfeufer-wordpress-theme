@@ -379,3 +379,29 @@ function ppfeufer_svg_sprite(): void {
 }
 
 add_action(hook_name: 'wp_footer', callback: 'ppfeufer_svg_sprite');
+
+/**
+ * Add general native lazy-loading support
+ *
+ * @param array $attr
+ * @param WP_Post $attachment
+ * @param string|int $size
+ * @return array
+ */
+function ppfeufer_add_lazy_loading(
+    array $attr, WP_Post $attachment, string|int $size
+): array {
+    if ($attachment->post_mime_type === 'image/svg+xml') {
+        unset($attr['loading']);
+    } else {
+        $attr['loading'] = 'lazy';
+    }
+
+    return $attr;
+}
+
+add_filter(
+    hook_name: 'wp_get_attachment_image_attributes',
+    callback: 'ppfeufer_add_lazy_loading',
+    accepted_args: 3
+);
