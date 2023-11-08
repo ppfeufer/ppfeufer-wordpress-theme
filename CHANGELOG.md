@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## \[In Development\] - Unreleased
 
+### \[0.1.0\] - 2023-11-08
+
 ### Added
 
 - Native lazy-loading support for images
