@@ -385,8 +385,8 @@ add_action(hook_name: 'wp_footer', callback: 'ppfeufer_svg_sprite');
  *
  * @param array $attr
  * @param WP_Post $attachment
- * @param array $size
- * @return string|array
+ * @param string|array $size
+ * @return array
  */
 function ppfeufer_add_lazy_loading(
     array $attr, WP_Post $attachment, string|array $size
