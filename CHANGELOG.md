@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## \[In Development\] - Unreleased
 
+### Fixed
+
+- Type hints in lazy loading function
+
 ### \[0.1.0\] - 2023-11-08
 
 ### Added

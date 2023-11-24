@@ -385,16 +385,18 @@ add_action(hook_name: 'wp_footer', callback: 'ppfeufer_svg_sprite');
  *
  * @param array $attr
  * @param WP_Post $attachment
- * @param string|int $size
- * @return array
+ * @param array $size
+ * @return string|array
  */
 function ppfeufer_add_lazy_loading(
-    array $attr, WP_Post $attachment, string|int $size
+    array $attr, WP_Post $attachment, string|array $size
 ): array {
-    if ($attachment->post_mime_type === 'image/svg+xml') {
-        unset($attr['loading']);
-    } else {
-        $attr['loading'] = 'lazy';
+    if (!is_admin()) {
+        if ($attachment->post_mime_type === 'image/svg+xml') {
+            unset($attr['loading']);
+        } else {
+            $attr['loading'] = 'lazy';
+        }
     }
 
     return $attr;
