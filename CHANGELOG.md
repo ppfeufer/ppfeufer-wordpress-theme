@@ -7,15 +7,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## \[In Development\] - Unreleased
 
-### Fixed
-
-- Type hints in lazy loading function
-
-### \[0.1.0\] - 2023-11-08
+### \[0.1.0\] - 2023-12-11
 
 ### Added
 
 - Native lazy-loading support for images
+
+### Changed
+
+- Favicons updated
 
 ### \[0.0.23\] - 2023-11-07
 
