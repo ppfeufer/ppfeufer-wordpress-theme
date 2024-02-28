@@ -19,6 +19,7 @@
 
 //namespace WordPress\Themes\Ppfeufer;
 
+use JetBrains\PhpStorm\NoReturn;
 use WordPress\Themes\Ppfeufer\Plugins\Shortcodes;
 
 require_once(get_theme_file_path(file: 'inc/autoloader.php'));
@@ -42,9 +43,9 @@ function __create_meta_tag(
 ): ?string {
     $allowed_types = ['property', 'name'];
 
-    if (
-        !in_array(needle: $type, haystack: $allowed_types)
-        || empty($property) || empty($content)
+    if (empty($property)
+        || empty($content)
+        || !in_array(needle: $type, haystack: $allowed_types)
     ) {
         return null;
     }
@@ -147,7 +148,7 @@ add_action(
  *
  * @return void
  */
-function ppfeufer_favicon_ico(): void {
+#[NoReturn] function ppfeufer_favicon_ico(): void {
     wp_redirect(location: get_site_icon_url(
         size: 32, url: get_theme_file_uri('/Assets/favicons/favicon.ico')
     ));
@@ -407,3 +408,22 @@ add_filter(
     callback: 'ppfeufer_add_lazy_loading',
     accepted_args: 3
 );
+
+/**
+ * Change the search URL
+ *
+ * @return void
+ */
+#[NoReturn] function ppfeufer_change_search_url(): void {
+    if (isset($_GET['s']) && is_search()) {
+        wp_redirect(
+            location: home_url(
+                path: "/search/"
+            ) . strtolower(urlencode(get_query_var(query_var: 's')) . '/')
+        );
+
+        exit();
+    }
+}
+
+add_action(hook_name: 'template_redirect', callback: 'ppfeufer_change_search_url');
