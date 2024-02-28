@@ -17,7 +17,9 @@ ci:
   autoupdate_branch: 'master'
   autoupdate_commit_msg: '[pre-commit.ci] pre-commit autoupdate'
   autoupdate_schedule: monthly
-  skip: []
+  skip:
+    - php-lint-all  # Skip PHP lint checks in CI due to missing PHP environment
+    - php-cs  # Skip PHP Code Sniffer checks in CI due to missing PHP environment
   submodules: false
 
 # Globally exclude files
