@@ -20,9 +20,8 @@ class Theme {
      */
     public function __construct() {
         add_action(
-            hook_name: 'wp_moose_action_footer',
+            hook_name: 'init',
             callback: [$this, 'disableFooterCredits'],
-            priority: 30
         );
         add_action(
             hook_name: 'comment_form_default_fields',
@@ -41,12 +40,16 @@ class Theme {
     /**
      * Disable footer credits
      *
-     * @return string
+     * @return void
      * @since 1.0.0
      * @access public
      */
-    public function disableFooterCredits(): string {
-        return '';
+    public function disableFooterCredits(): void {
+        remove_action(
+            hook_name: 'wp_moose_action_footer',
+            callback: 'wp_moose_footer_credits',
+            priority: 30
+        );
     }
 
     /**
