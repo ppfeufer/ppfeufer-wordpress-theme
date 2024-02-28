@@ -83,8 +83,8 @@ class Theme {
             $commenter = wp_get_current_commenter();
             $consent = empty($commenter['comment_author_email']) ? '' : ' checked="checked"';
             $consentText = __(
-                text: 'Save my name and email in this browser for the next time I comment.',
-                domain: 'ppfeufer'
+                'Save my name and email in this browser for the next time I comment.',
+                'ppfeufer'
             );
             $fields['cookies'] = '<p class="comment-form-cookies-consent">
                                     <input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"' . $consent . '>
