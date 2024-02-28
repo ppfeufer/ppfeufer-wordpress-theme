@@ -18,6 +18,7 @@ ci:
   autoupdate_commit_msg: '[pre-commit.ci] pre-commit autoupdate'
   autoupdate_schedule: monthly
   skip:
+    - eslint  # Skip ESLint checks in CI due to missing node environment
     - php-lint-all  # Skip PHP lint checks in CI due to missing PHP environment
     - php-cs  # Skip PHP Code Sniffer checks in CI due to missing PHP environment
   submodules: false
@@ -109,30 +110,44 @@ repos:
           - --colors
           - --report=full
 
-  - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: v8.55.0
+  - repo: https://github.com/eslint/eslint
+    rev: v8.56.0
     hooks:
       - id: eslint
+        name: ESLint
+        description: This hook checks for problems in JavaScript code.
+  #        additional_dependencies:
+  #          # eslint itself needs to be here when using additional_dependencies.
+  #          - eslint@8.56.0  # https://github.com/eslint/eslint/releases/latest
+  #          - globals@13.24.0  # https://github.com/sindresorhus/globals/releases/latest
 
   - repo: https://github.com/thibaudcolas/pre-commit-stylelint
-    rev: v16.2.0
+    rev: v16.2.1
     hooks:
       - id: stylelint
+        name: Stylelint
+        description: This hook checks for problems in CSS code.
         args:
           - --formatter=compact
         additional_dependencies:
-          - stylelint@16.2.0  # https://github.com/stylelint/stylelint/releases/latest
+          # stylelint itself needs to be here when using additional_dependencies.
+          - stylelint@16.2.1  # https://github.com/stylelint/stylelint/releases/latest
           - stylelint-config-standard@36.0.0  # https://github.com/stylelint/stylelint-config-standard/releases/latest
+          - stylelint-config-standard-scss@13.0.0  # https://github.com/stylelint-scss/stylelint-config-standard-scss/releases/latest
 
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
     rev: 2.7.3
     hooks:
       - id: editorconfig-checker
+        name: EditorConfig Checker
+        description: This hook checks for compliance with definitions made in EditorConfig files.
 
   - repo: https://github.com/executablebooks/mdformat
     rev: 0.7.17
     hooks:
       - id: mdformat
+        name: Mdformat
+        description: This hook checks for Markdown formatting issues.
         exclude: |
           (?x)(
             .github/|
