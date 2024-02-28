@@ -23,7 +23,10 @@ namespace WordPress\Themes\Ppfeufer\Plugins;
  * Theme Shortcodes
  */
 
+// Exit if accessed directly
+// phpcs:disable
 defined(constant_name: 'ABSPATH') or die();
+// phpcs:enable
 
 /**
  * Class Shortcodes
@@ -64,7 +67,9 @@ class Shortcodes {
         $content = do_shortcode(shortcode_unautop($content));
 
         return preg_replace(
-            pattern: '#^</p>|^<br />|<p>$#', replacement: '', subject: $content
+            pattern: '#^</p>|^<br />|<p>$#',
+            replacement: '',
+            subject: $content
         );
     }
 

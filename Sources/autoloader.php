@@ -2,7 +2,10 @@
 
 namespace WordPress\Themes\Ppfeufer;
 
+// Register the autoloader.
+// phpcs:disable
 spl_autoload_register(callback: '\WordPress\Themes\Ppfeufer\autoload');
+// phpcs:enable
 
 function autoload($className) {
     // If the specified $className does not include our namespace, duck out.
@@ -34,7 +37,8 @@ function autoload($className) {
             if (stripos($fileParts[count(value: $fileParts) - 1], 'interface')) {
                 // Grab the name of the interface from its qualified name.
                 $interfaceNameParts = explode(
-                    separator: '_', string: $fileParts[count($fileParts) - 1]
+                    separator: '_',
+                    string: $fileParts[count($fileParts) - 1]
                 );
                 $interfaceName = $interfaceNameParts[0];
 
@@ -44,7 +48,7 @@ function autoload($className) {
 
         // Now build a path to the file using mapping to the file location.
         $filepath = trailingslashit(
-            value: dirname(path: __FILE__, levels: 2) . $namespace
+            value: __DIR__ . $namespace
         );
         $filepath .= $fileName;
 
