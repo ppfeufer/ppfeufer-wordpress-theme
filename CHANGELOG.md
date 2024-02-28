@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## \[In Development\] - Unreleased
 
+### \[1.0.0\] - 2024-02-28
+
+### Added
+
+- PHP code style linting
+
+### Changed
+
+- Switched ESLint to their new flat configuration
+- Using classes instead of `funcions.php` now
+
 ### \[0.1.0\] - 2023-12-11
 
 ### Added
