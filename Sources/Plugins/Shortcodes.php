@@ -138,7 +138,7 @@ class Shortcodes {
             $headlineClose = '</' . $attributes['headline_tag'] . '>';
 
             $shortcodeOutput = '<div class="ppfeufer-article-credits clearfix">';
-            $shortcodeOutput .= '<header>' . $headlineOpen . __(text: 'Credits:', domain: 'ppfeufer') . $headlineClose . '</header>';
+            $shortcodeOutput .= '<header>' . $headlineOpen . __('Credits:', 'ppfeufer') . $headlineClose . '</header>';
             $shortcodeOutput .= wpautop(text: do_shortcode(
                 content: apply_filters(hook_name: 'the_content', value: $content)
             ));

@@ -1,12 +1,12 @@
 # Change these variables to match your environment
-plugin_name = pp-wp-memory-usage
+theme_name = ppfeufer
 
 pot:
 	./vendor/bin/wp i18n make-pot \
 		. \
-		l10n/$(plugin_name).pot \
-		--slug=$(plugin_name) \
-		--domain=$(plugin_name) \
+		l10n/$(theme_name).pot \
+		--slug=$(theme_name) \
+		--domain=$(theme_name) \
 		--include="/"
 
 clear-transient:
