@@ -1,10 +1,10 @@
-# Peter Pfeufer <info@ppfeufer.de>, 2023.
+# Peter Pfeufer <info@ppfeufer.de>, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: ppfeufer\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-08 10:03+0000\n"
-"PO-Revision-Date: 2023-11-08 10:26+0000\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/ppfeufer\n"
+"POT-Creation-Date: 2024-02-28T12:02:39+00:00\n"
+"PO-Revision-Date: 2024-02-28 12:07+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: German <https://weblate.ppfeufer.de/projects/wordpress-themes/"
 "website-ppfeufer/de/>\n"
@@ -13,36 +13,41 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.1\n"
+"X-Generator: Weblate 5.4.2\n"
 "X-Loco-Version: 2.6.6; wp-6.5-alpha-57081\n"
 "X-Domain: ppfeufer\n"
 
-#: Plugins/Shortcodes.php:136
-msgid "Credits:"
-msgstr "Nachweis:"
-
-#. Author of the theme
-msgid "H. Peter Pfeufer"
-msgstr "H. Peter Pfeufer"
-
-#. URI of the theme
-msgid "https://github.com/ppfeufer/ppfeufer-wordpress-theme"
-msgstr "https://github.com/ppfeufer/ppfeufer-wordpress-theme"
-
-#. Author URI of the theme
-msgid "https://ppfeufer.de"
-msgstr "https://ppfeufer.de"
-
-#. Name of the theme
+#. Theme Name of the theme
+#: style.css
 msgid "ppfeufer"
 msgstr "ppfeufer"
 
-#: functions.php:237
+#. Theme URI of the theme
+#: style.css
+msgid "https://github.com/ppfeufer/ppfeufer-wordpress-theme"
+msgstr "https://github.com/ppfeufer/ppfeufer-wordpress-theme"
+
+#. Description of the theme
+#: style.css
+msgid "WordPress theme for my own website (Child-Theme for WP-Moose)"
+msgstr "WordPress Theme für meine eigene Webseite (Child-Theme von „WP-Moose“)"
+
+#. Author of the theme
+#: style.css
+msgid "H. Peter Pfeufer"
+msgstr "H. Peter Pfeufer"
+
+#. Author URI of the theme
+#: style.css
+msgid "https://ppfeufer.de"
+msgstr "https://ppfeufer.de"
+
+#: Sources/Plugins/Shortcodes.php:141
+msgid "Credits:"
+msgstr "Nachweis:"
+
+#: Sources/Tweaks/Theme.php:85
 msgid "Save my name and email in this browser for the next time I comment."
 msgstr ""
 "Speichere meinen Namen und meine E-Mail-Adresse in diesem Browser für den "
 "nächsten Kommentar."
-
-#. Description of the theme
-msgid "WordPress theme for my own website (Child-Theme for WP-Moose)"
-msgstr "WordPress Theme für meine eigene Webseite (Child-Theme von „WP-Moose“)"
