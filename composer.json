@@ -1,0 +1,18 @@
+{
+    "name": "ppfeufer/ppfeufer",
+    "description": "Theme for my homepage",
+    "authors": [
+        {
+            "name": "Peter Pfeufer",
+            "email": "info@ppfeufer.de"
+        }
+    ],
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "wp-cli/wp-cli-bundle": "*",
+        "squizlabs/php_codesniffer": "*"
+    },
+    "config": {
+        "preferred-install": "dist"
+    }
+}
