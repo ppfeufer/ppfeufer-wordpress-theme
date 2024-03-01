@@ -80,6 +80,13 @@
     .comments-area .comment-list .reply::before {
         margin-right: 0.5rem;
     }
+
+    /* SVG sprite
+    --------------------------------------------------------------------------------- */
+    .svg-sprite {
+        height: 0;
+        width: 0;
+    }
 }
 
 /* Responsive

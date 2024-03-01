@@ -120,6 +120,7 @@ class AssetLoader {
         $svg_sprite = file_get_contents(
             filename: get_theme_file_path(file: 'Assets/images/sprite.svg')
         );
-        echo $svg_sprite;
+
+        echo '<div class="svg-sprite">' . $svg_sprite . '</div>';
     }
 }
