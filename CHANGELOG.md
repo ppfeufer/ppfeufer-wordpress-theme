@@ -7,13 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## \[In Development\] - Unreleased
 
-### \[1.0.1\] - 2024-03-01
+## \[1.0.1\] - 2024-03-01
 
 ### Fixed
 
 - Footer now again is at the bottom when the content is not large enough to push it down
 
-### \[1.0.0\] - 2024-02-28
+## \[1.0.0\] - 2024-02-28
 
 ### Added
 
@@ -24,7 +24,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Switched ESLint to their new flat configuration
 - Using classes instead of `funcions.php` now
 
-### \[0.1.0\] - 2023-12-11
+## \[0.1.0\] - 2023-12-11
 
 ### Added
 
@@ -34,7 +34,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Favicons updated
 
-### \[0.0.23\] - 2023-11-07
+## \[0.0.23\] - 2023-11-07
 
 ### Added
 
@@ -48,38 +48,38 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - JavaScript moved to the dedicated `Assets` directory
 - PHP code formatted
 
-### \[0.0.22\] - 2023-07-20
+## \[0.0.22\] - 2023-07-20
 
 ### Added
 
 - Copy to clipboard button for code blocks
 
-### \[0.0.21\] - 2023-06-04
+## \[0.0.21\] - 2023-06-04
 
 ### Changed
 
 - Meta-tags are now generated via their own function
 
-### \[0.0.20\] - 2022-11-08
+## \[0.0.20\] - 2022-11-08
 
 ### Removed
 
 - Custom `:hover` color for links
 - Unnecessary and non-existent 4th parameter from function
 
-### \[0.0.19\] - 2022-10-05
+## \[0.0.19\] - 2022-10-05
 
 ### Changed
 
 - Simplified `remove_protocol_from_url` function
 
-### \[0.0.18\] - 2022-09-25
+## \[0.0.18\] - 2022-09-25
 
 ### Removed
 
 - DNS prefetch
 
-### \[0.0.17\] - 2022-09-13
+## \[0.0.17\] - 2022-09-13
 
 ### Added
 
@@ -89,7 +89,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - CSS lint applied
 
-### \[0.0.16\] - 2022-08-28
+## \[0.0.16\] - 2022-08-28
 
 ### Fixed
 
@@ -99,37 +99,37 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Twitter cards to OG tags
 
-### \[0.0.15\] - 2022-08-18
+## \[0.0.15\] - 2022-08-18
 
 ### Changed
 
 - OG tags improved
 
-### \[0.0.14\] - 2022-08-16
+## \[0.0.14\] - 2022-08-16
 
 ### Added
 
 - Use article images as `og:image` meta tag
 
-### \[0.0.13\] - 2022-08-10
+## \[0.0.13\] - 2022-08-10
 
 ### Fixed
 
 - Make sure SVG images always use the full space they have
 
-### \[0.0.12\] - 2022-08-10
+## \[0.0.12\] - 2022-08-10
 
 ### Changed
 
 - Link colours when focused
 
-### \[0.0.11\] - 2022-07-29
+## \[0.0.11\] - 2022-07-29
 
 ### Changed
 
 - Use a template override to hide page title on the home page instead of CSS (This is the WordPress way)
 
-### \[0.0.10\] - 2022-07-28
+## \[0.0.10\] - 2022-07-28
 
 ### Added
 
@@ -141,7 +141,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Better way of hiding the page title on the home page
 - Argument type in shortcode class
 
-### \[0.0.9\] - 2022-07-27
+## \[0.0.9\] - 2022-07-27
 
 ### Added
 
@@ -149,7 +149,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - `CHANGELOG.md` file
 - `CODEOWNERS` file
 
-### \[0.0.8\] - 2022-07-23
+## \[0.0.8\] - 2022-07-23
 
 ### Added
 
@@ -159,7 +159,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Style for `SyntaxHighlighter Evolved`
 
-### \[0.0.7\] - 2022-07-05
+## \[0.0.7\] - 2022-07-05
 
 ### Removed
 
@@ -169,7 +169,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Switched from `Codecolorer` to `SyntaxHighlighter Evolved` as syntax plugin
 
-### \[0.0.6\] - 2022-05-21
+## \[0.0.6\] - 2022-05-21
 
 ### Added
 
@@ -179,25 +179,25 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Footer inherited from parent theme
 
-### \[0.0.5\] - 2022-05-15
+## \[0.0.5\] - 2022-05-15
 
 ### Changed
 
 - The Primary sidebar is now sticky
 
-### \[0.0.4\] - 2022-05-13
+## \[0.0.4\] - 2022-05-13
 
 ### Changed
 
 - Style for `Codecolorer` elements
 
-### \[0.0.3\] - 2022-04-29
+## \[0.0.3\] - 2022-04-29
 
 ### Added
 
 - Plugin related stylesheet
 
-### \[0.0.2\] - 2022-04-28
+## \[0.0.2\] - 2022-04-28
 
 ### Added
 
