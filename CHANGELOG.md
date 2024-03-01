@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## \[In Development\] - Unreleased
 
+### \[1.0.1\] - 2024-03-01
+
+### Fixed
+
+- Footer now again is at the bottom when the content is not large enough to push it down
+
 ### \[1.0.0\] - 2024-02-28
 
 ### Added
