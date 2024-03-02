@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## \[In Development\] - Unreleased
 
+## \[1.1.0\] - 2024-03-02
+
+### Added
+
+- `YahnisElsts/PluginUpdateChecker` to check for updates of the theme
+
 ## \[1.0.1\] - 2024-03-01
 
 ### Fixed

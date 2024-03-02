@@ -1,13 +1,19 @@
 <?php
 
-namespace WordPress\Themes\Ppfeufer;
+namespace WordPress\Ppfeufer\Theme\Ppfeufer;
+
+// phpcs:disable
+require_once trailingslashit(value: __DIR__) . 'Libs/yahnis-elsts/plugin-update-checker/plugin-update-checker.php';
+// phpcs:enable
+
+use WordPress\Ppfeufer\Theme\Ppfeufer\Libs\YahnisElsts\PluginUpdateChecker\v5p4\PucFactory;
 
 /**
  * Main Theme Class
  *
  * This class is responsible for the main functionality of the theme.
  *
- * @package WordPress\Themes\Ppfeufer
+ * @package WordPress\Ppfeufer\Theme\Ppfeufer
  * @since 1.0.0
  */
 class Main {
@@ -19,6 +25,8 @@ class Main {
      * @access public
      */
     public function init(): void {
+        $this->doUpdateCheck();
+
         // Load assets
         new AssetLoader();
 
@@ -42,5 +50,20 @@ class Main {
 
         // Theme Tweaks
         new Tweaks\Theme();
+    }
+
+    /**
+     * Check GitHub for updates
+     *
+     * @return void
+     * @since 1.1.0
+     * @access public
+     */
+    public function doUpdateCheck(): void {
+        PucFactory::buildUpdateChecker(
+            metadataUrl: 'https://github.com/ppfeufer/ppfeufer-wordpress-theme/',
+            fullPath: get_stylesheet_directory(),
+            slug: 'ppfeufer'
+        )->getVcsApi()->enableReleaseAssets();
     }
 }

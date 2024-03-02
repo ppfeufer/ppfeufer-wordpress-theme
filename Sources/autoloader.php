@@ -1,15 +1,15 @@
 <?php
 
-namespace WordPress\Themes\Ppfeufer;
+namespace WordPress\Ppfeufer\Theme\Ppfeufer;
 
 // Register the autoloader.
 // phpcs:disable
-spl_autoload_register(callback: '\WordPress\Themes\Ppfeufer\autoload');
+spl_autoload_register(callback: '\WordPress\Ppfeufer\Theme\Ppfeufer\autoload');
 // phpcs:enable
 
 function autoload($className) {
     // If the specified $className does not include our namespace, duck out.
-    if (!str_contains($className, 'WordPress\Themes\Ppfeufer')) {
+    if (!str_contains($className, 'WordPress\Ppfeufer\Theme\Ppfeufer')) {
         return;
     }
 

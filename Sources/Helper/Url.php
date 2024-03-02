@@ -1,11 +1,11 @@
 <?php
 
-namespace WordPress\Themes\Ppfeufer\Helper;
+namespace WordPress\Ppfeufer\Theme\Ppfeufer\Helper;
 
 /**
  * URL Helper Functions
  *
- * @package WordPress\Themes\Ppfeufer\Helper
+ * @package WordPress\Ppfeufer\Theme\Ppfeufer\Helper
  * @since 1.0.0
  */
 class Url {
