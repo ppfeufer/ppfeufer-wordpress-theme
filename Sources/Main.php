@@ -64,6 +64,6 @@ class Main {
             metadataUrl: 'https://github.com/ppfeufer/ppfeufer-wordpress-theme/',
             fullPath: get_stylesheet_directory(),
             slug: 'ppfeufer'
-        );
+        )->getVcsApi()->enableReleaseAssets();
     }
 }
