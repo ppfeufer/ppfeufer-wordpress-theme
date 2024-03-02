@@ -1,13 +1,13 @@
 <?php
 
-namespace WordPress\Themes\Ppfeufer\Tweaks;
+namespace WordPress\Ppfeufer\Theme\Ppfeufer\Tweaks;
 
 /**
  * Theme
  *
  * This class is responsible for adding general tweaks to the theme.
  *
- * @package WordPress\Themes\Ppfeufer\Tweaks
+ * @package WordPress\Ppfeufer\Theme\Ppfeufer\Tweaks
  * @since 1.0.0
  */
 class Theme {

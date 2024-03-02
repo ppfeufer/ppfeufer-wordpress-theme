@@ -1,13 +1,13 @@
 <?php
 
-namespace WordPress\Themes\Ppfeufer;
+namespace WordPress\Ppfeufer\Theme\Ppfeufer;
 
 /**
  * Main Theme Class
  *
  * This class is responsible for the main functionality of the theme.
  *
- * @package WordPress\Themes\Ppfeufer
+ * @package WordPress\Ppfeufer\Theme\Ppfeufer
  * @since 1.0.0
  */
 class Main {

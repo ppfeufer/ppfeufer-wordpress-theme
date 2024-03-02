@@ -17,7 +17,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-namespace WordPress\Themes\Ppfeufer;
+namespace WordPress\Ppfeufer\Theme\Ppfeufer;
 
 // Register the autoloader.
 require_once(get_theme_file_path(file: 'Sources/autoloader.php'));

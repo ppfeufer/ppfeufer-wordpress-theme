@@ -1,13 +1,13 @@
 <?php
 
-namespace WordPress\Themes\Ppfeufer;
+namespace WordPress\Ppfeufer\Theme\Ppfeufer;
 
 /**
  * Asset Loader
  *
  * This class is responsible for loading all assets for the theme.
  *
- * @package WordPress\Themes\Ppfeufer
+ * @package WordPress\Ppfeufer\Theme\Ppfeufer
  * @since 1.0.0
  */
 class AssetLoader {

@@ -17,7 +17,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-namespace WordPress\Themes\Ppfeufer\Plugins;
+namespace WordPress\Ppfeufer\Theme\Ppfeufer\Plugins;
 
 /**
  * Theme Shortcodes
