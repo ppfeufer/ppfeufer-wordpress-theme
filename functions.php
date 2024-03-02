@@ -20,7 +20,7 @@
 namespace WordPress\Ppfeufer\Theme\Ppfeufer;
 
 // Register the autoloader.
-require_once(get_theme_file_path(file: 'Sources/autoloader.php'));
+require_once trailingslashit(value: __DIR__) . 'Sources/autoloader.php';
 
 // Load the theme's main class.
 (new Main())->init();
