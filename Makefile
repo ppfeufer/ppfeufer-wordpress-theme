@@ -12,4 +12,4 @@ pot:
 clear-transient:
 	./vendor/bin/wp transient delete \
 		--all \
-		--path=/mnt/sda1/Development/PHP/Sources/WordPress
+		--path=./../../../../Sources
