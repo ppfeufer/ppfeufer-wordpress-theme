@@ -101,11 +101,23 @@ class OpenGraph {
             }
         }
 
+        echo Metatags::createMetaTag(
+            property: 'description',
+            content: $ogDescription,
+            type: 'name'
+        ) . "\n";
+
         echo Metatags::createMetaTag(property: 'og:type', content: $ogType) . "\n";
-        echo Metatags::createMetaTag(property: 'og:site_name', content: $ogSiteName) . "\n";
+        echo Metatags::createMetaTag(
+            property: 'og:site_name',
+            content: $ogSiteName
+        ) . "\n";
         echo Metatags::createMetaTag(property: 'og:url', content: $ogUrl) . "\n";
         echo Metatags::createMetaTag(property: 'og:title', content: $ogTitle) . "\n";
-        echo Metatags::createMetaTag(property: 'og:description', content: $ogDescription) . "\n";
+        echo Metatags::createMetaTag(
+            property: 'og:description',
+            content: $ogDescription
+        ) . "\n";
 
         // Twitter cards
         echo Metatags::createMetaTag(
