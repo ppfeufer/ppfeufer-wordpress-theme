@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## \[In Development\] - Unreleased
 
+## \[1.2.0\] - 2024-04-09
+
+### Added
+
+- Meta description tag to the header
+
+### Fixed
+
+- CSS formatting
+
 ## \[1.1.0\] - 2024-03-02
 
 ### Added
