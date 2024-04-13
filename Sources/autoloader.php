@@ -11,8 +11,10 @@ namespace WordPress\Ppfeufer\Theme\Ppfeufer;
  * @package WordPress\Ppfeufer\Theme\Ppfeufer
  */
 spl_autoload_register(callback: static function (string $className): void {
+    $myNamespace = 'WordPress\\Ppfeufer\\Theme\\Ppfeufer';
+
     // If the specified $className does not include our namespace, duck out.
-    if (!str_contains(haystack: $className, needle: 'WordPress\Ppfeufer\Theme\Ppfeufer')) {
+    if (!str_starts_with(haystack: $className, needle: $myNamespace)) {
         return;
     }
 
