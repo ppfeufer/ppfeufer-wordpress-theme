@@ -2,10 +2,6 @@
 
 namespace WordPress\Ppfeufer\Theme\Ppfeufer;
 
-// phpcs:disable
-require_once trailingslashit(value: __DIR__) . 'Libs/yahnis-elsts/plugin-update-checker/plugin-update-checker.php';
-// phpcs:enable
-
 use WordPress\Ppfeufer\Theme\Ppfeufer\Libs\YahnisElsts\PluginUpdateChecker\v5p4\PucFactory;
 
 /**
