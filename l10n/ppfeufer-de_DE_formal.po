@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: ppfeufer\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/ppfeufer\n"
 "POT-Creation-Date: 2024-03-02T14:52:44+00:00\n"
-"PO-Revision-Date: 2024-03-02 12:28+0000\n"
+"PO-Revision-Date: 2024-04-21 15:46+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: German (formal) <https://weblate.ppfeufer.de/projects/"
 "wordpress-themes/website-ppfeufer/de@formal/>\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.4.2\n"
+"X-Generator: Weblate 5.4.3\n"
 "X-Loco-Version: 2.6.6; wp-6.5-alpha-57081\n"
 "X-Domain: ppfeufer\n"
 
@@ -44,7 +44,7 @@ msgstr "https://ppfeufer.de"
 
 #: Sources/Plugins/Shortcodes.php:141
 msgid "Credits:"
-msgstr "Nachweis:"
+msgstr "Nachweise:"
 
 #: Sources/Tweaks/Theme.php:85
 msgid "Save my name and email in this browser for the next time I comment."
