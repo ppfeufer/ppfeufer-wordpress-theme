@@ -19,6 +19,7 @@ help:
 	@echo "  clear-transient    Clear all transient caches"
 	@echo "  deactivate         Deactivate the theme"
 	@echo "  pot                Create the theme .pot file"
+	@echo "  pre-commit-checks  Run pre-commit checks"
 
 pot:
 	$(wp_cli) i18n make-pot \
@@ -42,3 +43,7 @@ deactivate:
 	$(wp_cli) theme deactivate \
 		$(theme_name) \
 		--path=$(wp_path)
+
+pre-commit-checks:
+	@echo "Running pre-commit checks"
+	pre-commit run --all-files
