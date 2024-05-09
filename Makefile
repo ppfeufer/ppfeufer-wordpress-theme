@@ -3,7 +3,7 @@
 # Default goal and help message for the Makefile
 .DEFAULT_GOAL := help
 
-wp_cli = /usr/local/bin/wp-cli
+wp_cli = vendor/bin/wp
 wp_path = ./../../../../WP-Sources
 
 theme_name = ppfeufer WordPress Theme
