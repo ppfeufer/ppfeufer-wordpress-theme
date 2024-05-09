@@ -20,9 +20,10 @@ help:
 	@echo "  deactivate         Deactivate the theme"
 	@echo "  pot                Create the theme .pot file"
 	@echo "  pre-commit-checks  Run pre-commit checks"
+	@echo "  pre-commit-update  Update pre-commit configuration"
 
 pot:
-	$(wp_cli) i18n make-pot \
+	@$(wp_cli) i18n make-pot \
 		. \
 		l10n/$(theme_slug).pot \
 		--slug=$(theme_slug) \
@@ -30,20 +31,24 @@ pot:
 		--include="/"
 
 clear-transient:
-	$(wp_cli) transient delete \
+	@$(wp_cli) transient delete \
 		--all \
 		--path=$(wp_path)
 
 activate:
-	$(wp_cli) theme activate \
+	@$(wp_cli) theme activate \
 		$(theme_name) \
 		--path=$(wp_path)
 
 deactivate:
-	$(wp_cli) theme deactivate \
+	@$(wp_cli) theme deactivate \
 		$(theme_name) \
 		--path=$(wp_path)
 
 pre-commit-checks:
 	@echo "Running pre-commit checks"
-	pre-commit run --all-files
+	@pre-commit run --all-files
+
+pre-commit-update:
+	@echo "Updating pre-commit configuration"
+	@pre-commit autoupdate
