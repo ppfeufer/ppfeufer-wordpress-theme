@@ -10,14 +10,12 @@ use WP_Post;
  * This class is responsible for adding lazy loading to images.
  *
  * @package WordPress\Ppfeufer\Theme\Ppfeufer\Tweaks
- * @since 1.0.0
  */
 class LazyLoading {
     /**
      * Constructor
      *
      * @return void
-     * @since 1.0.0
      * @access public
      */
     public function __construct() {
@@ -35,7 +33,6 @@ class LazyLoading {
      * @param WP_Post $attachment Image attachment post
      * @param string|array $size Requested size
      * @return array
-     * @since 1.0.0
      * @access public
      */
     public function addLazyLoading(

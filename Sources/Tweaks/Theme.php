@@ -8,14 +8,12 @@ namespace WordPress\Ppfeufer\Theme\Ppfeufer\Tweaks;
  * This class is responsible for adding general tweaks to the theme.
  *
  * @package WordPress\Ppfeufer\Theme\Ppfeufer\Tweaks
- * @since 1.0.0
  */
 class Theme {
     /**
      * Constructor
      *
      * @return void
-     * @since 1.0.0
      * @access public
      */
     public function __construct() {
@@ -41,7 +39,6 @@ class Theme {
      * Disable footer credits
      *
      * @return void
-     * @since 1.0.0
      * @access public
      */
     public function disableFooterCredits(): void {
@@ -58,7 +55,6 @@ class Theme {
      * @param array $fields
      *
      * @return array
-     * @since 1.0.0
      * @access public
      */
     public function removeUrlField(array $fields): array {
@@ -75,7 +71,6 @@ class Theme {
      * @param array $fields
      *
      * @return array
-     * @since 1.0.0
      * @access public
      */
     public function cookieConsentCheckbox(array $fields): array {
@@ -99,7 +94,6 @@ class Theme {
      * Change the document title separator
      *
      * @return string
-     * @since 1.0.0
      * @access public
      */
     public function documentTitleSeparator(): string {

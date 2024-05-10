@@ -8,14 +8,12 @@ namespace WordPress\Ppfeufer\Theme\Ppfeufer\Tweaks;
  * This class is responsible for handling DNS prefetch.
  *
  * @package WordPress\Ppfeufer\Theme\Ppfeufer\Tweaks
- * @since 1.0.0
  */
 class DnsPrefetch {
     /**
      * Constructor
      *
      * @return void
-     * @since 1.0.0
      * @access public
      */
     public function __construct() {
@@ -26,7 +24,6 @@ class DnsPrefetch {
      * Remove DNS prefetch
      *
      * @return void
-     * @since 1.0.0
      * @access public
      */
     public function removeDnsPrefetch(): void {

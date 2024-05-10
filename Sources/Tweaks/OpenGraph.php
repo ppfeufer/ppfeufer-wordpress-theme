@@ -11,14 +11,12 @@ use WordPress\Ppfeufer\Theme\Ppfeufer\Helper\Url;
  * This class is responsible for adding Open Graph tags to the theme.
  *
  * @package WordPress\Ppfeufer\Theme\Ppfeufer\Tweaks
- * @since 1.0.0
  */
 class OpenGraph {
     /**
      * Constructor
      *
      * @return void
-     * @since 1.0.0
      * @access public
      */
     public function __construct() {
@@ -32,7 +30,6 @@ class OpenGraph {
      * Add Open Graph tags to the theme
      *
      * @return void
-     * @since 1.0.0
      * @access public
      */
     public function addOpenGraphTags(): void {

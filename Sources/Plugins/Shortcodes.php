@@ -10,7 +10,7 @@
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
@@ -30,10 +30,17 @@ defined(constant_name: 'ABSPATH') or die();
 
 /**
  * Class Shortcodes
+ *
+ * This class is responsible for handling shortcodes.
+ *
+ * @package WordPress\Ppfeufer\Theme\Ppfeufer\Plugins
  */
 class Shortcodes {
     /**
      * Constructor
+     *
+     * @return void
+     * @access public
      */
     public function __construct() {
         $this->addShortcodesToWidgets();
@@ -44,6 +51,7 @@ class Shortcodes {
      * Add shortcode to widgets
      *
      * @return void
+     * @access public
      */
     public function addShortcodesToWidgets(): void {
         add_filter(hook_name: 'widget_text', callback: 'do_shortcode');
@@ -51,6 +59,9 @@ class Shortcodes {
 
     /**
      * Register all shortcodes
+     *
+     * @return void
+     * @access public
      */
     public function registerShortcodes(): void {
         add_shortcode(tag: 'divider', callback: [$this, 'shortcodeDivider']);
@@ -58,10 +69,11 @@ class Shortcodes {
     }
 
     /**
-     * Remove the `<p>` tag that WP automatically adds
+     * Remove the `<p>` tag that WP automatically adds.
      *
      * @param string $content
      * @return string
+     * @access public
      */
     public function removeAutopInShortcode(string $content): string {
         $content = do_shortcode(shortcode_unautop($content));
@@ -84,6 +96,7 @@ class Shortcodes {
      *
      * @param array|string $atts Attributes for the shortcode
      * @return string
+     * @access public
      */
     public function shortcodeDivider(array|string $atts = []): string {
         // Normalize attribute keys, lowercase
@@ -116,6 +129,7 @@ class Shortcodes {
      * @param array|string $atts Attributes for the shortcode
      * @param string|null $content Shortcode content
      * @return string|null
+     * @access public
      */
     public function shortcodeCredits(array|string $atts = [], string $content = null): ?string {
         // Normalize attribute keys, lowercase

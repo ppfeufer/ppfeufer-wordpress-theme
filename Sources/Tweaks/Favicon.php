@@ -10,14 +10,12 @@ use WordPress\Ppfeufer\Theme\Ppfeufer\Helper\Metatags;
  * This class is responsible for adding the favicon to the theme.
  *
  * @package WordPress\Ppfeufer\Theme\Ppfeufer\Tweaks
- * @since 1.0.0
  */
 class Favicon {
     /**
      * Constructor
      *
      * @return void
-     * @since 1.0.0
      * @access public
      */
     public function __construct() {
@@ -35,7 +33,6 @@ class Favicon {
      * Add favicons to the theme
      *
      * @return void
-     * @since 1.0.0
      * @access public
      */
     public function addFavicons(): void {
@@ -72,14 +69,13 @@ class Favicon {
      * Redirect to the right favicon.ico
      *
      * WordPress redirects to a default favicon (admin_url('images/w-logo-blue.png')) since v5.5, which is not what I want,
-     * so I have to do it myself here ...
+     * so I have to do it myself here …
      *
-     * `//ppfeufer.de/favicon.ico` will be redirected to get_theme_file_uri('/Assets/favicons/favicon.ico')
+     * `//ppfeufer.de/favicon.ico` will be redirected to `get_theme_file_uri('/Assets/favicons/favicon.ico')`.
      *
      * @see https://make.wordpress.org/core/2020/02/19/enhancements-to-favicon-handling-in-wordpress-5-4/
      *
      * @return void
-     * @since 1.0.0
      * @access public
      */
     public function redirectFavicon(): void {

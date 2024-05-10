@@ -6,7 +6,6 @@ namespace WordPress\Ppfeufer\Theme\Ppfeufer\Helper;
  * Metatags Helper Functions
  *
  * @package WordPress\Ppfeufer\Theme\Ppfeufer\Helper
- * @since 1.0.0
  */
 class Metatags {
     /**
@@ -15,8 +14,8 @@ class Metatags {
      * @param string $property
      * @param string $content
      * @param string $type
-     *
      * @return string|null
+     * @access public
      */
     public static function createMetaTag(
         string $property,

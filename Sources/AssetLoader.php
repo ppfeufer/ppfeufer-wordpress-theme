@@ -8,14 +8,12 @@ namespace WordPress\Ppfeufer\Theme\Ppfeufer;
  * This class is responsible for loading all assets for the theme.
  *
  * @package WordPress\Ppfeufer\Theme\Ppfeufer
- * @since 1.0.0
  */
 class AssetLoader {
     /**
      * Constructor
      *
      * @return void
-     * @since 1.0.0
      * @access public
      */
     public function __construct() {
@@ -36,7 +34,6 @@ class AssetLoader {
      * Load styles
      *
      * @return void
-     * @since 1.0.0
      * @access public
      */
     public function loadStyles(): void {
@@ -71,7 +68,6 @@ class AssetLoader {
      * Load scripts
      *
      * @return void
-     * @since 1.0.0
      * @access public
      */
     public function loadScripts(): void {
@@ -90,7 +86,6 @@ class AssetLoader {
      * Load admin styles
      *
      * @return void
-     * @since 1.0.0
      * @access public
      */
     public function loadAdminStyles(): void {
@@ -113,7 +108,6 @@ class AssetLoader {
      * Add SVG-Sprite to footer hook
      *
      * @return void
-     * @since 1.0.0
      * @access public
      */
     public function loadSvgSprite(): void {
