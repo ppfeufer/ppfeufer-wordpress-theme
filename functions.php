@@ -14,7 +14,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
 namespace WordPress\Ppfeufer\Theme\Ppfeufer;
@@ -23,5 +23,5 @@ namespace WordPress\Ppfeufer\Theme\Ppfeufer;
 require_once trailingslashit(value: __DIR__) . 'Sources/autoloader.php';
 require_once trailingslashit(value: __DIR__) . 'Sources/Libs/autoload.php';
 
-// Load the theme's main class.
+// Load the themes' main class.
 (new Main())->init();

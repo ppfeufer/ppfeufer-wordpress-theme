@@ -10,49 +10,53 @@ use WordPress\Ppfeufer\Theme\Ppfeufer\Libs\YahnisElsts\PluginUpdateChecker\v5p4\
  * This class is responsible for the main functionality of the theme.
  *
  * @package WordPress\Ppfeufer\Theme\Ppfeufer
- * @since 1.0.0
  */
 class Main {
+    /**
+     * Constructor
+     *
+     * @return void
+     * @access public
+     */
+    public function __construct() {
+        $this->doUpdateCheck();
+    }
+
+    /**
+     * Get classes to load
+     *
+     * @return array
+     * @access private
+     */
+    private function getClassesToLoad(): array {
+        return [
+            AssetLoader::class, // Load assets
+            Plugins\Shortcodes::class, // Theme shortcodes
+            Tweaks\DnsPrefetch::class, // Disable DNS prefetch
+            Tweaks\Favicon::class, // Favicons
+            Tweaks\LazyLoading::class, // Image lazy loading
+            Tweaks\OpenGraph::class, // Open Graph
+            Tweaks\SearchUrl::class, // Search URL modifications
+            Tweaks\Theme::class // Theme Tweaks
+        ];
+    }
+
     /**
      * Initialize the theme
      *
      * @return void
-     * @since 1.0.0
      * @access public
      */
     public function init(): void {
-        $this->doUpdateCheck();
-
-        // Load assets
-        new AssetLoader();
-
-        // Theme shortcodes
-        new Plugins\Shortcodes();
-
-        // DNS prefetch settings
-        new Tweaks\DnsPrefetch();
-
-        // Favicons
-        new Tweaks\Favicon();
-
-        // Image lazy loading
-        new Tweaks\LazyLoading();
-
-        // Open Graph
-        new Tweaks\OpenGraph();
-
-        // Search URL modifications
-        new Tweaks\SearchUrl();
-
-        // Theme Tweaks
-        new Tweaks\Theme();
+        foreach ($this->getClassesToLoad() as $class) {
+            new $class();
+        }
     }
 
     /**
      * Check GitHub for updates
      *
      * @return void
-     * @since 1.1.0
      * @access public
      */
     public function doUpdateCheck(): void {
