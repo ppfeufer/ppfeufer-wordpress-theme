@@ -60,6 +60,3 @@ msgstr "Bearbeiten"
 #: template-parts/content-page.php:41
 msgid "Pages:"
 msgstr "Seiten:"
-
-#~ msgid "ppfeufer"
-#~ msgstr "ppfeufer"
