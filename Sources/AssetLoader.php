@@ -42,25 +42,25 @@ class AssetLoader {
             src: get_theme_file_uri(
                 file: '/Assets/css/libs/fira-code/6.2.0/fira_code.min.css'
             ),
-            ver: wp_get_theme()->get('Version')
+            ver: THEME_VERSION
         );
         wp_enqueue_style(
             handle: 'ppfeufer-theme-style-defaults',
             src: get_theme_file_uri(file: '/Assets/css/ppfeufer-defaults.min.css'),
             deps: ['fira-code', 'wp-moose-style'],
-            ver: wp_get_theme()->get('Version')
+            ver: THEME_VERSION
         );
         wp_enqueue_style(
             handle: 'ppfeufer-theme-style',
             src: get_theme_file_uri(file: '/Assets/css/ppfeufer.min.css'),
             deps: ['ppfeufer-theme-style-defaults'],
-            ver: wp_get_theme()->get('Version')
+            ver: THEME_VERSION
         );
         wp_enqueue_style(
             handle: 'ppfeufer-plugin-styles',
             src: get_theme_file_uri(file: '/Assets/css/plugin-styles.min.css'),
             deps: ['ppfeufer-theme-style'],
-            ver: wp_get_theme()->get('Version')
+            ver: THEME_VERSION
         );
     }
 
@@ -74,7 +74,7 @@ class AssetLoader {
         wp_enqueue_script(
             handle: 'ppfeufer',
             src: get_theme_file_uri(file: '/Assets/javascript/ppfeufer.min.js'),
-            ver: wp_get_theme()->get('Version'),
+            ver: THEME_VERSION,
             args: [
                 'in_footer' => true,
                 'strategy' => 'async'
@@ -94,13 +94,13 @@ class AssetLoader {
             src: get_theme_file_uri(
                 file: '/Assets/css/libs/fira-code/6.2.0/fira_code.min.css'
             ),
-            ver: wp_get_theme()->get('Version')
+            ver: THEME_VERSION
         );
         wp_enqueue_style(
             handle: 'ppfeufer-admin-style',
             src: get_theme_file_uri(file: '/Assets/css/ppfeufer-admin-style.min.css'),
             deps: ['fira-code'],
-            ver: wp_get_theme()->get('Version')
+            ver: THEME_VERSION
         );
     }
 

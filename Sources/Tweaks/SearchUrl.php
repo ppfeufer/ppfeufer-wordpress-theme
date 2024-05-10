@@ -34,7 +34,7 @@ class SearchUrl {
             wp_redirect(
                 location: home_url(
                     path: '/search/'
-                ) . strtolower(urlencode(get_query_var(query_var: 's')) . '/')
+                ) . strtolower(string: urlencode(get_query_var(query_var: 's')) . '/')
             );
 
             exit();

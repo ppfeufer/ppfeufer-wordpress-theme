@@ -31,6 +31,11 @@ class Metatags {
             return null;
         }
 
-        return '<meta ' . $type . '="' . $property . '" content="' . $content . '">';
+        return sprintf(
+            '<meta %1$s="%2$s" content="%3$s">',
+            $type,
+            $property,
+            $content
+        );
     }
 }

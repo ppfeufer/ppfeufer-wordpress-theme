@@ -20,6 +20,24 @@ class Main {
      */
     public function __construct() {
         $this->doUpdateCheck();
+
+        add_action(
+            hook_name: 'after_setup_theme',
+            callback: [$this, 'loadTextDomain']
+        );
+    }
+
+    /**
+     * Load text domain
+     *
+     * @return void
+     * @access public
+     */
+    public function loadTextDomain(): void {
+        load_child_theme_textdomain(
+            domain: 'ppfeufer',
+            path: THEME_DIRECTORY . '/l10n'
+        );
     }
 
     /**

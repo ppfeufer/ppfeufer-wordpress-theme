@@ -24,7 +24,7 @@ $classes = [
 
                 <div class="text-xs entry-meta">
                     <span class="link text-xs">
-                        <?php edit_post_link(esc_html__(text: 'Edit', domain: 'wp-moose')); ?>
+                        <?php edit_post_link(esc_html__(text: 'Edit', domain: 'ppfeufer')); ?>
                     </span>
                 </div>
             </div>
@@ -38,7 +38,7 @@ $classes = [
         the_content();
 
         wp_link_pages(args: [
-            'before' => '<div class="page-links">' . esc_html__(text: 'Pages:', domain: 'wp-moose'),
+            'before' => '<div class="page-links">' . esc_html__(text: 'Pages:', domain: 'ppfeufer'),
             'after'  => '</div>',
         ]);
         ?>

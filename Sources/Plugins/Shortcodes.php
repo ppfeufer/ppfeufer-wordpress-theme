@@ -111,7 +111,10 @@ class Shortcodes {
             shortcode: 'divider'
         );
 
-        return '<div class="divider clearfix" style="width: ' . $attributes['width'] . '"></div>';
+        return sprintf(
+            '<div class="divider clearfix" style="width: %1$s"></div>',
+            $attributes['width']
+        );
     }
 
     /**
@@ -148,15 +151,19 @@ class Shortcodes {
         $shortcodeOutput = null;
 
         if ($content !== null) {
-            $headlineOpen = '<' . $attributes['headline_tag'] . '>';
-            $headlineClose = '</' . $attributes['headline_tag'] . '>';
-
-            $shortcodeOutput = '<div class="ppfeufer-article-credits clearfix">';
-            $shortcodeOutput .= '<header>' . $headlineOpen . __('Credits:', 'ppfeufer') . $headlineClose . '</header>';
-            $shortcodeOutput .= wpautop(text: do_shortcode(
-                content: apply_filters(hook_name: 'the_content', value: $content)
-            ));
-            $shortcodeOutput .= '</div>';
+            $shortcodeOutput = sprintf(
+                '<div class="ppfeufer-article-credits clearfix">
+                    <header>
+                        <%1$s>%2$s:</%1$s>
+                    </header>
+                    %3$s
+                </div>',
+                $attributes['headline_tag'],
+                __('Credits', 'ppfeufer'),
+                wpautop(text: do_shortcode(
+                    content: apply_filters(hook_name: 'the_content', value: $content)
+                ))
+            );
         }
 
         return $shortcodeOutput;

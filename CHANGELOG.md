@@ -35,9 +35,14 @@ Section Order:
 ### Security
 -->
 
+### Added
+
+- Text domain to the theme for translations
+
 ### Changed
 
 - `package-lock.json` file updated
+- Some minor code style improvements
 
 ## \[1.2.1\] - 2024-04-13
 

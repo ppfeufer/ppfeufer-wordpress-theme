@@ -81,10 +81,14 @@ class Theme {
                 'Save my name and email in this browser for the next time I comment.',
                 'ppfeufer'
             );
-            $fields['cookies'] = '<p class="comment-form-cookies-consent">
-                                    <input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"' . $consent . '>
-                                    <label for="wp-comment-cookies-consent">' . $consentText . '</label>
-                                </p>';
+            $fields['cookies'] = sprintf(
+                '<p class="comment-form-cookies-consent">
+                    <input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"%1$s>
+                    <label for="wp-comment-cookies-consent">%2$s</label>
+                </p>',
+                $consent,
+                $consentText
+            );
         }
 
         return $fields;

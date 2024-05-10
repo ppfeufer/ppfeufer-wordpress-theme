@@ -36,12 +36,12 @@ class Favicon {
      * @access public
      */
     public function addFavicons(): void {
-        echo '<link rel="apple-touch-icon" sizes="180x180" href="' . get_stylesheet_directory_uri() . '/Assets/favicons/apple-touch-icon.png">' . "\n";
-        echo '<link rel="icon" type="image/png" sizes="32x32" href="' . get_stylesheet_directory_uri() . '/Assets/favicons/favicon-32x32.png">' . "\n";
-        echo '<link rel="icon" type="image/png" sizes="192x192" href="' . get_stylesheet_directory_uri() . '/Assets/favicons/android-chrome-192x192.png">' . "\n";
-        echo '<link rel="icon" type="image/png" sizes="16x16" href="' . get_stylesheet_directory_uri() . '/Assets/favicons/favicon-16x16.png">' . "\n";
-        echo '<link rel="manifest" href="' . get_stylesheet_directory_uri() . '/Assets/favicons/site.webmanifest">' . "\n";
-        echo '<link rel="shortcut icon" href="' . get_stylesheet_directory_uri() . '/Assets/favicons/favicon.ico">' . "\n";
+        echo '<link rel="apple-touch-icon" sizes="180x180" href="' . THEME_DIRECTORY_URI . '/Assets/favicons/apple-touch-icon.png">' . "\n";
+        echo '<link rel="icon" type="image/png" sizes="32x32" href="' . THEME_DIRECTORY_URI . '/Assets/favicons/favicon-32x32.png">' . "\n";
+        echo '<link rel="icon" type="image/png" sizes="192x192" href="' . THEME_DIRECTORY_URI . '/Assets/favicons/android-chrome-192x192.png">' . "\n";
+        echo '<link rel="icon" type="image/png" sizes="16x16" href="' . THEME_DIRECTORY_URI . '/Assets/favicons/favicon-16x16.png">' . "\n";
+        echo '<link rel="manifest" href="' . THEME_DIRECTORY_URI . '/Assets/favicons/site.webmanifest">' . "\n";
+        echo '<link rel="shortcut icon" href="' . THEME_DIRECTORY_URI . '/Assets/favicons/favicon.ico">' . "\n";
 
         echo Metatags::createMetaTag(
             property: 'msapplication-TileColor',
@@ -50,12 +50,12 @@ class Favicon {
         ) . "\n";
         echo Metatags::createMetaTag(
             property: 'msapplication-TileImage',
-            content: get_stylesheet_directory_uri() . '/Assets/favicons/mstile-144x144.png',
+            content: THEME_DIRECTORY_URI . '/Assets/favicons/mstile-144x144.png',
             type: 'name'
         ) . "\n";
         echo Metatags::createMetaTag(
             property: 'msapplication-config',
-            content: get_stylesheet_directory_uri() . '/Assets/favicons/browserconfig.xml',
+            content: THEME_DIRECTORY_URI . '/Assets/favicons/browserconfig.xml',
             type: 'name'
         ) . "\n";
         echo Metatags::createMetaTag(
@@ -81,7 +81,7 @@ class Favicon {
     public function redirectFavicon(): void {
         wp_redirect(location: get_site_icon_url(
             size: 32,
-            url: get_theme_file_uri('/Assets/favicons/favicon.ico')
+            url: get_theme_file_uri(file: '/Assets/favicons/favicon.ico')
         ));
 
         exit;
