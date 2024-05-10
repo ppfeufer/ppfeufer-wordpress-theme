@@ -159,7 +159,7 @@ class Shortcodes {
                     %3$s
                 </div>',
                 $attributes['headline_tag'],
-                __('Credits', 'ppfeufer'),
+                __('Credits:', 'ppfeufer'),
                 wpautop(text: do_shortcode(
                     content: apply_filters(hook_name: 'the_content', value: $content)
                 ))
