@@ -35,6 +35,8 @@ Section Order:
 ### Security
 -->
 
+## \[1.3.0\] - 2024-05-10
+
 ### Added
 
 - Text domain to the theme for translations
