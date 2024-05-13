@@ -2,7 +2,7 @@
 /**
  * @license MIT
  *
- * Modified by Peter Pfeufer on 13-April-2024 using {@see https://github.com/BrianHenryIE/strauss}.
+ * Modified by Peter Pfeufer on 13-May-2024 using {@see https://github.com/BrianHenryIE/strauss}.
  */
 
 namespace WordPress\Ppfeufer\Theme\Ppfeufer\Libs\YahnisElsts\PluginUpdateChecker\v5p4;
