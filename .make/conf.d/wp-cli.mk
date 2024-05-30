@@ -37,7 +37,7 @@ shell:
 
 # Help message for the WP-CLI commands
 help::
-	@echo "  $(FONT_UNDERLINE)WP-CLI:$(FONT_UNDERLINE_END)"
+	@echo "  $(TEXT_UNDERLINE)WP-CLI:$(TEXT_UNDERLINE_END)"
 	@echo "    activate-theme            Activate the theme."
 	@echo "    clear-transient           Clear all transient caches from the WordPress database."
 	@echo "    deactivate-theme          Deactivate the theme."
