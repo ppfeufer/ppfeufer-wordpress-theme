@@ -8,6 +8,7 @@ theme_name = ppfeufer WordPress Theme
 theme_slug = ppfeufer
 
 # Help message for the Makefile
+.PHONY: help
 help::
 	@echo "$(TEXT_BOLD)$(theme_name)$(TEXT_BOLD_END) Makefile"
 	@echo ""

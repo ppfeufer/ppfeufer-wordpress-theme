@@ -3,12 +3,14 @@ wp_cli = vendor/bin/wp
 wp_path = ./../../../../WP-Sources
 
 # Activate the theme
+.PHONY: activate-theme
 activate-theme:
 	@$(wp_cli) theme activate \
 		$(theme_name) \
 		--path=$(wp_path)
 
 # Clear all transient caches from the WordPress database
+.PHONY: clear-transient
 clear-transient:
 	@echo "Clearing all transient caches from the WordPress database …"
 	@$(wp_cli) transient delete \
@@ -16,12 +18,14 @@ clear-transient:
 		--path=$(wp_path)
 
 # Deactivate the theme
+.PHONY: deactivate-theme
 deactivate-theme:
 	@$(wp_cli) theme deactivate \
 		$(theme_name) \
 		--path=$(wp_path)
 
 # Create the theme .pot file
+.PHONY: pot
 pot:
 	@$(wp_cli) i18n make-pot \
 		. \
@@ -30,12 +34,15 @@ pot:
 		--domain=$(theme_slug) \
 		--include="/"
 
+# Start the WP-CLI shell
+.PHONY: shell
 shell:
 	@echo "Starting the WP-CLI shell …"
 	@$(wp_cli) shell \
 		--path=$(wp_path)
 
 # Help message for the WP-CLI commands
+.PHONY: help
 help::
 	@echo "  $(TEXT_UNDERLINE)WP-CLI:$(TEXT_UNDERLINE_END)"
 	@echo "    activate-theme            Activate the theme."
