@@ -19,7 +19,9 @@
     "extra": {
         "strauss": {
             "target_directory": "Sources/Libs",
-            "namespace_prefix": "WordPress\\Ppfeufer\\Theme\\Ppfeufer\\Libs\\"
+            "namespace_prefix": "WordPress\\Ppfeufer\\Theme\\Ppfeufer\\Libs\\",
+            "include_modified_date": false,
+            "include_author": false
         }
     },
     "scripts": {
