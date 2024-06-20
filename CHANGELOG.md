@@ -35,6 +35,8 @@ Section Order:
 ### Security
 -->
 
+## \[1.3.1\] - 2024-06-20
+
 ### Changed
 
 - Post navigation styling
