@@ -62,6 +62,16 @@
         top: 5rem;
     }
 
+    /* Next/previous post navigation
+    --------------------------------------------------------------------------------- */
+    .post-navigation .nav-links > div {
+        width: 50%;
+    }
+
+    .post-navigation .nav-links .nav-next {
+        text-align: right;
+    }
+
     /* Footer should always be at the bottom
     --------------------------------------------------------------------------------- */
     footer {
