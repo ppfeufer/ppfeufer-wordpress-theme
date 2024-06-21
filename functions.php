@@ -25,9 +25,18 @@ require_once trailingslashit(value: __DIR__) . 'Sources/Libs/autoload.php';
 
 // Define a couple of constants we might need.
 // phpcs:disable
-define(constant_name: 'THEME_VERSION', value: wp_get_theme()->get('Version'));
-define(constant_name: 'THEME_DIRECTORY', value: get_stylesheet_directory());
-define(constant_name: 'THEME_DIRECTORY_URI', value: get_stylesheet_directory_uri());
+define(
+    constant_name: __NAMESPACE__ . '\THEME_VERSION',
+    value: wp_get_theme()->get('Version')
+);
+define(
+    constant_name: __NAMESPACE__ . '\THEME_DIRECTORY',
+    value: get_stylesheet_directory()
+);
+define(
+    constant_name: __NAMESPACE__ . '\THEME_DIRECTORY_URI',
+    value: get_stylesheet_directory_uri()
+);
 // phpcs:enable
 
 // Load the themes' main class.

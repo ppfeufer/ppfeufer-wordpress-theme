@@ -3,6 +3,7 @@
 namespace WordPress\Ppfeufer\Theme\Ppfeufer\Tweaks;
 
 use WordPress\Ppfeufer\Theme\Ppfeufer\Helper\Metatags;
+use const WordPress\Ppfeufer\Theme\Ppfeufer\THEME_DIRECTORY_URI;
 
 /**
  * Favicon
