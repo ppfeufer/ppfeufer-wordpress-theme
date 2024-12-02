@@ -2,7 +2,7 @@
 
 namespace WordPress\Ppfeufer\Theme\Ppfeufer;
 
-use WordPress\Ppfeufer\Theme\Ppfeufer\Libs\YahnisElsts\PluginUpdateChecker\v5p4\PucFactory;
+use WordPress\Ppfeufer\Theme\Ppfeufer\Libs\YahnisElsts\PluginUpdateChecker\v5p5\PucFactory;
 
 /**
  * Main Theme Class
