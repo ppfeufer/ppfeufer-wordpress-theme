@@ -22,7 +22,7 @@ https://docs.github.com/assets/cb-41128/mw-1440/images/help/writing/alerts-rende
 > Critical content demanding immediate user attention due to potential risks.
 -->
 
-## \[In Development\] – Unreleased
+## [In Development] – Unreleased
 
 <!--
 Section Order:
@@ -39,13 +39,13 @@ Section Order:
 
 - Put constants under our namespace to avoid potential conflicts
 
-## \[1.3.1\] - 2024-06-20
+## [1.3.1] - 2024-06-20
 
 ### Changed
 
 - Post navigation styling
 
-## \[1.3.0\] - 2024-05-10
+## [1.3.0] - 2024-05-10
 
 ### Added
 
@@ -56,13 +56,13 @@ Section Order:
 - `package-lock.json` file updated
 - Some minor code style improvements
 
-## \[1.2.1\] - 2024-04-13
+## [1.2.1] - 2024-04-13
 
 ### Changed
 
 - Autoloading refactored
 
-## \[1.2.0\] - 2024-04-09
+## [1.2.0] - 2024-04-09
 
 ### Added
 
@@ -72,19 +72,19 @@ Section Order:
 
 - CSS formatting
 
-## \[1.1.0\] - 2024-03-02
+## [1.1.0] - 2024-03-02
 
 ### Added
 
 - `YahnisElsts/PluginUpdateChecker` to check for updates of the theme
 
-## \[1.0.1\] - 2024-03-01
+## [1.0.1] - 2024-03-01
 
 ### Fixed
 
 - Footer now again is at the bottom when the content is not large enough to push it down
 
-## \[1.0.0\] - 2024-02-28
+## [1.0.0] - 2024-02-28
 
 ### Added
 
@@ -95,7 +95,7 @@ Section Order:
 - Switched ESLint to their new flat configuration
 - Using classes instead of `funcions.php` now
 
-## \[0.1.0\] - 2023-12-11
+## [0.1.0] - 2023-12-11
 
 ### Added
 
@@ -105,7 +105,7 @@ Section Order:
 
 - Favicons updated
 
-## \[0.0.23\] - 2023-11-07
+## [0.0.23] - 2023-11-07
 
 ### Added
 
@@ -119,38 +119,38 @@ Section Order:
 - JavaScript moved to the dedicated `Assets` directory
 - PHP code formatted
 
-## \[0.0.22\] - 2023-07-20
+## [0.0.22] - 2023-07-20
 
 ### Added
 
 - Copy to clipboard button for code blocks
 
-## \[0.0.21\] - 2023-06-04
+## [0.0.21] - 2023-06-04
 
 ### Changed
 
 - Meta-tags are now generated via their own function
 
-## \[0.0.20\] - 2022-11-08
+## [0.0.20] - 2022-11-08
 
 ### Removed
 
 - Custom `:hover` color for links
 - Unnecessary and non-existent 4th parameter from function
 
-## \[0.0.19\] - 2022-10-05
+## [0.0.19] - 2022-10-05
 
 ### Changed
 
 - Simplified `remove_protocol_from_url` function
 
-## \[0.0.18\] - 2022-09-25
+## [0.0.18] - 2022-09-25
 
 ### Removed
 
 - DNS prefetch
 
-## \[0.0.17\] - 2022-09-13
+## [0.0.17] - 2022-09-13
 
 ### Added
 
@@ -160,7 +160,7 @@ Section Order:
 
 - CSS lint applied
 
-## \[0.0.16\] - 2022-08-28
+## [0.0.16] - 2022-08-28
 
 ### Fixed
 
@@ -170,37 +170,37 @@ Section Order:
 
 - Twitter cards to OG tags
 
-## \[0.0.15\] - 2022-08-18
+## [0.0.15] - 2022-08-18
 
 ### Changed
 
 - OG tags improved
 
-## \[0.0.14\] - 2022-08-16
+## [0.0.14] - 2022-08-16
 
 ### Added
 
 - Use article images as `og:image` meta tag
 
-## \[0.0.13\] - 2022-08-10
+## [0.0.13] - 2022-08-10
 
 ### Fixed
 
 - Make sure SVG images always use the full space they have
 
-## \[0.0.12\] - 2022-08-10
+## [0.0.12] - 2022-08-10
 
 ### Changed
 
 - Link colours when focused
 
-## \[0.0.11\] - 2022-07-29
+## [0.0.11] - 2022-07-29
 
 ### Changed
 
 - Use a template override to hide page title on the home page instead of CSS (This is the WordPress way)
 
-## \[0.0.10\] - 2022-07-28
+## [0.0.10] - 2022-07-28
 
 ### Added
 
@@ -212,7 +212,7 @@ Section Order:
 - Better way of hiding the page title on the home page
 - Argument type in shortcode class
 
-## \[0.0.9\] - 2022-07-27
+## [0.0.9] - 2022-07-27
 
 ### Added
 
@@ -220,7 +220,7 @@ Section Order:
 - `CHANGELOG.md` file
 - `CODEOWNERS` file
 
-## \[0.0.8\] - 2022-07-23
+## [0.0.8] - 2022-07-23
 
 ### Added
 
@@ -230,7 +230,7 @@ Section Order:
 
 - Style for `SyntaxHighlighter Evolved`
 
-## \[0.0.7\] - 2022-07-05
+## [0.0.7] - 2022-07-05
 
 ### Removed
 
@@ -240,7 +240,7 @@ Section Order:
 
 - Switched from `Codecolorer` to `SyntaxHighlighter Evolved` as syntax plugin
 
-## \[0.0.6\] - 2022-05-21
+## [0.0.6] - 2022-05-21
 
 ### Added
 
@@ -250,25 +250,25 @@ Section Order:
 
 - Footer inherited from parent theme
 
-## \[0.0.5\] - 2022-05-15
+## [0.0.5] - 2022-05-15
 
 ### Changed
 
 - The Primary sidebar is now sticky
 
-## \[0.0.4\] - 2022-05-13
+## [0.0.4] - 2022-05-13
 
 ### Changed
 
 - Style for `Codecolorer` elements
 
-## \[0.0.3\] - 2022-04-29
+## [0.0.3] - 2022-04-29
 
 ### Added
 
 - Plugin related stylesheet
 
-## \[0.0.2\] - 2022-04-28
+## [0.0.2] - 2022-04-28
 
 ### Added
 
@@ -286,7 +286,7 @@ Section Order:
 
 - Wrong redirect to favicon (thx WordPress, you suck at this)
 
-## \[0.0.1\] - 2022-03-22
+## [0.0.1] - 2022-03-22
 
 ### Added
 
