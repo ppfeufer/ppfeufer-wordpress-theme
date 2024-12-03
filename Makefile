@@ -7,6 +7,10 @@
 theme_name = ppfeufer WordPress Theme
 theme_slug = ppfeufer
 
+# Git repository URLs
+theme_repo_url = https://github.com/ppfeufer/ppfeufer-wordpress-theme
+theme_issues_url = $(theme_repo_url)/issues
+
 # Help message for the Makefile
 .PHONY: help
 help::
