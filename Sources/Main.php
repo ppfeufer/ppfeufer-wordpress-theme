@@ -28,6 +28,20 @@ class Main {
     }
 
     /**
+     * Check GitHub for updates
+     *
+     * @return void
+     * @access public
+     */
+    public function doUpdateCheck(): void {
+        PucFactory::buildUpdateChecker(
+            metadataUrl: THEME_GITHUB_URI,
+            fullPath: THEME_DIRECTORY,
+            slug: THEME_SLUG
+        )->getVcsApi()->enableReleaseAssets();
+    }
+
+    /**
      * Load text domain
      *
      * @return void
@@ -35,9 +49,21 @@ class Main {
      */
     public function loadTextDomain(): void {
         load_child_theme_textdomain(
-            domain: 'ppfeufer',
+            domain: THEME_SLUG,
             path: THEME_DIRECTORY . '/l10n'
         );
+    }
+
+    /**
+     * Initialize the theme
+     *
+     * @return void
+     * @access public
+     */
+    public function init(): void {
+        foreach ($this->getClassesToLoad() as $class) {
+            new $class();
+        }
     }
 
     /**
@@ -57,31 +83,5 @@ class Main {
             Tweaks\SearchUrl::class, // Search URL modifications
             Tweaks\Theme::class // Theme Tweaks
         ];
-    }
-
-    /**
-     * Initialize the theme
-     *
-     * @return void
-     * @access public
-     */
-    public function init(): void {
-        foreach ($this->getClassesToLoad() as $class) {
-            new $class();
-        }
-    }
-
-    /**
-     * Check GitHub for updates
-     *
-     * @return void
-     * @access public
-     */
-    public function doUpdateCheck(): void {
-        PucFactory::buildUpdateChecker(
-            metadataUrl: 'https://github.com/ppfeufer/ppfeufer-wordpress-theme/',
-            fullPath: get_stylesheet_directory(),
-            slug: 'ppfeufer'
-        )->getVcsApi()->enableReleaseAssets();
     }
 }

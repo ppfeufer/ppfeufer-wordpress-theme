@@ -19,25 +19,42 @@
 
 namespace WordPress\Ppfeufer\Theme\Ppfeufer;
 
-// Register the autoloader.
-require_once trailingslashit(value: __DIR__) . 'Sources/autoloader.php';
-require_once trailingslashit(value: __DIR__) . 'Sources/Libs/autoload.php';
-
 // Define a couple of constants we might need.
 // phpcs:disable
+// Theme name
+define(
+    constant_name: __NAMESPACE__ . '\THEME_NAME',
+    value: wp_get_theme()->get('Name')
+);
+
+// Theme version
 define(
     constant_name: __NAMESPACE__ . '\THEME_VERSION',
     value: wp_get_theme()->get('Version')
 );
+
+// Theme directory
 define(
     constant_name: __NAMESPACE__ . '\THEME_DIRECTORY',
     value: get_stylesheet_directory()
 );
+
+// Theme directory URI
 define(
     constant_name: __NAMESPACE__ . '\THEME_DIRECTORY_URI',
     value: get_stylesheet_directory_uri()
 );
+
+// Theme GitHub URI
+const THEME_GITHUB_URI = 'https://github.com/ppfeufer/ppfeufer-wordpress-theme/';
+
+// Theme slug
+const THEME_SLUG = 'ppfeufer';
 // phpcs:enable
+
+// Include the autoloader and the libraries autoloader
+require_once THEME_DIRECTORY . '/Sources/autoloader.php';
+require_once THEME_DIRECTORY . '/Sources/Libs/autoload.php';
 
 // Load the themes' main class.
 (new Main())->init();
