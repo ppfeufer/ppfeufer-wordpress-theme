@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Added
+
+- Release workflow for GitHub Actions
+
 ### Changed
 
 - Put constants under our namespace to avoid potential conflicts
