@@ -35,6 +35,8 @@ Section Order:
 ### Security
 -->
 
+## [1.3.2] - 2024-12-09
+
 ### Added
 
 - Release workflow for GitHub Actions
