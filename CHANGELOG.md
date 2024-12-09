@@ -38,6 +38,7 @@ Section Order:
 ### Changed
 
 - Put constants under our namespace to avoid potential conflicts
+- Code optimization
 
 ## [1.3.1] - 2024-06-20
 
