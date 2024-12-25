@@ -45,16 +45,19 @@ define(
     value: get_stylesheet_directory_uri()
 );
 
-// Theme GitHub URI
-const THEME_GITHUB_URI = 'https://github.com/ppfeufer/ppfeufer-wordpress-theme/';
-
 // Theme slug
 const THEME_SLUG = 'ppfeufer';
+
+// Theme Sources directory
+const THEME_SOURCES_DIRECTORY = THEME_DIRECTORY . '/Sources/';
+
+// Theme GitHub URI
+const THEME_GITHUB_URI = 'https://github.com/ppfeufer/' . THEME_SLUG . '-wordpress-theme/';
 // phpcs:enable
 
 // Include the autoloader and the libraries autoloader
-require_once THEME_DIRECTORY . '/Sources/autoloader.php';
-require_once THEME_DIRECTORY . '/Sources/Libs/autoload.php';
+require_once THEME_SOURCES_DIRECTORY . 'autoloader.php';
+require_once THEME_SOURCES_DIRECTORY . 'Libs/autoload.php';
 
 // Load the themes' main class.
 (new Main())->init();
