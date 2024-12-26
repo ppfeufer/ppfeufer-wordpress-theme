@@ -58,8 +58,10 @@ const THEME_LIBRARY_DIRECTORY = THEME_SOURCES_DIRECTORY . 'Libs/';
 const THEME_GITHUB_URI = 'https://github.com/ppfeufer/' . THEME_SLUG . '-wordpress-theme/';
 // phpcs:enable
 
-// Include the autoloader and the libraries autoloader
-require_once THEME_SOURCES_DIRECTORY . 'autoloader.php';
+// Include the theme autoloader
+require_once THEME_SOURCES_DIRECTORY . 'autoload.php';
+
+// Include the library autoloader
 require_once THEME_LIBRARY_DIRECTORY . 'autoload.php';
 
 // Load the themes' main class.
