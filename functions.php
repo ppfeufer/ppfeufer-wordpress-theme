@@ -51,13 +51,16 @@ const THEME_SLUG = 'ppfeufer';
 // Theme Sources directory
 const THEME_SOURCES_DIRECTORY = THEME_DIRECTORY . '/Sources/';
 
+// Theme Library directory
+const THEME_LIBRARY_DIRECTORY = THEME_SOURCES_DIRECTORY . 'Libs/';
+
 // Theme GitHub URI
 const THEME_GITHUB_URI = 'https://github.com/ppfeufer/' . THEME_SLUG . '-wordpress-theme/';
 // phpcs:enable
 
 // Include the autoloader and the libraries autoloader
 require_once THEME_SOURCES_DIRECTORY . 'autoloader.php';
-require_once THEME_SOURCES_DIRECTORY . 'Libs/autoload.php';
+require_once THEME_LIBRARY_DIRECTORY . 'autoload.php';
 
 // Load the themes' main class.
 (new Main())->init();
