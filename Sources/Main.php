@@ -70,9 +70,7 @@ class Main {
      * @access public
      */
     public function init(): void {
-        foreach ($this->getClassesToLoad() as $class) {
-            new $class();
-        }
+        array_map(static fn($class) => new $class(), $this->getClassesToLoad());
     }
 
     /**
