@@ -20,11 +20,7 @@ class Main {
      */
     public function __construct() {
         $this->doUpdateCheck();
-
-        add_action(
-            hook_name: 'after_setup_theme',
-            callback: [$this, 'loadTextDomain']
-        );
+        $this->initializeHooks();
     }
 
     /**
@@ -39,6 +35,19 @@ class Main {
             fullPath: THEME_DIRECTORY,
             slug: THEME_SLUG
         )->getVcsApi()->enableReleaseAssets();
+    }
+
+    /**
+     * Initialize hooks
+     *
+     * @return void
+     * @access private
+     */
+    private function initializeHooks(): void {
+        add_action(
+            hook_name: 'after_setup_theme',
+            callback: [$this, 'loadTextDomain']
+        );
     }
 
     /**
