@@ -1,16 +1,16 @@
 <?php
 
-namespace WordPress\Ppfeufer\Theme\Ppfeufer\Tweaks;
+namespace Ppfeufer\Theme\Ppfeufer\Tweaks;
 
-use WordPress\Ppfeufer\Theme\Ppfeufer\Helper\Metatags;
-use const WordPress\Ppfeufer\Theme\Ppfeufer\THEME_DIRECTORY_URI;
+use Ppfeufer\Theme\Ppfeufer\Helper\Metatags;
+use const Ppfeufer\Theme\Ppfeufer\THEME_DIRECTORY_URI;
 
 /**
  * Favicon
  *
  * This class is responsible for adding the favicon to the theme.
  *
- * @package WordPress\Ppfeufer\Theme\Ppfeufer\Tweaks
+ * @package Ppfeufer\Theme\Ppfeufer\Tweaks
  */
 class Favicon {
     /**

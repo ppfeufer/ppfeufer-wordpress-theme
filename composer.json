@@ -19,7 +19,7 @@
     "extra": {
         "strauss": {
             "target_directory": "Sources/Libs",
-            "namespace_prefix": "WordPress\\Ppfeufer\\Theme\\Ppfeufer\\Libs\\",
+            "namespace_prefix": "Ppfeufer\\Theme\\Ppfeufer\\Libs\\",
             "include_modified_date": false,
             "include_author": false
         }
@@ -45,7 +45,7 @@
     },
     "autoload": {
         "psr-4": {
-            "WordPress\\Ppfeufer\\Theme\\Ppfeufer\\": "Sources"
+            "Ppfeufer\\Theme\\Ppfeufer\\": "Sources"
         },
         "classmap": [
             "vendor"

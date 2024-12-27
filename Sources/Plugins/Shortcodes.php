@@ -17,7 +17,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-namespace WordPress\Ppfeufer\Theme\Ppfeufer\Plugins;
+namespace Ppfeufer\Theme\Ppfeufer\Plugins;
 
 /**
  * Theme Shortcodes
@@ -33,7 +33,7 @@ defined(constant_name: 'ABSPATH') or die();
  *
  * This class is responsible for handling shortcodes.
  *
- * @package WordPress\Ppfeufer\Theme\Ppfeufer\Plugins
+ * @package Ppfeufer\Theme\Ppfeufer\Plugins
  */
 class Shortcodes {
     /**

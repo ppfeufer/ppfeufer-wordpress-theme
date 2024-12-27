@@ -1,6 +1,6 @@
 <?php
 
-namespace WordPress\Ppfeufer\Theme\Ppfeufer\Libs\YahnisElsts\PluginUpdateChecker\v5p5\Vcs;
+namespace Ppfeufer\Theme\Ppfeufer\Libs\YahnisElsts\PluginUpdateChecker\v5p5\Vcs;
 
 use Parsedown;
 use PucReadmeParser;

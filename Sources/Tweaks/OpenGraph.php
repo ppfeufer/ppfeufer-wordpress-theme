@@ -1,16 +1,16 @@
 <?php
 
-namespace WordPress\Ppfeufer\Theme\Ppfeufer\Tweaks;
+namespace Ppfeufer\Theme\Ppfeufer\Tweaks;
 
-use WordPress\Ppfeufer\Theme\Ppfeufer\Helper\Metatags;
-use WordPress\Ppfeufer\Theme\Ppfeufer\Helper\Url;
+use Ppfeufer\Theme\Ppfeufer\Helper\Metatags;
+use Ppfeufer\Theme\Ppfeufer\Helper\Url;
 
 /**
  * Open Graph
  *
  * This class is responsible for adding Open Graph tags to the theme.
  *
- * @package WordPress\Ppfeufer\Theme\Ppfeufer\Tweaks
+ * @package Ppfeufer\Theme\Ppfeufer\Tweaks
  */
 class OpenGraph {
     /**

@@ -1,13 +1,13 @@
 <?php
 
-namespace WordPress\Ppfeufer\Theme\Ppfeufer;
+namespace Ppfeufer\Theme\Ppfeufer;
 
 use Exception;
 use RuntimeException;
 
 // Register the autoloader.
 // phpcs:disable
-spl_autoload_register(callback: '\WordPress\Ppfeufer\Theme\Ppfeufer\autoload');
+spl_autoload_register(callback: '\Ppfeufer\Theme\Ppfeufer\autoload');
 // phpcs:enable
 
 /**
@@ -16,7 +16,7 @@ spl_autoload_register(callback: '\WordPress\Ppfeufer\Theme\Ppfeufer\autoload');
  *
  * @param string $className The name of the class to load
  * @return void
- * @package WordPress\Ppfeufer\Theme\Ppfeufer
+ * @package Ppfeufer\Theme\Ppfeufer
  */
 function autoload(string $className): void {
     // Check if the class name starts with the base namespace or includes `Libs' in the path

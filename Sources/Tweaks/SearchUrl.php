@@ -1,13 +1,13 @@
 <?php
 
-namespace WordPress\Ppfeufer\Theme\Ppfeufer\Tweaks;
+namespace Ppfeufer\Theme\Ppfeufer\Tweaks;
 
 /**
  * Search URL
  *
  * This class is responsible for modifying the search URL.
  *
- * @package WordPress\Ppfeufer\Theme\Ppfeufer\Tweaks
+ * @package Ppfeufer\Theme\Ppfeufer\Tweaks
  */
 class SearchUrl {
     /**

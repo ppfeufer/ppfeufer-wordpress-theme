@@ -1,13 +1,13 @@
 <?php
 
-namespace WordPress\Ppfeufer\Theme\Ppfeufer\Tweaks;
+namespace Ppfeufer\Theme\Ppfeufer\Tweaks;
 
 /**
  * DNS Prefetch
  *
  * This class is responsible for handling DNS prefetch.
  *
- * @package WordPress\Ppfeufer\Theme\Ppfeufer\Tweaks
+ * @package Ppfeufer\Theme\Ppfeufer\Tweaks
  */
 class DnsPrefetch {
     /**

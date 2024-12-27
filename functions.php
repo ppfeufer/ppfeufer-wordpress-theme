@@ -17,7 +17,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-namespace WordPress\Ppfeufer\Theme\Ppfeufer;
+namespace Ppfeufer\Theme\Ppfeufer;
 
 // Define a couple of constants we might need.
 // phpcs:disable

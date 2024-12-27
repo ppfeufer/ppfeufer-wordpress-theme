@@ -1,7 +1,7 @@
 <?php
-namespace WordPress\Ppfeufer\Theme\Ppfeufer\Libs\YahnisElsts\PluginUpdateChecker\v5p5\DebugBar;
+namespace Ppfeufer\Theme\Ppfeufer\Libs\YahnisElsts\PluginUpdateChecker\v5p5\DebugBar;
 
-use WordPress\Ppfeufer\Theme\Ppfeufer\Libs\YahnisElsts\PluginUpdateChecker\v5p5\Plugin\UpdateChecker;
+use Ppfeufer\Theme\Ppfeufer\Libs\YahnisElsts\PluginUpdateChecker\v5p5\Plugin\UpdateChecker;
 
 if ( !class_exists(PluginPanel::class, false) ):
 

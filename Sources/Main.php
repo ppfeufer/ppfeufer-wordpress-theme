@@ -1,15 +1,15 @@
 <?php
 
-namespace WordPress\Ppfeufer\Theme\Ppfeufer;
+namespace Ppfeufer\Theme\Ppfeufer;
 
-use WordPress\Ppfeufer\Theme\Ppfeufer\Libs\YahnisElsts\PluginUpdateChecker\v5p5\PucFactory;
+use Ppfeufer\Theme\Ppfeufer\Libs\YahnisElsts\PluginUpdateChecker\v5p5\PucFactory;
 
 /**
  * Main Theme Class
  *
  * This class is responsible for the main functionality of the theme.
  *
- * @package WordPress\Ppfeufer\Theme\Ppfeufer
+ * @package Ppfeufer\Theme\Ppfeufer
  */
 class Main {
     /**
