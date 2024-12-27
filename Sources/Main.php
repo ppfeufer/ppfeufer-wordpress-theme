@@ -1,15 +1,15 @@
 <?php
 
-namespace WordPress\Ppfeufer\Theme\Ppfeufer;
+namespace Ppfeufer\Theme\Ppfeufer;
 
-use WordPress\Ppfeufer\Theme\Ppfeufer\Libs\YahnisElsts\PluginUpdateChecker\v5p5\PucFactory;
+use Ppfeufer\Theme\Ppfeufer\Libs\YahnisElsts\PluginUpdateChecker\v5p5\PucFactory;
 
 /**
  * Main Theme Class
  *
  * This class is responsible for the main functionality of the theme.
  *
- * @package WordPress\Ppfeufer\Theme\Ppfeufer
+ * @package Ppfeufer\Theme\Ppfeufer
  */
 class Main {
     /**
@@ -20,11 +20,7 @@ class Main {
      */
     public function __construct() {
         $this->doUpdateCheck();
-
-        add_action(
-            hook_name: 'after_setup_theme',
-            callback: [$this, 'loadTextDomain']
-        );
+        $this->initializeHooks();
     }
 
     /**
@@ -39,6 +35,19 @@ class Main {
             fullPath: THEME_DIRECTORY,
             slug: THEME_SLUG
         )->getVcsApi()->enableReleaseAssets();
+    }
+
+    /**
+     * Initialize hooks
+     *
+     * @return void
+     * @access private
+     */
+    private function initializeHooks(): void {
+        add_action(
+            hook_name: 'after_setup_theme',
+            callback: [$this, 'loadTextDomain']
+        );
     }
 
     /**
@@ -61,9 +70,7 @@ class Main {
      * @access public
      */
     public function init(): void {
-        foreach ($this->getClassesToLoad() as $class) {
-            new $class();
-        }
+        array_map(static fn($class) => new $class(), $this->getClassesToLoad());
     }
 
     /**

@@ -1,9 +1,14 @@
 <?php
 
-namespace WordPress\Ppfeufer\Theme\Ppfeufer;
+namespace Ppfeufer\Theme\Ppfeufer;
 
 use Exception;
 use RuntimeException;
+
+// Register the autoloader.
+// phpcs:disable
+spl_autoload_register(callback: '\Ppfeufer\Theme\Ppfeufer\autoload');
+// phpcs:enable
 
 /**
  * Autoloader for the theme classes and interfaces to be loaded dynamically.
@@ -11,12 +16,13 @@ use RuntimeException;
  *
  * @param string $className The name of the class to load
  * @return void
- * @package WordPress\Ppfeufer\Theme\Ppfeufer
+ * @package Ppfeufer\Theme\Ppfeufer
  */
-spl_autoload_register(callback: static function (string $className): void {
+function autoload(string $className): void {
     // Check if the class name starts with the base namespace or includes `Libs' in the path
     if (!str_starts_with(haystack: $className, needle: __NAMESPACE__)
-        || str_contains(haystack: $className, needle: '\Libs')) {
+        || str_contains(haystack: $className, needle: '\Libs')
+    ) {
         return;
     }
 
@@ -43,7 +49,8 @@ spl_autoload_register(callback: static function (string $className): void {
         } else {
             throw new RuntimeException(
                 sprintf(
-                    'Autoloader error: Class file for %1$s not found at %2$s',
+                    '[%1$s] Autoloader error: Class file for %2$s not found at %3$s',
+                    __NAMESPACE__,
                     $className,
                     $file
                 )
@@ -52,4 +59,4 @@ spl_autoload_register(callback: static function (string $className): void {
     } catch (Exception $e) {
         error_log(message: $e->getMessage());
     }
-});
+}

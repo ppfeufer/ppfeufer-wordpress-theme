@@ -1,6 +1,6 @@
 <?php
 
-namespace WordPress\Ppfeufer\Theme\Ppfeufer\Tweaks;
+namespace Ppfeufer\Theme\Ppfeufer\Tweaks;
 
 use WP_Post;
 
@@ -9,7 +9,7 @@ use WP_Post;
  *
  * This class is responsible for adding lazy loading to images.
  *
- * @package WordPress\Ppfeufer\Theme\Ppfeufer\Tweaks
+ * @package Ppfeufer\Theme\Ppfeufer\Tweaks
  */
 class LazyLoading {
     /**

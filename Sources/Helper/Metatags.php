@@ -1,11 +1,11 @@
 <?php
 
-namespace WordPress\Ppfeufer\Theme\Ppfeufer\Helper;
+namespace Ppfeufer\Theme\Ppfeufer\Helper;
 
 /**
  * Metatags Helper Functions
  *
- * @package WordPress\Ppfeufer\Theme\Ppfeufer\Helper
+ * @package Ppfeufer\Theme\Ppfeufer\Helper
  */
 class Metatags {
     /**
