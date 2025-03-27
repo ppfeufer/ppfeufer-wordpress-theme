@@ -35,6 +35,8 @@ Section Order:
 ### Security
 -->
 
+## [1.5.0] - 2025-03-27
+
 ### Changed
 
 - Use `__NAMESPACE__` constant in autoloader
