@@ -4,13 +4,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ppfeufer 0.1.0\n"
-"Report-Msgid-Bugs-To: https://github.com/ppfeufer/ppfeufer-wordpress-theme/"
-"issues\n"
-"POT-Creation-Date: 2024-12-09T03:15:56+00:00\n"
+"Report-Msgid-Bugs-To: https://github.com/ppfeufer/ppfeufer-wordpress-theme/issues\n"
+"POT-Creation-Date: 2025-03-27T08:32:53+00:00\n"
 "PO-Revision-Date: 2024-05-10 10:21+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
-"Language-Team: German <https://weblate.ppfeufer.de/projects/wordpress-themes/"
-"website-ppfeufer/de/>\n"
+"Language-Team: German <https://weblate.ppfeufer.de/projects/wordpress-themes/website-ppfeufer/de/>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -50,9 +48,7 @@ msgstr "Nachweise:"
 
 #: Sources/Tweaks/Theme.php:80
 msgid "Save my name and email in this browser for the next time I comment."
-msgstr ""
-"Meinen Namen und E-Mail-Adresse in diesem Browser speichern für den nächsten "
-"Kommentar."
+msgstr "Meinen Namen und E-Mail-Adresse in diesem Browser speichern für den nächsten Kommentar."
 
 #: template-parts/content-page.php:27
 msgid "Edit"
