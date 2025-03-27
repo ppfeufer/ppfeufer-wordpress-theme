@@ -85,7 +85,6 @@ class Main {
             Plugins\Shortcodes::class, // Theme shortcodes
             Tweaks\DnsPrefetch::class, // Disable DNS prefetch
             Tweaks\Favicon::class, // Favicons
-            Tweaks\LazyLoading::class, // Image lazy loading
             Tweaks\OpenGraph::class, // Open Graph
             Tweaks\SearchUrl::class, // Search URL modifications
             Tweaks\Theme::class // Theme Tweaks

@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Removed
+
+- Lazy-loading tweaks. WordPress has something built-in now.
+
 ## [1.4.0] - 2024-12-09
 
 ### Changed
