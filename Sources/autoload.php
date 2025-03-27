@@ -7,7 +7,7 @@ use RuntimeException;
 
 // Register the autoloader.
 // phpcs:disable
-spl_autoload_register(callback: '\Ppfeufer\Theme\Ppfeufer\autoload');
+spl_autoload_register(callback: '\\' . __NAMESPACE__ . '\autoload');
 // phpcs:enable
 
 /**
