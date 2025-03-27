@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Changed
+
+- Use `__NAMESPACE__` constant in autoloader
+
 ### Removed
 
 - Lazy-loading tweaks. WordPress has something built-in now.
