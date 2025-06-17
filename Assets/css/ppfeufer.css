@@ -44,6 +44,26 @@
         color: inherit;
     }
 
+    .comments-area .comment-list .comment-content p {
+        margin: inherit;
+    }
+
+    blockquote,
+    dd,
+    dl,
+    figure,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    hr,
+    p,
+    pre {
+        margin: inherit;
+    }
+
     /* Navbar
     --------------------------------------------------------------------------------- */
     .is-sticky .navbar {
