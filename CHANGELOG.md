@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Fixed
+
+- Margins from parent theme
+
 ## [1.5.0] - 2025-03-27
 
 ### Changed
