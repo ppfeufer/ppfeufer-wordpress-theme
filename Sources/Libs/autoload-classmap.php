@@ -7,7 +7,7 @@ $strauss_src = dirname(__FILE__);
 return array(
    'PucReadmeParser' => $strauss_src . '/yahnis-elsts/plugin-update-checker/vendor/PucReadmeParser.php',
    'Parsedown' => $strauss_src . '/yahnis-elsts/plugin-update-checker/vendor/ParsedownModern.php',
-   'YahnisElsts\PluginUpdateChecker\v5\PucFactory' => $strauss_src . '/yahnis-elsts/plugin-update-checker/Puc/v5/PucFactory.php',
+   'Ppfeufer\Theme\Ppfeufer\Libs\YahnisElsts\PluginUpdateChecker\v5\PucFactory' => $strauss_src . '/yahnis-elsts/plugin-update-checker/Puc/v5/PucFactory.php',
    'Ppfeufer\Theme\Ppfeufer\Libs\YahnisElsts\PluginUpdateChecker\v5p6\UpdateChecker' => $strauss_src . '/yahnis-elsts/plugin-update-checker/Puc/v5p6/UpdateChecker.php',
    'Ppfeufer\Theme\Ppfeufer\Libs\YahnisElsts\PluginUpdateChecker\v5p6\Plugin\Ui' => $strauss_src . '/yahnis-elsts/plugin-update-checker/Puc/v5p6/Plugin/Ui.php',
    'Ppfeufer\Theme\Ppfeufer\Libs\YahnisElsts\PluginUpdateChecker\v5p6\Plugin\UpdateChecker' => $strauss_src . '/yahnis-elsts/plugin-update-checker/Puc/v5p6/Plugin/UpdateChecker.php',
