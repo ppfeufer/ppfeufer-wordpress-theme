@@ -1,10 +1,10 @@
 jQuery(document).ready(() => {
     'use strict';
 
-    // const copyButtonLabel = 'Copy Code';
-    const copyButtonLabel = `<svg style="width: 16px; height: 16px;"><use href="#copy-code"></use></svg>`;
-    const sleep = ms => new Promise(r => setTimeout(r, ms));
-
+    const copyButton = {
+        copyCode: `<svg style="width: 16px; height: 16px;"><use href="#copy-code"></use></svg>`,
+        codeCopied: `<svg style="width: 16px; height: 16px;"><use href="#code-copied"></use></svg>`
+    };
 
     /**
      * Copy code to clipboard
@@ -12,50 +12,49 @@ jQuery(document).ready(() => {
      * @param block
      * @param button
      * @returns {Promise<void>}
-     * @see https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText
      */
     const copyCode = async (block, button) => {
         const code = block.querySelector('td.code div.container');
-        const text = code.innerText;
 
-        await navigator.clipboard.writeText(text);
+        try {
+            await navigator.clipboard.writeText(code.innerText);
 
-        // Visual feedback that task is completed
-        // button.innerText = 'Code Copied';
-        button.innerHTML = `<svg style="width: 16px; height: 16px;"><use href="#code-copied"></use></svg>`;
+            // Visual feedback
+            button.innerHTML = copyButton.codeCopied;
 
-        setTimeout(() => {
-            button.innerHTML = copyButtonLabel;
-        }, 5000);
+            setTimeout(() => {
+                button.innerHTML = copyButton.copyCode;
+            }, 5000);
+        } catch (err) {
+            console.error('Failed to copy code:', err);
+        }
     };
 
-
     /**
-     * Add header to code blocks
-     *
-     * @returns {Promise<void>}
+     * Add copy buttons to code blocks
      */
-    const addHeaderToCodeBlocks = async () => {
-        await sleep(2000);
+    const addCopyButtons = () => {
+        // Only proceed if browser supports Clipboard API
+        if (!navigator.clipboard) {
+            return;
+        }
 
         const blocks = document.querySelectorAll('div.wp-block-syntaxhighlighter-code');
 
         blocks.forEach((block) => {
-            // Only add button if the browser supports Clipboard API
-            if (navigator.clipboard) {
-                const button = document.createElement('span');
+            const button = document.createElement('span');
 
-                button.innerHTML = copyButtonLabel;
-                button.classList.add('copy-to-clipboard');
+            button.innerHTML = copyButton.copyCode;
+            button.classList.add('copy-to-clipboard');
+            button.addEventListener('click', () => {
+                copyCode(block, button);
+            });
 
-                button.addEventListener('click', async () => {
-                    await copyCode(block, button);
-                });
-
-                block.prepend(button);
-            }
+            block.prepend(button);
         });
     };
 
-    addHeaderToCodeBlocks();
+    // Use setTimeout instead of custom sleep function
+    // setTimeout(addCopyButtons, 2000);
+    addCopyButtons();
 });
