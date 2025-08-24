@@ -57,6 +57,5 @@ jQuery(document).ready(() => {
         });
     };
 
-
     addHeaderToCodeBlocks();
 });
