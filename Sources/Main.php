@@ -2,7 +2,7 @@
 
 namespace Ppfeufer\Theme\Ppfeufer;
 
-use Ppfeufer\Theme\Ppfeufer\Libs\YahnisElsts\PluginUpdateChecker\v5p6\PucFactory;
+use Ppfeufer\Theme\Ppfeufer\Libs\YahnisElsts\PluginUpdateChecker\v5p7\PucFactory;
 
 /**
  * Main Theme Class
