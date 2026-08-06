@@ -40,7 +40,7 @@ class AssetLoader {
         wp_enqueue_style(
             handle: 'fira-code',
             src: get_theme_file_uri(
-                file: '/Assets/css/libs/fira-code/6.2.0/fira_code.min.css'
+                file: '/Assets/libs/fira-code/6.2.0/fira_code.min.css'
             ),
             ver: THEME_VERSION
         );
