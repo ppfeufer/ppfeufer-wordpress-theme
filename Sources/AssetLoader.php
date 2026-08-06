@@ -47,7 +47,7 @@ class AssetLoader {
         wp_enqueue_style(
             handle: 'ppfeufer-theme-style-defaults',
             src: get_theme_file_uri(file: '/Assets/css/ppfeufer-defaults.min.css'),
-            deps: ['fira-code', 'wp-moose-style'],
+            deps: ['fira-code', 'generate-style'],
             ver: THEME_VERSION
         );
         wp_enqueue_style(
