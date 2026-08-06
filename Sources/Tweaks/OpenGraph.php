@@ -3,6 +3,7 @@
 namespace Ppfeufer\Theme\Ppfeufer\Tweaks;
 
 use Ppfeufer\Theme\Ppfeufer\Helper\Metatags;
+use Ppfeufer\Theme\Ppfeufer\Helper\Post;
 use Ppfeufer\Theme\Ppfeufer\Helper\Url;
 
 /**
@@ -47,8 +48,10 @@ class OpenGraph {
 
         // On every singular page except home page
         if (is_singular()) {
+            $post_id = get_the_ID();
+            $post = get_post($post_id);
             $ogTitle = get_the_title();
-            $ogDescription = get_the_excerpt();
+            $ogDescription = Post::getDefaultExcerptUnfiltered($post);
         }
 
         // On blog articles

@@ -120,7 +120,7 @@
         border-radius: 5px;
         float: right;
         margin-right: 0.5rem;
-        padding: 0.45rem 0.35rem 0.35rem;
+        padding: 0.45rem 0.45rem 0.05rem;
         position: sticky;
         text-shadow: var(--color-grey-light) 0 0 2px;
         top: 5rem;

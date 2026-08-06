@@ -82,12 +82,14 @@ class Main {
     private function getClassesToLoad(): array {
         return [
             AssetLoader::class, // Load assets
+            Overrides\CommentForm::class, // Comment form overrides
+            Overrides\PostExcerpt::class, // Post excerpt / read-more overrides
+            Overrides\Website::class, // Website bahvior overrides
             Plugins\Shortcodes::class, // Theme shortcodes
             Tweaks\DnsPrefetch::class, // Disable DNS prefetch
             Tweaks\Favicon::class, // Favicons
             Tweaks\OpenGraph::class, // Open Graph
             Tweaks\SearchUrl::class, // Search URL modifications
-            Tweaks\Theme::class // Theme Tweaks
         ];
     }
 }

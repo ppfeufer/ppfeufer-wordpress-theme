@@ -1,3 +1,5 @@
+/* global Masonry */
+
 jQuery(document).ready(() => {
     'use strict';
 
@@ -54,7 +56,22 @@ jQuery(document).ready(() => {
         });
     };
 
+    const blogMasonry = () => {
+        const grid = document.querySelector('body.blog .site-main');
+        const articles = document.querySelectorAll('body.blog .site-main article');
+
+        if (grid && articles.length > 0) {
+            const msnry = new Masonry(grid, { // eslint-disable-line no-unused-vars
+                percentPosition: true,
+                itemSelector: '.post',
+                columnWidth: '.post',
+                gutter: 20,
+            });
+        }
+    };
+
     // Use setTimeout instead of custom sleep function
     // setTimeout(addCopyButtons, 2000);
     addCopyButtons();
+    blogMasonry();
 });
