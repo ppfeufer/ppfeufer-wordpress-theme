@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Changed
+
+- Masonry updated to v0.0.2
+
 ## [1.5.2] - 2025-10-08
 
 ### Changed

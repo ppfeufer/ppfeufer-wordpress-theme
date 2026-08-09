@@ -73,7 +73,7 @@ class AssetLoader {
     public function loadScripts(): void {
         wp_enqueue_script(
             handle: 'masonry-layout',
-            src: get_theme_file_uri(file: '/Assets/libs/masonry-layout/4.2.2/masonry.pkgd.min.js'),
+            src: get_theme_file_uri(file: '/Assets/libs/masonry/0.0.2/dist/masonry.min.js'),
             deps: ['jquery'],
             ver: THEME_VERSION,
             args: [
