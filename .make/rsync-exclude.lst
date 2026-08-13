@@ -22,3 +22,5 @@ README.md
 .make
 .rsync-exclude
 docs
+style.min.css
+style.min.css.map
