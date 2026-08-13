@@ -48,6 +48,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Added
+
+- Bottom margin on code blocks
+
 ## [2.0.0] - 2026-08-13
 
 ### Changed
