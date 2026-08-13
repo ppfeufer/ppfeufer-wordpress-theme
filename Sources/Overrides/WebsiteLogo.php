@@ -74,7 +74,7 @@ class WebsiteLogo {
                     </a>
                 </div>',
                 esc_url(home_url('/')),
-                esc_attr(get_bloginfo('name')),
+                esc_attr(apply_filters('generate_logo_title', get_bloginfo('name', 'display'))),
                 $img_attr
             );
         }, 10, 3);
