@@ -30,12 +30,12 @@ class WebsiteLogo {
 
         // Override the website logo URL
         add_filter('generate_logo', static function (string $logo_url): string {
-            return get_stylesheet_directory_uri() . '/Assets/images/ppfeufer.jpg';
+            return get_stylesheet_directory_uri() . '/Assets/images/ppfeufer-128x128.jpg';
         });
 
         // Override the website retina logo URL
         add_filter('generate_retina_logo', static function (string $retina_url): string {
-            return get_stylesheet_directory_uri() . '/Assets/images/ppfeufer@2x.jpg';
+            return get_stylesheet_directory_uri() . '/Assets/images/ppfeufer-256x256.jpg';
         });
 
         // Override the website logo output
