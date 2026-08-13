@@ -29,6 +29,19 @@
                 }
             }
         }
+
+        .inside-article {
+            .post-image,
+            .featured-image {
+                margin-left: -30px;
+                margin-right: -30px;
+
+                .size-full {
+                    aspect-ratio: 16 / 9;
+                    width: 100%;
+                }
+            }
+        }
     }
 
     /* Sticky primary sidebar
