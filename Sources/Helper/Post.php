@@ -7,24 +7,25 @@ class Post {
      * Return an excerpt without running theme/plugin excerpt filters.
      *
      * @param object $post The current post object.
-     * @return string
+     * @return string|null
      */
-    public static function getDefaultExcerptUnfiltered(object $post): string {
-        $manualExcerpt = trim((string) $post->post_excerpt);
+    public static function getDefaultExcerptUnfiltered(object $post): ?string {
+        $manualExcerpt = trim(($post->post_excerpt));
 
         if ('' !== $manualExcerpt) {
-            return $manualExcerpt;
+            return esc_html($manualExcerpt);
         }
 
-        $content = (string) $post->post_content;
-        $content = strip_shortcodes($content);
-        $content = wp_strip_all_tags($content);
-        $content = preg_replace('/\s+/', ' ', $content);
+        $content = preg_replace(
+            '/\s+/',
+            ' ',
+            wp_strip_all_tags(strip_shortcodes((string) $post->post_content))
+        );
 
         if (null === $content) {
-            return '';
+            return null;
         }
 
-        return wp_trim_words(trim($content));
+        return wp_trim_words(trim(esc_html($content)));
     }
 }

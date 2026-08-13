@@ -79,10 +79,13 @@ class OpenGraph {
                     property: 'og:image:height',
                     content: $ogArticleImage['2']
                 ) . "\n";
-                echo Metatags::createMetaTag(
-                    property: 'og:image:alt',
-                    content: $ogDescription
-                ) . "\n";
+
+                if ($ogDescription) {
+                    echo Metatags::createMetaTag(
+                        property: 'og:image:alt',
+                        content: $ogDescription
+                    ) . "\n";
+                }
 
                 // Twitter cards
                 echo Metatags::createMetaTag(
@@ -101,11 +104,13 @@ class OpenGraph {
             }
         }
 
-        echo Metatags::createMetaTag(
-            property: 'description',
-            content: $ogDescription,
-            type: 'name'
-        ) . "\n";
+        if ($ogDescription) {
+            echo Metatags::createMetaTag(
+                property: 'description',
+                content: $ogDescription,
+                type: 'name'
+            ) . "\n";
+        }
 
         echo Metatags::createMetaTag(property: 'og:type', content: $ogType) . "\n";
         echo Metatags::createMetaTag(
@@ -114,10 +119,13 @@ class OpenGraph {
         ) . "\n";
         echo Metatags::createMetaTag(property: 'og:url', content: $ogUrl) . "\n";
         echo Metatags::createMetaTag(property: 'og:title', content: $ogTitle) . "\n";
-        echo Metatags::createMetaTag(
-            property: 'og:description',
-            content: $ogDescription
-        ) . "\n";
+
+        if ($ogDescription) {
+            echo Metatags::createMetaTag(
+                property: 'og:description',
+                content: $ogDescription
+            ) . "\n";
+        }
 
         // Twitter cards
         echo Metatags::createMetaTag(
@@ -130,10 +138,13 @@ class OpenGraph {
             content: '@ppfeufer',
             type: 'name'
         ) . "\n";
-        echo Metatags::createMetaTag(
-            property: 'twitter:description',
-            content: $ogDescription,
-            type: 'name'
-        ) . "\n";
+
+        if ($ogDescription) {
+            echo Metatags::createMetaTag(
+                property: 'twitter:description',
+                content: $ogDescription,
+                type: 'name'
+            ) . "\n";
+        }
     }
 }
