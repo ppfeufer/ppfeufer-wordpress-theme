@@ -30,6 +30,31 @@
             }
         }
 
+        .site-header {
+            z-index: 10;
+
+            .inside-header {
+                padding: 20px 20px 4px;
+
+                .site-branding,
+                .site-logo {
+                    margin-bottom: 1rem;
+                    margin-right: 1rem;
+                }
+
+                .site-logo {
+                    min-width: 128px;
+                }
+
+                .main-navigation {
+                    a,
+                    .main-nav ul ul li a {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+
         .inside-article {
             .post-image,
             .featured-image {

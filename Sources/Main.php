@@ -84,7 +84,8 @@ class Main {
             AssetLoader::class, // Load assets
             Overrides\CommentForm::class, // Comment form overrides
             Overrides\PostExcerpt::class, // Post excerpt / read-more overrides
-            Overrides\Website::class, // Website bahvior overrides
+            Overrides\Website::class, // Website behavior overrides
+            Overrides\WebsiteLogo::class, // Website logo overrides
             Plugins\Shortcodes::class, // Theme shortcodes
             Tweaks\DnsPrefetch::class, // Disable DNS prefetch
             Tweaks\Favicon::class, // Favicons
