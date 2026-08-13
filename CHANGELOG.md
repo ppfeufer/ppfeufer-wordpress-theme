@@ -2,8 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](http://keepachangelog.com/)
-and this project adheres to [Semantic Versioning](http://semver.org/).
+The format is based on [Keep a Changelog] and this project adheres to [Semantic Versioning].
 
 <!--
 GitHub MD Syntax:
@@ -13,16 +12,27 @@ Highlighting:
 https://docs.github.com/assets/cb-41128/mw-1440/images/help/writing/alerts-rendered.webp
 
 > [!NOTE]
+>
 > Highlights information that users should take into account, even when skimming.
 
+> [!TIP]
+>
+> Optional information to help a user be more successful.
+
 > [!IMPORTANT]
+>
 > Crucial information necessary for users to succeed.
 
 > [!WARNING]
-> Critical content demanding immediate user attention due to potential risks.
+>
+> Urgent info that needs immediate user attention to avoid problems.
+
+> [!CAUTION]
+>
+> Advised about risks or negative outcomes of certain actions.
 -->
 
-## [In Development] – Unreleased
+## [In Development] - Unreleased
 
 <!--
 Section Order:
@@ -33,11 +43,16 @@ Section Order:
 ### Deprecated
 ### Removed
 ### Security
+### Miscellaneous
 -->
+
+<!-- Your changes go here -->
+
+## [2.0.0] - 2026-08-13
 
 ### Changed
 
-- Masonry updated to v0.0.2
+- Switch to GeneratePress as parent theme
 
 ## [1.5.2] - 2025-10-08
 
@@ -335,3 +350,38 @@ Section Order:
 ### Changed
 
 - Switched from development on my own to a child theme of `WP-Moose` theme
+
+<!-- Links to be updated upon release -->
+
+[0.0.10]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v0.0.9...v0.0.10 "v0.0.10"
+[0.0.11]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v0.0.10...v0.0.11 "v0.0.11"
+[0.0.12]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v0.0.11...v0.0.12 "v0.0.12"
+[0.0.13]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v0.0.12...v0.0.13 "v0.0.13"
+[0.0.14]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v0.0.13...v0.0.14 "v0.0.14"
+[0.0.15]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v0.0.14...v0.0.15 "v0.0.15"
+[0.0.16]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v0.0.15...v0.0.16 "v0.0.16"
+[0.0.17]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v0.0.16...v0.0.17 "v0.0.17"
+[0.0.18]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v0.0.17...v0.0.18 "v0.0.18"
+[0.0.19]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v0.0.18...v0.0.19 "v0.0.19"
+[0.0.20]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v0.0.19...v0.0.20 "v0.0.20"
+[0.0.21]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v0.0.20...v0.0.21 "v0.0.21"
+[0.0.22]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v0.0.21...v0.0.22 "v0.0.22"
+[0.0.23]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v0.0.22...v0.0.23 "v0.0.23"
+[0.0.9]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/commits/v0.0.9 "v0.0.9"
+[0.1.0]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v0.0.23...v0.1.0 "v0.1.0"
+[1.0.0]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v0.1.0...v1.0.0 "v1.0.0"
+[1.0.1]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v1.0.0...v1.0.1 "v1.0.1"
+[1.1.0]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v1.0.1...v1.1.0 "v1.1.0"
+[1.2.0]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v1.1.0...v1.2.0 "v1.2.0"
+[1.2.1]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v1.2.0...v1.2.1 "v1.2.1"
+[1.3.0]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v1.2.1...v1.3.0 "v1.3.0"
+[1.3.1]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v1.3.0...v1.3.1 "v1.3.1"
+[1.3.2]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v1.3.1...v1.3.2 "v1.3.2"
+[1.4.0]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v1.3.2...v1.4.0 "v1.4.0"
+[1.5.0]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v1.4.0...v1.5.0 "v1.5.0"
+[1.5.1]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v1.5.0...v1.5.1 "v1.5.1"
+[1.5.2]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v1.5.1...v1.5.2 "v1.5.2"
+[2.0.0]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v1.5.2...v2.0.0 "v2.0.0"
+[in development]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v2.0.0...HEAD "In Development"
+[keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
+[semantic versioning]: http://semver.org/ "Semantic Versioning"

@@ -1,5 +1,9 @@
 {
-    "name": "ppfeufer",
+    "author": "Peter Pfeufer",
+    "name": "@ppfeufer/ppfeufer-wordpress-theme",
+    "version": "2.0.0",
+    "description": "WordPress Theme for the ppfeufer website",
+    "license": "GPL-3.0-or-later",
     "type": "module",
     "devDependencies": {
         "@eslint/js": "^10.0.1",
