@@ -30,8 +30,8 @@ exclude: |
   (?x)(
     LICENSE|
     .min(.css|.css.map|.js|.js.map)|
+    Assets/libs/|
     Sources/Libs/|
-    css/libs/|
     .vscode/|
     .idea/|
     vendor/|

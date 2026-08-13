@@ -13,48 +13,47 @@
     /* CodeColorer
     --------------------------------------------------------------------------------- */
     .codecolorer-container {
+        background-color: transparent !important;
         border: none !important;
         border-left: 1px solid var(--color-grey-light) !important;
         border-right: 1px solid var(--color-grey-light) !important;
         padding-bottom: 0.5rem;
         padding-top: 0.5rem;
+
+        table td.line-numbers {
+            background-color: transparent !important;
+            border-right: none !important;
+        }
     }
 
-    .codecolorer-container table td.line-numbers {
-        background-color: transparent !important;
-        border-right: none !important;
-    }
-
-    .codecolorer-container,
     .codecolorer {
         background-color: transparent !important;
-    }
-
-    div.codecolorer {
         padding: 5px 1.5rem !important;
     }
 
     /* Syntax Highlighter Evolved
     --------------------------------------------------------------------------------- */
-    .wp-block-syntaxhighlighter-code > div {
-        border: none !important;
-        border-left: 1px solid var(--color-grey-light) !important;
-        border-right: 1px solid var(--color-grey-light) !important;
-        padding-bottom: 0.5rem;
-        padding-top: 0.5rem;
-    }
+    .wp-block-syntaxhighlighter-code {
+        > div {
+            border: none !important;
+            border-left: 1px solid var(--color-grey-light) !important;
+            border-right: 1px solid var(--color-grey-light) !important;
+            padding-bottom: 0.5rem;
+            padding-top: 0.5rem;
+        }
 
-    .wp-block-syntaxhighlighter-code .syntaxhighlighter {
-        margin: 0 !important;
-    }
+        .syntaxhighlighter {
+            margin: 0 !important;
 
-    .wp-block-syntaxhighlighter-code .syntaxhighlighter .gutter {
-        color: var(--color-grey-dark) !important;
-    }
+            .gutter {
+                color: var(--color-grey-dark) !important;
 
-    .wp-block-syntaxhighlighter-code .syntaxhighlighter .gutter .line {
-        border-right: none !important;
-        padding: 0 0.5em !important;
+                .line {
+                    border-right: none !important;
+                    padding: 0 0.5em !important;
+                }
+            }
+        }
     }
 
     /* Syntax Highlight and code elements
@@ -121,17 +120,17 @@
         border-radius: 5px;
         float: right;
         margin-right: 0.5rem;
-        padding: 0.45rem 0.35rem 0.35rem;
+        padding: 0.45rem 0.45rem 0.05rem;
         position: sticky;
         text-shadow: var(--color-grey-light) 0 0 2px;
         top: 5rem;
         transition: var(--background-hover-transition);
         width: auto;
         z-index: 1;
-    }
 
-    .wp-block-syntaxhighlighter-code > .copy-to-clipboard:hover {
-        background-color: var(--color-grey-light);
-        cursor: pointer;
+        &:hover {
+            background-color: var(--color-grey-light);
+            cursor: pointer;
+        }
     }
 }

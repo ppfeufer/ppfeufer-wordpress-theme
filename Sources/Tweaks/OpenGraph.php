@@ -3,6 +3,7 @@
 namespace Ppfeufer\Theme\Ppfeufer\Tweaks;
 
 use Ppfeufer\Theme\Ppfeufer\Helper\Metatags;
+use Ppfeufer\Theme\Ppfeufer\Helper\Post;
 use Ppfeufer\Theme\Ppfeufer\Helper\Url;
 
 /**
@@ -47,8 +48,10 @@ class OpenGraph {
 
         // On every singular page except home page
         if (is_singular()) {
+            $post_id = get_the_ID();
+            $post = get_post($post_id);
             $ogTitle = get_the_title();
-            $ogDescription = get_the_excerpt();
+            $ogDescription = Post::getDefaultExcerptUnfiltered($post);
         }
 
         // On blog articles
@@ -76,10 +79,13 @@ class OpenGraph {
                     property: 'og:image:height',
                     content: $ogArticleImage['2']
                 ) . "\n";
-                echo Metatags::createMetaTag(
-                    property: 'og:image:alt',
-                    content: $ogDescription
-                ) . "\n";
+
+                if ($ogDescription) {
+                    echo Metatags::createMetaTag(
+                        property: 'og:image:alt',
+                        content: $ogDescription
+                    ) . "\n";
+                }
 
                 // Twitter cards
                 echo Metatags::createMetaTag(
@@ -98,11 +104,13 @@ class OpenGraph {
             }
         }
 
-        echo Metatags::createMetaTag(
-            property: 'description',
-            content: $ogDescription,
-            type: 'name'
-        ) . "\n";
+        if ($ogDescription) {
+            echo Metatags::createMetaTag(
+                property: 'description',
+                content: $ogDescription,
+                type: 'name'
+            ) . "\n";
+        }
 
         echo Metatags::createMetaTag(property: 'og:type', content: $ogType) . "\n";
         echo Metatags::createMetaTag(
@@ -111,10 +119,13 @@ class OpenGraph {
         ) . "\n";
         echo Metatags::createMetaTag(property: 'og:url', content: $ogUrl) . "\n";
         echo Metatags::createMetaTag(property: 'og:title', content: $ogTitle) . "\n";
-        echo Metatags::createMetaTag(
-            property: 'og:description',
-            content: $ogDescription
-        ) . "\n";
+
+        if ($ogDescription) {
+            echo Metatags::createMetaTag(
+                property: 'og:description',
+                content: $ogDescription
+            ) . "\n";
+        }
 
         // Twitter cards
         echo Metatags::createMetaTag(
@@ -127,10 +138,13 @@ class OpenGraph {
             content: '@ppfeufer',
             type: 'name'
         ) . "\n";
-        echo Metatags::createMetaTag(
-            property: 'twitter:description',
-            content: $ogDescription,
-            type: 'name'
-        ) . "\n";
+
+        if ($ogDescription) {
+            echo Metatags::createMetaTag(
+                property: 'twitter:description',
+                content: $ogDescription,
+                type: 'name'
+            ) . "\n";
+        }
     }
 }

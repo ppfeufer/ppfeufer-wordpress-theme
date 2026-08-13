@@ -1,3 +1,5 @@
+/* global Masonry */
+
 jQuery(document).ready(() => {
     'use strict';
 
@@ -7,7 +9,7 @@ jQuery(document).ready(() => {
     };
 
     /**
-     * Copy code to clipboard
+     * Copy code to clipboard.
      *
      * @param block
      * @param button
@@ -31,7 +33,7 @@ jQuery(document).ready(() => {
     };
 
     /**
-     * Add copy buttons to code blocks
+     * Add copy buttons to code blocks.
      */
     const addCopyButtons = () => {
         // Only proceed if browser supports Clipboard API
@@ -54,7 +56,32 @@ jQuery(document).ready(() => {
         });
     };
 
+    /**
+     * Initialize Masonry layout for blog, search, and archive pages.
+     */
+    const initMasonry = () => {
+        const grid = document.querySelector(
+            'body.blog .site-main, body.search .site-main, body.archive .site-main'
+        );
+        const articles = grid ? grid.querySelectorAll('article') : [];
+
+        // Only initialize Masonry if there are multiple articles to display
+        if (grid && articles.length > 1) {
+            articles.forEach(article => article.classList.add('masonry-item'));
+
+            const msnry = new Masonry(grid, { // eslint-disable-line no-unused-vars
+                columnWidth: '.masonry-item',
+                gutter: 20,
+                itemSelector: '.masonry-item',
+                maxColumnHeightDifference: 1,
+                percentPosition: true,
+                stamp: '.site-main .page-header'
+            });
+        }
+    };
+
     // Use setTimeout instead of custom sleep function
     // setTimeout(addCopyButtons, 2000);
     addCopyButtons();
+    initMasonry();
 });
