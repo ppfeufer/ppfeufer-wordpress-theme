@@ -23,7 +23,7 @@ class WebsiteLogo {
         // Override the website logo title
         add_filter('generate_logo_title', static function (string $title): string {
             return esc_html__(
-                'H. Peter Pfeufer - Web developer and WordPress enthusiast',
+                'H. Peter Pfeufer - Web Developer and WordPress Enthusiast',
                 'ppfeufer'
             );
         });
