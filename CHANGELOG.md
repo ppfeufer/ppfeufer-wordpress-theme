@@ -50,6 +50,7 @@ Section Order:
 
 ### Added
 
+- Top margin to site header
 - Bottom margin on code blocks
 
 ## [2.0.0] - 2026-08-13
