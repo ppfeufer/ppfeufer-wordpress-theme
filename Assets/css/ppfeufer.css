@@ -30,6 +30,12 @@
             }
         }
 
+        &.home {
+            .entry-header {
+                display: none;
+            }
+        }
+
         .site-header {
             z-index: 10;
 
