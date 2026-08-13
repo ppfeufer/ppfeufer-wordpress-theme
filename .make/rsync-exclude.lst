@@ -17,6 +17,8 @@ node_modules
 scss
 Makefile
 README.md
+CHANGELOG.md
+CODEOWNERS
 *.zip
 /vendor
 .make
