@@ -34,6 +34,8 @@
     /* Syntax Highlighter Evolved
     --------------------------------------------------------------------------------- */
     .wp-block-syntaxhighlighter-code {
+        margin-bottom: 1.5em;
+
         > div {
             border: none !important;
             border-left: 1px solid var(--color-grey-light) !important;
