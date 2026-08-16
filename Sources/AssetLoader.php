@@ -72,8 +72,19 @@ class AssetLoader {
      */
     public function loadScripts(): void {
         wp_enqueue_script(
-            handle: 'masonry-layout',
+            handle: 'masonry',
             src: get_theme_file_uri(file: '/Assets/libs/masonry/0.0.2/dist/masonry.min.js'),
+            deps: ['jquery'],
+            ver: THEME_VERSION,
+            args: [
+                'in_footer' => true,
+                'strategy' => 'async'
+            ]
+        );
+
+        wp_enqueue_script(
+            handle: 'stickyjs',
+            src: get_theme_file_uri(file: '/Assets/libs/stickyjs/0.1.0/dist/stickyjs.min.js'),
             deps: ['jquery'],
             ver: THEME_VERSION,
             args: [
@@ -85,7 +96,7 @@ class AssetLoader {
         wp_enqueue_script(
             handle: 'ppfeufer',
             src: get_theme_file_uri(file: '/Assets/javascript/ppfeufer.min.js'),
-            deps: ['masonry-layout'],
+            deps: ['masonry', 'stickyjs'],
             ver: THEME_VERSION,
             args: [
                 'in_footer' => true,
