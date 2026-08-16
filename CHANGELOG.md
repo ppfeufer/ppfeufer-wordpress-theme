@@ -50,6 +50,7 @@ Section Order:
 
 ### Added
 
+- Copyright to footer
 - Preparations for sticky elements
 - Top margin to site header
 - Bottom margin on code blocks
