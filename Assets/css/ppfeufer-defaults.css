@@ -5,7 +5,11 @@
     --background-color-light-transparency: rgb(255 255 255 / 60%);
     --background-hover-transition: background-color 0.25s linear;
     --font-family-code: "Fira Code", monospace;
-    --font-family-code-font-variation: "Fira Code VF", monospace;
+    --font-code: 0.9rem/1.3rem var(--font-family-code);
     --color-grey-light: rgb(192 192 192);
     --color-grey-dark: rgb(136 136 136);
+
+    @supports (font-variation-settings: normal) {
+        --font-family-code: "Fira Code VF", monospace;
+    }
 }

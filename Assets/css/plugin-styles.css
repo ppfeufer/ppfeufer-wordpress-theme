@@ -1,6 +1,7 @@
 @media all {
     /* Shortcode [divider] (Theme own shortcode)
     --------------------------------------------------------------------------------- */
+
     .divider {
         border-bottom-width: 1px;
         border-color: rgb(241 245 249 / 100%);
@@ -10,29 +11,9 @@
         margin: 1rem auto;
     }
 
-    /* CodeColorer
-    --------------------------------------------------------------------------------- */
-    .codecolorer-container {
-        background-color: transparent !important;
-        border: none !important;
-        border-left: 1px solid var(--color-grey-light) !important;
-        border-right: 1px solid var(--color-grey-light) !important;
-        padding-bottom: 0.5rem;
-        padding-top: 0.5rem;
-
-        table td.line-numbers {
-            background-color: transparent !important;
-            border-right: none !important;
-        }
-    }
-
-    .codecolorer {
-        background-color: transparent !important;
-        padding: 5px 1.5rem !important;
-    }
-
     /* Syntax Highlighter Evolved
     --------------------------------------------------------------------------------- */
+
     .wp-block-syntaxhighlighter-code {
         margin-bottom: 1.5em;
 
@@ -45,7 +26,11 @@
         }
 
         .syntaxhighlighter {
+            border-radius: 8px;
+            border-top: none;
             margin: 0 !important;
+            position: relative;
+            top: -2rem;
 
             .gutter {
                 color: var(--color-grey-dark) !important;
@@ -56,83 +41,50 @@
                 }
             }
         }
+
+        /* Copy to Clipboard Button
+        _____________________________________________________________________________ */
+
+        > .copy-to-clipboard {
+            backdrop-filter: var(--backdrop-filter-default);
+            background-color: var(--background-color-light-transparency);
+            border: ridge 1px var(--color-grey-dark);
+            border-radius: 5px;
+            float: right;
+            margin-right: 0.5rem;
+            padding: 0.45rem 0.45rem 0.05rem;
+            position: sticky;
+            text-shadow: var(--color-grey-light) 0 0 2px;
+            top: 0.5rem;
+            transition: var(--background-hover-transition);
+            width: auto;
+            z-index: 1;
+
+            &:hover {
+                background-color: var(--color-grey-light);
+                cursor: pointer;
+            }
+        }
+
+        .syntaxhighlighter a,
+        .syntaxhighlighter div,
+        .syntaxhighlighter code,
+        .syntaxhighlighter table,
+        .syntaxhighlighter table td,
+        .syntaxhighlighter table tr,
+        .syntaxhighlighter table tbody,
+        .syntaxhighlighter table thead,
+        .syntaxhighlighter table caption,
+        .syntaxhighlighter textarea {
+            font: var(--font-code) !important;
+        }
     }
 
     /* Syntax Highlight and code elements
     --------------------------------------------------------------------------------- */
+
     code,
-    .syntaxhighlight,
-    .codecolorer,
-    .codecolorer *,
-    .codecolorer-container,
-    .codecolorer-container *,
-    .wp-block-syntaxhighlighter-code,
-    .wp-block-syntaxhighlighter-code .syntaxhighlighter a,
-    .wp-block-syntaxhighlighter-code .syntaxhighlighter div,
-    .wp-block-syntaxhighlighter-code .syntaxhighlighter code,
-    .wp-block-syntaxhighlighter-code .syntaxhighlighter table,
-    .wp-block-syntaxhighlighter-code .syntaxhighlighter table td,
-    .wp-block-syntaxhighlighter-code .syntaxhighlighter table tr,
-    .wp-block-syntaxhighlighter-code .syntaxhighlighter table tbody,
-    .wp-block-syntaxhighlighter-code .syntaxhighlighter table thead,
-    .wp-block-syntaxhighlighter-code .syntaxhighlighter table caption,
-    .wp-block-syntaxhighlighter-code .syntaxhighlighter textarea {
-        font: 0.9rem/1.3rem var(--font-family-code) !important;
-    }
-
-    @supports (font-variation-settings: normal) {
-        code,
-        .syntaxhighlight,
-        .codecolorer,
-        .codecolorer *,
-        .codecolorer-container,
-        .codecolorer-container *,
-        .wp-block-syntaxhighlighter-code,
-        .wp-block-syntaxhighlighter-code .syntaxhighlighter a,
-        .wp-block-syntaxhighlighter-code .syntaxhighlighter div,
-        .wp-block-syntaxhighlighter-code .syntaxhighlighter code,
-        .wp-block-syntaxhighlighter-code .syntaxhighlighter table,
-        .wp-block-syntaxhighlighter-code .syntaxhighlighter table td,
-        .wp-block-syntaxhighlighter-code .syntaxhighlighter table tr,
-        .wp-block-syntaxhighlighter-code .syntaxhighlighter table tbody,
-        .wp-block-syntaxhighlighter-code .syntaxhighlighter table thead,
-        .wp-block-syntaxhighlighter-code .syntaxhighlighter table caption,
-        .wp-block-syntaxhighlighter-code .syntaxhighlighter textarea {
-            font: 0.9rem/1.3rem var(--font-family-code-font-variation) !important;
-        }
-    }
-
-    .prose .wp-block-syntaxhighlighter-code code::after,
-    .prose .wp-block-syntaxhighlighter-code code::before {
-        content: "";
-    }
-
-    /* Copy to Clipboard Button
-    _________________________________________________________________________________ */
-    .syntaxhighlighter {
-        border-radius: 8px;
-        border-top: none;
-        position: relative;
-    }
-
-    .wp-block-syntaxhighlighter-code > .copy-to-clipboard {
-        backdrop-filter: var(--backdrop-filter-default);
-        background-color: var(--background-color-light-transparency);
-        border: ridge 1px var(--color-grey-dark);
-        border-radius: 5px;
-        float: right;
-        margin-right: 0.5rem;
-        padding: 0.45rem 0.45rem 0.05rem;
-        position: sticky;
-        text-shadow: var(--color-grey-light) 0 0 2px;
-        top: 5rem;
-        transition: var(--background-hover-transition);
-        width: auto;
-        z-index: 1;
-
-        &:hover {
-            background-color: var(--color-grey-light);
-            cursor: pointer;
-        }
+    .syntaxhighlight {
+        font: var(--font-code) !important;
     }
 }
