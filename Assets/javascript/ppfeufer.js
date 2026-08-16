@@ -1,5 +1,6 @@
 /* global Masonry */
 
+// jQuery(document).ready(($) => {
 jQuery(document).ready(() => {
     'use strict';
 
@@ -80,8 +81,38 @@ jQuery(document).ready(() => {
         }
     };
 
+    /**
+     * Initialize sticky elements on the page.
+     */
+    // const initStickyElements = () => {
+    //     const stickyElements = [
+    //         // {
+    //         //     selector: '.site-header',
+    //         //     stickyOptions: {
+    //         //         topSpacing: -20,
+    //         //         zIndex: 9999
+    //         //     },
+    //         // },
+    //         {
+    //             selector: '.widget-area.sidebar > div',
+    //             stickyOptions: {
+    //                 getWidthFrom: '.widget-area.sidebar',
+    //                 responsiveWidth: true,
+    //                 // topSpacing: 165, // To accommodate the height of the header and any other fixed elements above the sidebar
+    //             },
+    //         }
+    //     ];
+    //
+    //     stickyElements.forEach(element => {
+    //         if ($(element.selector).length) {
+    //             $(element.selector).sticky(element.stickyOptions);
+    //         }
+    //     });
+    // };
+
     // Use setTimeout instead of custom sleep function
     // setTimeout(addCopyButtons, 2000);
     addCopyButtons();
     initMasonry();
+    // initStickyElements();
 });
