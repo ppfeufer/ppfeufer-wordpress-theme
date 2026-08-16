@@ -55,6 +55,10 @@ Section Order:
 - Top margin to site header
 - Bottom margin on code blocks
 
+### Fixed
+
+- Copy code to clipboard button position in code snippets
+
 ## [2.0.0] - 2026-08-13
 
 ### Changed
