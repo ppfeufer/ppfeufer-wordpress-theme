@@ -85,6 +85,7 @@ class Main {
             Overrides\CommentForm::class, // Comment form overrides
             Overrides\PostExcerpt::class, // Post excerpt / read-more overrides
             Overrides\Website::class, // Website behavior overrides
+            Overrides\WebsiteFooter::class, // Website footer overrides
             Overrides\WebsiteLogo::class, // Website logo overrides
             Plugins\Shortcodes::class, // Theme shortcodes
             Tweaks\DnsPrefetch::class, // Disable DNS prefetch
