@@ -59,6 +59,11 @@ Section Order:
 
 - Copy code to clipboard button position in code snippets
 
+### Changed
+
+- Column logic simplified
+- Backend style simplified
+
 ## [2.0.0] - 2026-08-13
 
 ### Changed
