@@ -50,6 +50,7 @@ Section Order:
 
 ### Added
 
+- `externalLinks` function to the main JavaScript file
 - Copyright to footer
 - Preparations for sticky elements
 - Top margin to site header
