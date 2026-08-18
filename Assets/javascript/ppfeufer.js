@@ -158,8 +158,6 @@ jQuery(document).ready(($) => {
     //     });
     // };
 
-    // Use setTimeout instead of custom sleep function
-    // setTimeout(addCopyButtons, 2000);
     externalLinks();
     addCopyButtons();
     initMasonry();

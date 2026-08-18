@@ -52,7 +52,6 @@ Section Order:
 
 - `externalLinks` function to the main JavaScript file
 - Copyright to footer
-- Preparations for sticky elements
 - Top margin to site header
 - Bottom margin on code blocks
 
