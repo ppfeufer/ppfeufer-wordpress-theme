@@ -61,6 +61,7 @@ Section Order:
 
 ### Changed
 
+- Masonry JS updated to v1.2.0
 - Column logic simplified
 - Backend style simplified
 
