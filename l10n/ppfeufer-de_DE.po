@@ -3,8 +3,8 @@
 # Peter Pfeufer <info@ppfeufer.de>, 2024, 2025, 2026.
 msgid ""
 msgstr ""
-"Project-Id-Version: ppfeufer 0.1.0\n"
-"Report-Msgid-Bugs-To: https://github.com/ppfeufer/ppfeufer-wordpress-theme/issues\n"
+"Project-Id-Version: ppfeufer.de WordPress Theme\n"
+"Report-Msgid-Bugs-To: https://weblate.ppfeufer.de/projects/wordpress-themes/website-ppfeufer/\n"
 "POT-Creation-Date: 2026-08-13T10:55:26+00:00\n"
 "PO-Revision-Date: 2026-08-13 11:00+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
