@@ -48,6 +48,8 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [2.1.0] - 2026-09-11
+
 ### Added
 
 - `externalLinks` function to the main JavaScript file
@@ -399,6 +401,7 @@ Section Order:
 [1.5.1]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v1.5.0...v1.5.1 "v1.5.1"
 [1.5.2]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v1.5.1...v1.5.2 "v1.5.2"
 [2.0.0]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v1.5.2...v2.0.0 "v2.0.0"
-[in development]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v2.0.0...HEAD "In Development"
+[2.1.0]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v2.0.0...v2.1.0 "v2.1.0"
+[in development]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v2.1.0...HEAD "In Development"
 [keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
 [semantic versioning]: http://semver.org/ "Semantic Versioning"
