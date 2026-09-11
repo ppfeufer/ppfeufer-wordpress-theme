@@ -48,6 +48,8 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [2.1.1] - 2026-09-11
+
 ### Fixed
 
 - Ensure our Masonry is loaded, not the one provided by WordPress core, which is
@@ -407,6 +409,7 @@ Section Order:
 [1.5.2]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v1.5.1...v1.5.2 "v1.5.2"
 [2.0.0]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v1.5.2...v2.0.0 "v2.0.0"
 [2.1.0]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v2.0.0...v2.1.0 "v2.1.0"
-[in development]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v2.1.0...HEAD "In Development"
+[2.1.1]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v2.1.0...v2.1.1 "v2.1.1"
+[in development]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v2.1.1...HEAD "In Development"
 [keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
 [semantic versioning]: http://semver.org/ "Semantic Versioning"

@@ -1,7 +1,7 @@
 {
     "author": "Peter Pfeufer",
     "name": "@ppfeufer/ppfeufer-wordpress-theme",
-    "version": "2.1.0",
+    "version": "2.1.1",
     "description": "WordPress Theme for the ppfeufer.de Website",
     "license": "GPL-3.0-or-later",
     "type": "module",
