@@ -1,4 +1,6 @@
 /node_modules*
 /vendor*
-/ppfeufer.zip
+/ppfeufer*.zip
 /.make/config-overrides.ini
+/style.min.css
+/style.min.css.map

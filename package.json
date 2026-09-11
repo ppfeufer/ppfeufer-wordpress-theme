@@ -1,8 +1,8 @@
 {
     "author": "Peter Pfeufer",
     "name": "@ppfeufer/ppfeufer-wordpress-theme",
-    "version": "2.0.0",
-    "description": "WordPress Theme for the ppfeufer website",
+    "version": "2.1.0",
+    "description": "WordPress Theme for the ppfeufer.de Website",
     "license": "GPL-3.0-or-later",
     "type": "module",
     "devDependencies": {
@@ -13,5 +13,10 @@
         "stylelint": "^17.15.0",
         "stylelint-config-standard": "^40.0.0",
         "terser": "^5.51.2"
+    },
+    "scripts": {
+        "lint:css": "stylelint -f verbose \"**/*.css\" --config .stylelintrc.json --ignore-pattern '**/*.min.css' --ignore-pattern 'vendor/**' --ignore-pattern 'Sources/Libs/**' --ignore-pattern 'Assets/libs/**'",
+        "lint:js": "eslint --config eslint.config.js --ext js --ignore-pattern '**/*.min.js' --ignore-pattern 'vendor/**' --ignore-pattern 'Sources/Libs/**' --ignore-pattern 'Assets/libs/**' --debug",
+        "lint": "npm run lint:css && npm run lint:js"
     }
 }
