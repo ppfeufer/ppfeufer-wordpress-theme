@@ -48,6 +48,11 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Fixed
+
+- Ensure our Masonry is loaded, not the one provided by WordPress core, which is
+  totally outdated
+
 ## [2.1.0] - 2026-09-11
 
 ### Added
