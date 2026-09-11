@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ppfeufer.de WordPress Theme\n"
 "Report-Msgid-Bugs-To: https://weblate.ppfeufer.de/projects/wordpress-themes/website-ppfeufer/\n"
-"POT-Creation-Date: 2026-08-13T10:55:26+00:00\n"
-"PO-Revision-Date: 2026-08-13 11:00+0000\n"
+"POT-Creation-Date: 2026-09-11T07:59:10+00:00\n"
+"PO-Revision-Date: 2026-09-11 08:08+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: German <https://weblate.ppfeufer.de/projects/wordpress-themes/website-ppfeufer/de/>\n"
 "Language: de_DE\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.8.1\n"
+"X-Generator: Weblate 2026.9\n"
 "X-Domain: ppfeufer\n"
 
 #. Theme Name of the theme
@@ -29,8 +29,8 @@ msgstr "https://github.com/ppfeufer/ppfeufer-wordpress-theme"
 
 #. Description of the theme
 #: style.css:4
-msgid "WordPress theme for my own website (Child-Theme for WP-Moose)"
-msgstr "WordPress Theme für meine eigene Webseite (Child-Theme von „WP-Moose“)"
+msgid "WordPress Theme for My Own Website - ppfeufer.de (Child-Theme for GeneratePress)"
+msgstr "WordPress Theme für meine eigene Webseite - ppfeufer.de (Child-Theme von „GeneratePress“)"
 
 #. Author of the theme
 #: style.css:6
