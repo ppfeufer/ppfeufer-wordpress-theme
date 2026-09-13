@@ -48,6 +48,14 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Fixed
+
+- Bottom margin on code blocks
+
+### Changed
+
+- Set default font size to 1rem
+
 ## [2.1.1] - 2026-09-11
 
 ### Fixed
