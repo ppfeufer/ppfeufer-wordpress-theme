@@ -4,6 +4,8 @@
 
 @media all {
     body {
+        font-size: var(--font-size-base);
+
         &.archive .site-content,
         &.blog .site-content,
         &.search .site-content {
@@ -55,7 +57,7 @@
                 .main-navigation {
                     a,
                     .main-nav ul ul li a {
-                        font-size: 1rem;
+                        font-size: var(--font-size-base);
                     }
                 }
             }
