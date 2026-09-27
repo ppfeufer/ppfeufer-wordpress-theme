@@ -116,9 +116,9 @@ jQuery(document).ready(($) => {
 
         // Only initialize Masonry if there are multiple articles to display
         if (grid && articles.length > 1) {
-            articles.forEach(article => article.classList.add('masonry-item'));
+            articles.forEach((article) => article.classList.add('masonry-item'));
 
-            const msnry = new Masonry(grid, { // eslint-disable-line no-unused-vars
+            const msnry = new Masonry(grid, {
                 columnWidth: '.masonry-item',
                 gutter: 20,
                 itemSelector: '.masonry-item',
@@ -126,6 +126,8 @@ jQuery(document).ready(($) => {
                 percentPosition: true,
                 stamp: '.site-main .page-header'
             });
+
+            void msnry; // Prevent unused variable warning
         }
     };
 
