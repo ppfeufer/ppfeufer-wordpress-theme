@@ -24,5 +24,7 @@ CODEOWNERS
 .make
 .rsync-exclude
 docs
-style.min.css
-style.min.css.map
+/*.min.css
+/*.min.css.map
+/*.min.js
+/*.min.js.map
