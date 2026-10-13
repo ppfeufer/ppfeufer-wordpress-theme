@@ -48,6 +48,8 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [2.2.0] - 2026-10-13
+
 ### Added
 
 - External link marker for links that open in a new tab/window
@@ -422,6 +424,7 @@ Section Order:
 [2.0.0]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v1.5.2...v2.0.0 "v2.0.0"
 [2.1.0]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v2.0.0...v2.1.0 "v2.1.0"
 [2.1.1]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v2.1.0...v2.1.1 "v2.1.1"
-[in development]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v2.1.1...HEAD "In Development"
+[2.2.0]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v2.1.1...v2.2.0 "v2.2.0"
+[in development]: https://github.com/ppfeufer/ppfeufer-wordpress-theme/compare/v2.2.0...HEAD "In Development"
 [keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
 [semantic versioning]: http://semver.org/ "Semantic Versioning"
