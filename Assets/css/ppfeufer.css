@@ -6,6 +6,32 @@
     body {
         font-size: var(--font-size-base);
 
+        a {
+            /* color: var(--link-color); */
+
+            &.external-link {
+                .external-link-indicator {
+                    margin-left: 0.25em;
+
+                    svg {
+                        fill: var(--link-color);
+                        height: 0.75em;
+                        width: 0.75em;
+                    }
+                }
+
+                &:hover {
+                    color: var(--link-hover-color);
+
+                    .external-link-indicator {
+                        svg {
+                            fill: var(--link-hover-color);
+                        }
+                    }
+                }
+            }
+        }
+
         &.archive .site-content,
         &.blog .site-content,
         &.search .site-content {
@@ -58,6 +84,25 @@
                     a,
                     .main-nav ul ul li a {
                         font-size: var(--font-size-base);
+
+
+                        &.external-link {
+                            .external-link-indicator {
+                                /* display: none; */
+
+                                svg {
+                                    fill: var(--link-hover-color);
+                                }
+                            }
+
+                            &:hover {
+                                .external-link-indicator {
+                                    svg {
+                                        fill: var(--link-color);
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -87,8 +132,8 @@
     /* Make sure SVG images always use the full space they have
     --------------------------------------------------------------------------------- */
     svg {
-        height: 100%;
-        width: 100%;
+        height: 1em;
+        width: 1em;
     }
 
     /* SVG sprite

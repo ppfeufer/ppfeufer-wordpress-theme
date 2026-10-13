@@ -6,8 +6,8 @@ jQuery(document).ready(($) => {
     // HTML elements used in the script
     const elements = {
         copyButton: {
-            copyCode: '<svg style="width: 16px; height: 16px;"><use href="#copy-code"></use></svg>',
-            codeCopied: '<svg style="width: 16px; height: 16px;"><use href="#code-copied"></use></svg>'
+            copyCode: '<svg><use href="#copy-code"></use></svg>',
+            codeCopied: '<svg><use href="#code-copied"></use></svg>'
         }
     };
 
@@ -52,6 +52,11 @@ jQuery(document).ready(($) => {
                     $(element).attr('target', '_blank');
                     $(element).attr('rel', 'noopener noreferrer');
                     $(element).attr('referrerpolicy', 'no-referrer');
+
+                    // Add a visual indicator for external links, if the link does not already have one.
+                    if (!$(element).find('.external-link-indicator').length) {
+                        $(element).append('<sup class="external-link-indicator" aria-hidden="true"><svg><use href="#fa-arrow-up-right-from-square"></use></svg></sup>');
+                    }
                 }
             }
         });
