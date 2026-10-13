@@ -48,6 +48,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Added
+
+- External link marker for links that open in a new tab/window
+
 ### Fixed
 
 - Bottom margin on code blocks
