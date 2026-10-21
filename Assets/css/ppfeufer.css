@@ -9,6 +9,15 @@
         a {
             /* color: var(--link-color); */
 
+            &.read-more {
+                display: block;
+                border: 1px solid;
+                margin: 1.5em auto 0;
+                padding: 0.5em;
+                text-decoration: none;
+                width: fit-content;
+            }
+
             &.external-link {
                 .external-link-indicator {
                     margin-left: 0.25em;
