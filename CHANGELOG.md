@@ -48,6 +48,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Changed
+
+- Read more link is now visually a button instead of a link
+
 ## [2.2.0] - 2026-10-13
 
 ### Added
